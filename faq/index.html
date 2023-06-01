@@ -1288,8 +1288,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-concepts" class="md-nav__link">
-    General concepts
+  <a href="#app" class="md-nav__link">
+    APP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-related" class="md-nav__link">
+    Network related
   </a>
   
 </li>
@@ -1329,8 +1336,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-concepts" class="md-nav__link">
-    General concepts
+  <a href="#app" class="md-nav__link">
+    APP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-related" class="md-nav__link">
+    Network related
   </a>
   
 </li>
@@ -1351,25 +1365,49 @@
 
 
 <h1 id="general-faq">General FAQ</h1>
-<p>Check out our frequently asked questions about being on DST.</p>
-<h2 id="general-concepts">General concepts</h2>
+<p>View answers to frequently asked questions on DST.</p>
+<h2 id="app">APP</h2>
 <details>
-<summary><b>What port numbers should the server open?</b></summary>
+<summary><b>Why does APP query data fail validation?</b></summary>
 <p>
-TCP open ports: 1317 , 8545 , 23478 , 26656 , 26657 , 28008 , 28043 , 50327 , 50328
+The balance query and TX result query of the APP have an anti cheating verification mechanism. If the verification results are incorrect, you may encounter data query verification failure.
 </p>
 <p>
-UDP open ports: 3478, 50000~55000
+When the app starts, it initializes the verification client and extracts the verification nodes from the available gateway nodes. When querying balance and TX status, the query results will be verified with the verification node. If the verification fails, an error will be prompted
+</p>
+</details>
+
+<h2 id="network-related">Network related</h2>
+<details>
+<summary><b>What port numbers do servers need to open?</b></summary>
+<p>
+TCP Open Port：1317 , 8545 , 23478 , 26656 , 26657 , 28008 , 28043 , 50327 , 50328
+</p>
+<p>
+UDP Open Port：3478, 50000~55000
 </p>
 </details>
 
 <details>
-<summary><b>Why does APP query data fail to be verified?</b></summary>
+<summary><b>Why does the gateway address fail verification? How to solve it?</b></summary>
 <p>
-There is an anti-cheating verification mechanism for the balance query and TX result query of the APP. If the verification result is incorrect, the data query verification will fail.
+<b>1.First, explain why gateway address verification failed</b>
 </p>
 <p>
-When the APP starts, the authentication client will be initialized, and the authentication node will be selected from the available gateway nodes. When querying the balance and querying the TX status, the query result will be verified with the verification node, and an error will be prompted if the verification fails
+Due to the need for gateway addresses to provide external services, it is required that the gateway address must be open to the public.
+</p>
+<p>
+Therefore, when setting the gateway address, the connectivity of the address will be tested through the internet. When the request fails to be sent or the request result is incorrect, an error will be thrown indicating that the gateway address verification has failed.
+</p>
+<p>
+<b>2.How to solve the problem of gateway address verification failure</b>
+</p>
+<p>
+The failure of gateway address verification is essentially due to network access failure, which needs to be addressed from the network layer. Solving requires a certain level of hands-on ability. If there are difficulties, it is recommended to find a partner to help.
+<ul>
+<li>Firstly, check if the router settings are correct and if the port image is correctly set (refer to the introduction on the current page for a list of port numbers that require an image)</li>
+<li>If it has not been resolved yet, you can check if the server's firewall is enabled. If it is enabled, please check if the list of ports that need to be opened is already open.</li>
+<li>If it has not been resolved yet, you can contact the current network supplier and explain the list of ports that need to be opened for their assistance in resolving the issue</li>
 </p>
 </details>
 
