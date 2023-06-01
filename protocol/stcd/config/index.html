@@ -1,0 +1,1742 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../single-node/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Configuration - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    繁体
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../account/" class="md-tabs__link md-tabs__link--active">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../modules_accounts/" class="md-tabs__link">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../gateway/run/" class="md-tabs__link">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account/" class="md-nav__link">
+        Technical Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-and-data-directories" class="md-nav__link">
+    Configuration and data directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-configuration" class="md-nav__link">
+    node configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="node configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-pruning" class="md-nav__link">
+    State pruning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-configuration" class="md-nav__link">
+    Client Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-json-rpc-server" class="md-nav__link">
+    Run the JSON-RPC server
+  </a>
+  
+    <nav class="md-nav" aria-label="Run the JSON-RPC server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-server" class="md-nav__link">
+    Enable server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-the-namespace" class="md-nav__link">
+    Define the namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-a-gas-amount" class="md-nav__link">
+    Set a Gas amount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    CORS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune" class="md-nav__link">
+    prune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-server" class="md-nav__link">
+    WebSocket server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evm/" class="md-nav__link">
+        Evm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/mainnet/" class="md-nav__link">
+        mainnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/guide-linux/" class="md-nav__link">
+        Linux version instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/guide-win/" class="md-nav__link">
+        Windows version instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gateway/key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-and-data-directories" class="md-nav__link">
+    Configuration and data directories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-configuration" class="md-nav__link">
+    node configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="node configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-pruning" class="md-nav__link">
+    State pruning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-configuration" class="md-nav__link">
+    Client Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-json-rpc-server" class="md-nav__link">
+    Run the JSON-RPC server
+  </a>
+  
+    <nav class="md-nav" aria-label="Run the JSON-RPC server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-server" class="md-nav__link">
+    Enable server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-the-namespace" class="md-nav__link">
+    Define the namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-a-gas-amount" class="md-nav__link">
+    Set a Gas amount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    CORS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune" class="md-nav__link">
+    prune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-server" class="md-nav__link">
+    WebSocket server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configure">configure</h1>
+<p>The following pages will guide you through the configuration of nodes and clients.
+This node is used to run the blockchain network, produce blocks and verify transactions.
+Clients act as gateways, interacting with the blockchain network by sending transactions and querying state.
+Additionally, we introduced <a href="#running-the-json-rpc-server">running the JSON-RPC server</a>.</p>
+<p>These configurations affect the performance, security, and functionality of the node.
+Therefore, it is crucial to understand and properly configure your nodes and clients.</p>
+<h2 id="configuration-and-data-directories">Configuration and data directories</h2>
+<p>By default, your configuration and data are stored in folders located in the ~/.stcd directory.
+You can easily change the default directory with the <code>--home</code> flag.
+It's important to note that you can have multiple home directories, each representing a different blockchain.</p>
+<pre><code class="language-bash">.# ~/.stcd
+   ├── data/ # Contains the databases used by the node.
+   └── config/
+       ├── app.toml # Application-related configuration file.
+       ├── config.toml # Tendermint-related configuration file.
+       ├── genesis.json # The genesis file.
+       ├── node_key.json # Private key to use for node authentication in the p2p protocol.
+       └── priv_validator_key.json # Private key to use as a validator in the consensus protocol.
+</code></pre>
+<p>Specifies the <code>stcd</code> configuration and data storage directory; you can update it with the global flag <code>--home &lt;directory&gt;</code>.</p>
+<h2 id="node-configuration">node configuration</h2>
+<p>The Cosmos SDK automatically generates two configuration files in <code>~/.stcd/config</code>:</p>
+<ul>
+<li><code>config.toml</code>: used to configure Tendermint, read more in <a href="https://docs.tendermint.com/v0.34/tendermint-core/configuration.html">Tendermint's documentation</a>, - <code>app .toml</code> : Generated by the Cosmos SDK to configure your application, such as state pruning strategies, telemetry, gRPC and REST server configuration, state sync, JSON-RPC, etc.</li>
+</ul>
+<p>Both files are heavily commented, please refer to them directly to tune your node.</p>
+<p>An example configuration to tune is the <code>minimum-gas-prices</code> field in <code>app.toml</code>, which defines the minimum amount a validator is willing to accept in order to process a transaction. This is an anti-spam mechanism that will reject incoming transactions below a minimum gas price.</p>
+<p>If it's empty, make sure to edit the field with some value, such as <code>0dst</code>, otherwise the node will stop on startup.</p>
+<pre><code class="language-toml"> # The minimum gas prices a validator is willing to accept for processing a
+ # transaction. A transaction's fees must meet the minimum of any denomination
+ # specified in this config (e.g. 0.25token1;0.0001token2).
+ minimum-gas-prices = &quot;0dst&quot;
+</code></pre>
+<h3 id="state-pruning">State pruning</h3>
+<p>There are four strategies for pruning state. These policies only apply to state, not to block storage.
+To set up pruning, adjust the <code>pruning</code> parameter in the <code>~/.stcd/config/app.toml</code> file.
+The following trim state settings are available:</p>
+<ul>
+<li><code>everything</code>: Prune all saved states except the current state.</li>
+<li><code>nothing</code>: save all state, do not delete anything.</li>
+<li><code>default</code>: Save the last 100 states and the state every 10,000 blocks.</li>
+<li><code>custom</code>: Use <code>pruning-keep-recent</code>, <code>pruning-keep-every</code>, and <code>pruning-interval</code> parameters to specify pruning settings.</li>
+</ul>
+<p>By default, each node is in <code>default</code> mode, which is the recommended setting for most environments.
+If you want to change your node pruning strategy, then you must do so at node initialization time. Passing a flag when starting <code>daodst</code> will always override the setting in the <code>app.toml</code> file, if you want to change the node to <code>everything</code> mode, then you can pass the <code>--pruning everything</code> flag when calling <code>stcd stc-start</code>.</p>
+<p>🚨 <strong>Dangerous</strong>:
+When you trim the state, you won't be able to query the height that has been trimmed off.</p>
+<h2 id="client-configuration">Client Configuration</h2>
+<p>We can view the default client configuration settings with the <code>stcd config</code> command:</p>
+<pre><code class="language-bash">stcd config
+{
+  &quot;chain-id&quot;: &quot;&quot;,
+  &quot;keyring-backend&quot;: &quot;os&quot;,
+  &quot;output&quot;: &quot;text&quot;,
+  &quot;node&quot;: &quot;tcp://localhost:26657&quot;,
+  &quot;broadcast-mode&quot;: &quot;sync&quot;
+}
+</code></pre>
+<p>We can make changes to the default settings according to our choice, so it allows the user to pre-set all configurations at once, so that the same configuration can be used afterwards.</p>
+<p>For example, the chain identifier can be changed from a blank name to <code>daodst_7000-1</code> with the following command:</p>
+<pre><code class="language-bash">stcd config &quot;chain-id&quot; daodst_7000-1
+stcd config
+{
+ &quot;chain-id&quot;: &quot;daodst_7000-1&quot;,
+ &quot;keyring-backend&quot;: &quot;os&quot;,
+ &quot;output&quot;: &quot;text&quot;,
+ &quot;node&quot;: &quot;tcp://localhost:26657&quot;,
+ &quot;broadcast-mode&quot;: &quot;sync&quot;
+}
+</code></pre>
+<p>Other values can be changed in the same way.</p>
+<p>Alternatively, we can directly change configuration values in one place in client.toml .</p>
+<p>Under the <code>.stcd/config/client.toml</code> path in the folder where we installed daodst:</p>
+<pre><code class="language-toml">############################################################################
+### Client Configuration ###
+
+############################################################################
+
+# The network chain ID
+
+chain-id = &quot;daodst_7000-1&quot;
+
+# The keyring's backend, where the keys are stored (os|file|kwallet|pass|test|memory)
+
+keyring-backend = &quot;os&quot;
+
+# CLI output format (text|json)
+
+output = &quot;number&quot;
+
+# &lt;host&gt;:&lt;port&gt; to Tendermint RPC interface for this chain
+
+node = &quot;tcp://localhost:26657&quot;
+
+# Transaction broadcasting mode (sync|async|block)
+
+broadcast-mode = &quot;sync&quot;
+</code></pre>
+<p>After making the necessary changes in <code>client.toml</code>, then save. For example, if we directly change the chain-id from <code>daodst_7000-1</code> to <code>daodst_7000-2</code> and output it as a number, it will instantly change as shown below.</p>
+<pre><code class="language-bash">stcd config
+{
+ &quot;chain-id&quot;: &quot;daodst_7000-2&quot;,
+ &quot;keyring-backend&quot;: &quot;os&quot;,
+ &quot;output&quot;: &quot;number&quot;,
+ &quot;node&quot;: &quot;tcp://localhost:26657&quot;,
+ &quot;broadcast-mode&quot;: &quot;sync&quot;
+}
+</code></pre>
+<h2 id="run-the-json-rpc-server">Run the JSON-RPC server</h2>
+<p>This section describes the steps to enable a JSON-RPC server.
+JSON-RPC is provided over several transports. Daodst supports JSON-RPC over HTTP and WebSocket.
+In terms of requirements, we recommend a server with at least an 8-core CPU and 64GB of RAM.
+You must open ports 8545 and 8546 on your firewall.</p>
+<p>📣 Tip: Unless your nodes store an entire copy of the blockchain locally, you cannot use all JSON RPC methods. Do you need an archive/snapshot of our network? Go to <a href="./../../develop/api/snapshots-archives">this section</a>.</p>
+<h3 id="enable-server">Enable server</h3>
+<p>To enable the RPC server, use the following flag (set to true by default).</p>
+<pre><code class="language-bash">stcd start --json-rpc.enable
+</code></pre>
+<h3 id="define-the-namespace">Define the namespace</h3>
+<p><code>Eth</code>, <code>Net</code> and <code>Web3</code> namespaces are enabled by default, but for JSON-RPC you need to add more namespaces.
+In order to enable additional namespaces, edit the app.toml file.</p>
+<pre><code class="language-toml"># API defines a list of JSON-RPC namespaces that should be enabled
+# Example: &quot;eth,txpool,personal,net,debug,web3&quot;
+api = &quot;eth,net,web3,txpool,debug,personal&quot;
+</code></pre>
+<h3 id="set-a-gas-amount">Set a Gas amount</h3>
+<p><code>eth_call</code> and <code>eth_estimateGas</code> define a global gas cap over rpc for DoS protection. You can override the default gas cap value of 25,000,000 by passing a custom value in app.toml:</p>
+<pre><code class="language-toml"># GasCap sets a cap on gas that can be used in eth_call/estimateGas (0=infinite). Default: 25,000,000.
+gas-cap = 25000000
+</code></pre>
+<h3 id="cors">CORS</h3>
+<p>If accessing RPC from a browser, you need to enable CORS with the appropriate domain set. Otherwise, JavaScript calls are restricted by the same-origin policy and the request will fail.</p>
+<p>CORS settings can be updated from <code>app.toml</code></p>
+<pre><code class="language-toml">###############################################################################
+###                           API Configuration                             ###
+###############################################################################
+
+[api]
+
+# ...
+
+# EnableUnsafeCORS defines if CORS should be enabled (unsafe - use it at your own risk).
+enabled-unsafe-cors = true # default false
+</code></pre>
+<h3 id="prune">prune</h3>
+<p>In order for all methods to work, your node must be archival (storing an entire copy of the blockchain locally). Trimming must be disabled.
+Prune settings can be updated from <code>app.toml</code></p>
+<pre><code class="language-toml">###############################################################################
+###                           Base Configuration                            ###
+###############################################################################
+
+# The minimum gas prices a validator is willing to accept for processing a
+# transaction. A transaction's fees must meet the minimum of any denomination
+# specified in this config (e.g. 0.25token1;0.0001token2).
+
+# ...
+
+# default: the last 100 states are kept in addition to every 500th state; pruning at 10 block intervals
+# nothing: all historic states will be saved, nothing will be deleted (i.e. archiving node)
+# everything: all saved states will be deleted, storing only the current state; pruning at 10 block intervals
+# custom: allow pruning options to be manually specified through 'pruning-keep-recent', 'pruning-keep-every', &gt;
+pruning = &quot;nothing&quot;
+pruning-keep-recent = &quot;0&quot;
+pruning-keep-every = &quot;0&quot;
+pruning-interval = &quot;0&quot;
+</code></pre>
+<h3 id="websocket-server">WebSocket server</h3>
+<p>Websocket is a two-way transport protocol. A Websocket connection is maintained by both client and server until it is explicitly terminated by one. Most modern browsers support Websockets, which means it has good tools.</p>
+<p>Because Websockets are bidirectional, the server can push events to the client. This makes Websockets a good choice for use cases involving event subscriptions.
+Another benefit of Websockets is the low overhead of a single message after the handshake process, making it ideal for sending large numbers of requests.
+WebSocket server can be enabled from <code>app.toml</code></p>
+<pre><code class="language-toml"># Address defines the EVM WebSocket server address to bind to.
+ws-address = &quot;0.0.0.0:8546&quot;
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
