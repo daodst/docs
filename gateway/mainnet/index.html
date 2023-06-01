@@ -1,0 +1,1716 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../testnet/">
+      
+      
+        <link rel="next" href="../guide-linux/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>mainnet - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mainnet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              mainnet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    繁体
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../protocol/account/" class="md-tabs__link">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../modules_accounts/" class="md-tabs__link">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../run/" class="md-tabs__link md-tabs__link--active">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/account/" class="md-nav__link">
+        Technical Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/stcd/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/stcd/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/stcd/single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/stcd/command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evm/" class="md-nav__link">
+        Evm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          mainnet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        mainnet
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-to-read" class="md-nav__link">
+    Prerequisites to read
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mainnet_1" class="md-nav__link">
+    Mainnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-daodst" class="md-nav__link">
+    Install daodst
+  </a>
+  
+    <nav class="md-nav" aria-label="Install daodst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#save-chain-id" class="md-nav__link">
+    Save Chain ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-node" class="md-nav__link">
+    Initialize node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genesis-seed-nodes" class="md-nav__link">
+    Genesis &amp; Seed Nodes
+  </a>
+  
+    <nav class="md-nav" aria-label="Genesis &amp; Seed Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-the-genesis-file" class="md-nav__link">
+    Copy the genesis file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-seed-node" class="md-nav__link">
+    Add seed node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-persistent-node" class="md-nav__link">
+    Add persistent node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-mainnet-validator" class="md-nav__link">
+    Run mainnet validator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-mainnet" class="md-nav__link">
+    Start the mainnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#share-your-node" class="md-nav__link">
+    Share your node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-synchronization-node" class="md-nav__link">
+    State synchronization node
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-linux/" class="md-nav__link">
+        Linux version instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-win/" class="md-nav__link">
+        Windows version instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-to-read" class="md-nav__link">
+    Prerequisites to read
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mainnet_1" class="md-nav__link">
+    Mainnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-daodst" class="md-nav__link">
+    Install daodst
+  </a>
+  
+    <nav class="md-nav" aria-label="Install daodst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#save-chain-id" class="md-nav__link">
+    Save Chain ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-node" class="md-nav__link">
+    Initialize node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genesis-seed-nodes" class="md-nav__link">
+    Genesis &amp; Seed Nodes
+  </a>
+  
+    <nav class="md-nav" aria-label="Genesis &amp; Seed Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-the-genesis-file" class="md-nav__link">
+    Copy the genesis file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-seed-node" class="md-nav__link">
+    Add seed node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-persistent-node" class="md-nav__link">
+    Add persistent node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-mainnet-validator" class="md-nav__link">
+    Run mainnet validator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-mainnet" class="md-nav__link">
+    Start the mainnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#share-your-node" class="md-nav__link">
+    Share your node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-synchronization-node" class="md-nav__link">
+    State synchronization node
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="mainnet">mainnet</h1>
+<p>This document outlines the steps to join an existing mainnet.</p>
+<h2 id="prerequisites-to-read">Prerequisites to read</h2>
+<ul>
+<li><a href="/gateway/security">Authenticator Security</a></li>
+</ul>
+<h2 id="mainnet_1">Mainnet</h2>
+<p>You need to setup a <strong>genesis file</strong> and a <strong>seed node</strong>.
+If you need more information on past networks, check out our <a href="https://github.com/daodst/mainnet">mainnet repo</a>.
+The table below outlines all mainnet chain IDs.
+Note that the displayed version may differ when there is an active software upgrade proposal on-chain.</p>
+<table>
+<thead>
+<tr>
+<th>Chain ID</th>
+<th>describe</th>
+<th>Location</th>
+<th>Version</th>
+<th>state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>daodst_7777-1</code></td>
+<td>Daodst Mainnet 1</td>
+<td><a href="https://github.com/daodst/mainnet/tree/main/daodst_7777-1">Daodst</a></td>
+<td><a href="https://github.com/daodst/blockchain/releases/v1.0.0"><code>v1.0.0</code></a></td>
+<td><code>active</code></td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>IMPORTANT:</strong> If you join mainnet as a validator, please make sure you follow all <a href="/gateway/security">security</a> recommendations!</p>
+<h2 id="install-daodst">Install <code>daodst</code></h2>
+<p>Follow the <a href="/gateway/run">installation</a> documentation to install the <strong>program</strong></p>
+<p>⚠️ <strong>Note</strong> :
+Make sure you have the correct version of the <strong>program</strong> installed.</p>
+<h3 id="save-chain-id">Save Chain ID</h3>
+<p>We recommend saving the mainnet <code>chain-id</code> to your <strong>app</strong>'s <code>client.toml</code>.
+This will save you from having to manually pass the <code>chain-id</code> flag for every CLI command.</p>
+<p>📣 Tip : Please refer to the official <a href="/protocol/chainid">chain ID</a> for reference.</p>
+<pre><code class="language-bash">stcd config chain-id daodst_7777-1
+</code></pre>
+<h2 id="initialize-node">Initialize node</h2>
+<p>We need to initialize the node to create all necessary validators and node configuration files:</p>
+<pre><code class="language-bash">stcd init &lt;your_custom_moniker&gt; --chain-id daodst_7777-1
+</code></pre>
+<p>⚠️<strong>Dangerous</strong> : Name objects can only contain ASCII characters. Using Unicode characters will make your node inaccessible.</p>
+<p>📣 Tip: <code>$install_path</code> is used to indicate the path where you installed the <code>stcd</code> binary</p>
+<p>By default, the <code>init</code> command creates the <code>$install_path/.stcd</code> (ie <code>$HOME</code>) directory with subfolders <code>config/</code> and <code>data/</code>.
+In the <code>config</code> directory, the most important configuration files are <code>app.toml</code> and <code>config.toml</code>.</p>
+<h2 id="genesis-seed-nodes">Genesis &amp; Seed Nodes</h2>
+<h3 id="copy-the-genesis-file">Copy the genesis file</h3>
+<p>Download the <code>genesis.json</code> file from <a href="https://github.com/daodst/mainnet"><code>github</code></a> and copy it to the <code>config</code> directory: <code>$install_path/.stcd/config/genesis.json</code>. This is a genesis file that contains the chain ID and the balance of the genesis account.</p>
+<pre><code class="language-bash">wget https://github.com/daodst/mainnet/daodst_7777-1/genesis.json
+mv genesis.json $install_path/.stcd/config/
+</code></pre>
+<p>Then verify the correctness of the genesis configuration file:</p>
+<pre><code class="language-bash">stcd validate-genesis
+</code></pre>
+<h3 id="add-seed-node">Add seed node</h3>
+<p>Your peers need to know how to find <a href="https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#peers">peers</a>.</p>
+<p>You need to add a healthy <a href="https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#seed">seed node</a>
+to <code>$install_path/.stcd/config/config.toml</code> <a href="https://github.com/daodst/mainnet"><code>mainnet</code></a> repository contains some links
+seed node.</p>
+<p>Edit the files located in <code>$install_path/.stcd/config/config.toml</code> and <code>seeds</code> to the following:</p>
+<pre><code class="language-toml">#######################################################
+###           P2P Configuration Options             ###
+#######################################################
+[p2p]
+
+# ...
+
+# Comma separated list of seed nodes to connect to
+seeds = &quot;&lt;node-id&gt;@&lt;ip&gt;:&lt;p2p port&gt;&quot;
+</code></pre>
+<p>You can fetch a seed from the repository and add it to your config with the following code:</p>
+<pre><code class="language-bash">SEEDS=`curl -sL https://raw.githubusercontent.com/daodst/mainnet/main/daodst_7777-1/seeds.txt | awk '{print $1}' | paste -s -d, -`
+sed -i.bak -e &quot;s/^seeds =.*/seeds = \&quot;$SEEDS\&quot;/&quot; $install_path/.stcd/config/config.toml
+</code></pre>
+<p>📣 Tips:
+For more information on torrents and peers, you can check out the Tendermint <a href="https://docs.tendermint.com/master/spec/p2p/peer.html">P2P Documentation</a>.</p>
+<h3 id="add-persistent-node">Add persistent node</h3>
+<p>We can set <a href="https://docs.tendermint.com/v0.34/tendermint-core/using-tendermint.html#persistent-peer"><code>persistent_peers</code></a>
+Fields in <code>$install_path/.stcd/config/config.toml</code> specify the peers with which your node will maintain persistent connections.
+You can retrieve them from the list of available nodes in the <a href="https://github.com/daodst/mainnet"><code>mainnet</code></a> repository.</p>
+<p>You can grab 10 random entries from the <code>peers.txt</code> file for the <code>PEERS</code> variable by running:</p>
+<pre><code class="language-bash">PEERS=`curl -sL https://raw.githubusercontent.com/daodst/mainnet/main/daodst_7777-1/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
+</code></pre>
+<p>Use <code>sed</code> to include them into the configuration. You can also add them manually:</p>
+<pre><code class="language-bash">sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; $install_path/.stcd/config/config.toml
+</code></pre>
+<h2 id="run-mainnet-validator">Run mainnet validator</h2>
+<p>📣 Tips:
+For more details on how to run a validator, follow the validator <a href="/gateway/run">these</a>
+instruct.</p>
+<pre><code class="language-bash">stcd tx staking create-validator \
+--amount=1000000000000dst \
+--pubkey=$(stcd tendermint show-validator) \
+--moniker=&quot;Daodst1&quot; \
+--chain-id=&lt;chain_id&gt; \
+--commission-rate=&quot;0.05&quot; \
+--commission-max-rate=&quot;0.20&quot; \
+--commission-max-change-rate=&quot;0.01&quot; \
+--min-self-delegation=&quot;1000000&quot; \
+--gas=&quot;auto&quot; \
+--gas-prices=&quot;0.025dst&quot; \
+--from=&lt;key_name&gt;
+</code></pre>
+<p>🚨 <strong>DANGER</strong>: <u>NEVER</u> create validator keys using <a href="/protocol/keyring#testing"><code>test</code></a> as the keyring backend.
+Doing so may cause your funds to be accessed remotely via the <code>eth_sendTransaction</code> JSON-RPC endpoint, resulting in loss of funds.</p>
+<p>Reference: <a href="https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds- remotely-accessible/">Security Advisory: Insecurely configured geth can make funds remotely accessible</a></p>
+<h2 id="start-the-mainnet">Start the mainnet</h2>
+<p>The last step is to <a href="/protocol/stcd/single-node#daemon">start the node</a>. Once enough voting power (+2/3)
+Starting from the genesis validator, nodes will start producing blocks.</p>
+<pre><code class="language-bash">stcd daemon
+</code></pre>
+<h2 id="share-your-node">Share your node</h2>
+<p>You can share your peers and post them in the <code>#find-peers</code> channel on the Daodst Discord.</p>
+<p>📣 Hint: To get your node ID, use</p>
+<pre><code class="language-bash">stcd tendermint show-node-id
+</code></pre>
+<h2 id="state-synchronization-node">State synchronization node</h2>
+<p>If you want to join the network using state-sync (fast, but not for archive nodes), check out our <a href="/gateway/state-sync/">state-sync</a> page.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

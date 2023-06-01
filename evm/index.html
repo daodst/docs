@@ -1,0 +1,3912 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../modules_accounts/">
+      
+      
+        <link rel="next" href="../chat/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Evm - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#abstract" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evm
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    繁体
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/account/" class="md-tabs__link">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        Technical Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Evm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Evm
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-architecture" class="md-nav__link">
+    Module architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    concept
+  </a>
+  
+    <nav class="md-nav" aria-label="concept">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evm" class="md-nav__link">
+    EVM
+  </a>
+  
+    <nav class="md-nav" aria-label="EVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-transition-of-smart-contract" class="md-nav__link">
+    State transition of smart contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-evm-bytecode" class="md-nav__link">
+    Execute EVM bytecode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst-implemented-as-geth" class="md-nav__link">
+    Daodst implemented as Geth
+  </a>
+  
+    <nav class="md-nav" aria-label="Daodst implemented as Geth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-rpc" class="md-nav__link">
+    JSON-RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-db" class="md-nav__link">
+    Status DB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consensus-engine" class="md-nav__link">
+    Consensus Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-record" class="md-nav__link">
+    Transaction Record
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-bloom" class="md-nav__link">
+    Block Bloom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state_1" class="md-nav__link">
+    state
+  </a>
+  
+    <nav class="md-nav" aria-label="state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-object" class="md-nav__link">
+    State object
+  </a>
+  
+    <nav class="md-nav" aria-label="State object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state_2" class="md-nav__link">
+    state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-db_1" class="md-nav__link">
+    Status DB
+  </a>
+  
+    <nav class="md-nav" aria-label="Status DB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crud-for-ethereum-accounts" class="md-nav__link">
+    CRUD for Ethereum accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eip2930-functionality" class="md-nav__link">
+    EIP2930 functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot-state-and-restore-functions" class="md-nav__link">
+    Snapshot state and restore functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethereum-transaction-log" class="md-nav__link">
+    Ethereum transaction log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeper" class="md-nav__link">
+    Keeper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genesis-state" class="md-nav__link">
+    Genesis state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genesis-account" class="md-nav__link">
+    Genesis account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-transition" class="md-nav__link">
+    state transition
+  </a>
+  
+    <nav class="md-nav" aria-label="state transition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preprocessor" class="md-nav__link">
+    Preprocessor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm-module" class="md-nav__link">
+    EVM module
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade" class="md-nav__link">
+    trade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx_1" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgEthereumTx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversion" class="md-nav__link">
+    Conversion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    sign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txdata" class="md-nav__link">
+    TxData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacytx" class="md-nav__link">
+    LegacyTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamicfeetx" class="md-nav__link">
+    DynamicFeeTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesslisttx" class="md-nav__link">
+    AccessListTx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abci" class="md-nav__link">
+    ABCI
+  </a>
+  
+    <nav class="md-nav" aria-label="ABCI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-genesis" class="md-nav__link">
+    Initialize Genesis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-genesis" class="md-nav__link">
+    Export Genesis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-block" class="md-nav__link">
+    Begin Block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-block" class="md-nav__link">
+    End block
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posttxprocessing" class="md-nav__link">
+    PostTxProcessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    event
+  </a>
+  
+    <nav class="md-nav" aria-label="event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgethereumtx_2" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abci_1" class="md-nav__link">
+    ABCI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-parameters" class="md-nav__link">
+    Module parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecreate" class="md-nav__link">
+    EnableCreate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecall" class="md-nav__link">
+    EnableCall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-eips" class="md-nav__link">
+    Extra EIPs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-config" class="md-nav__link">
+    Chain Config
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-chainconfig" class="md-nav__link">
+    Default ChainConfig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client_1" class="md-nav__link">
+    client
+  </a>
+  
+    <nav class="md-nav" aria-label="client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inquire" class="md-nav__link">
+    Inquire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trade_1" class="md-nav__link">
+    trade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inquire_1" class="md-nav__link">
+    Inquire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trade_2" class="md-nav__link">
+    trade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        mainnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        Linux version instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        Windows version instructions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-architecture" class="md-nav__link">
+    Module architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    concept
+  </a>
+  
+    <nav class="md-nav" aria-label="concept">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evm" class="md-nav__link">
+    EVM
+  </a>
+  
+    <nav class="md-nav" aria-label="EVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-transition-of-smart-contract" class="md-nav__link">
+    State transition of smart contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-evm-bytecode" class="md-nav__link">
+    Execute EVM bytecode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daodst-implemented-as-geth" class="md-nav__link">
+    Daodst implemented as Geth
+  </a>
+  
+    <nav class="md-nav" aria-label="Daodst implemented as Geth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-rpc" class="md-nav__link">
+    JSON-RPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-db" class="md-nav__link">
+    Status DB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consensus-engine" class="md-nav__link">
+    Consensus Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-record" class="md-nav__link">
+    Transaction Record
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-bloom" class="md-nav__link">
+    Block Bloom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state_1" class="md-nav__link">
+    state
+  </a>
+  
+    <nav class="md-nav" aria-label="state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-object" class="md-nav__link">
+    State object
+  </a>
+  
+    <nav class="md-nav" aria-label="State object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state_2" class="md-nav__link">
+    state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-db_1" class="md-nav__link">
+    Status DB
+  </a>
+  
+    <nav class="md-nav" aria-label="Status DB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crud-for-ethereum-accounts" class="md-nav__link">
+    CRUD for Ethereum accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eip2930-functionality" class="md-nav__link">
+    EIP2930 functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot-state-and-restore-functions" class="md-nav__link">
+    Snapshot state and restore functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethereum-transaction-log" class="md-nav__link">
+    Ethereum transaction log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeper" class="md-nav__link">
+    Keeper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genesis-state" class="md-nav__link">
+    Genesis state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genesis-account" class="md-nav__link">
+    Genesis account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-transition" class="md-nav__link">
+    state transition
+  </a>
+  
+    <nav class="md-nav" aria-label="state transition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preprocessor" class="md-nav__link">
+    Preprocessor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evm-module" class="md-nav__link">
+    EVM module
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade" class="md-nav__link">
+    trade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgethereumtx_1" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgEthereumTx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversion" class="md-nav__link">
+    Conversion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    sign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txdata" class="md-nav__link">
+    TxData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacytx" class="md-nav__link">
+    LegacyTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamicfeetx" class="md-nav__link">
+    DynamicFeeTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesslisttx" class="md-nav__link">
+    AccessListTx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abci" class="md-nav__link">
+    ABCI
+  </a>
+  
+    <nav class="md-nav" aria-label="ABCI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-genesis" class="md-nav__link">
+    Initialize Genesis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-genesis" class="md-nav__link">
+    Export Genesis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-block" class="md-nav__link">
+    Begin Block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-block" class="md-nav__link">
+    End block
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posttxprocessing" class="md-nav__link">
+    PostTxProcessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    event
+  </a>
+  
+    <nav class="md-nav" aria-label="event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgethereumtx_2" class="md-nav__link">
+    MsgEthereumTx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abci_1" class="md-nav__link">
+    ABCI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-parameters" class="md-nav__link">
+    Module parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecreate" class="md-nav__link">
+    EnableCreate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablecall" class="md-nav__link">
+    EnableCall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-eips" class="md-nav__link">
+    Extra EIPs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-config" class="md-nav__link">
+    Chain Config
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-chainconfig" class="md-nav__link">
+    Default ChainConfig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client_1" class="md-nav__link">
+    client
+  </a>
+  
+    <nav class="md-nav" aria-label="client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inquire" class="md-nav__link">
+    Inquire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trade_1" class="md-nav__link">
+    trade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inquire_1" class="md-nav__link">
+    Inquire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trade_2" class="md-nav__link">
+    trade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Evm</h1>
+
+<h2 id="abstract">Abstract</h2>
+<p>This document defines the specification of the Ethereum Virtual Machine (EVM) as a Cosmos SDK module.</p>
+<p>Since the introduction of Ethereum in 2015, the ability to control digital assets through [<strong>smart contracts</strong>] has attracted a large number of developers to build decentralized applications on the Ethereum Virtual Machine (EVM).
+This community continues to create a wide range of tools and introduce standards, which further increases the adoption rate of EVM-compatible technologies.</p>
+<p>However, the growth of EVM-based chains such as Ethereum has revealed some scalability challenges, often referred to as the <a href="https://vitalik. ca/general/2021/04/07/sharding.html">decentralization, security, and scalability trilemma</a>.
+Developers are frustrated by high gas fees, slow transaction speeds and throughput, and chain-specific governance that undergoes only slow changes due to their widely deployed applications.
+A solution is needed to allay these concerns for developers building applications in the familiar EVM environment.</p>
+<p>The <code>x/evm</code> module provides this EVM familiarity on scalable, high-throughput proof-of-stake blockchains.
+It is built as a <a href="https://docs.cosmos.network/main/building-modules/intro.html">Cosmos SDK module</a>, allowing deployment of smart contracts, interaction with the EVM state machine (state transitions), and use of EVM tools .
+It is available for Cosmos application-specific blockchains through <a href="https://github.com/tendermint/tendermint">Tendermint Core</a> high transaction throughput, fast transaction finality and <a href="https://ibcprotocol .org/">IBC</a> to alleviate the above problems.</p>
+<h2 id="content">content</h2>
+<ol>
+<li><strong><a href="#concepts">Concepts</a></strong></li>
+<li><strong><a href="#state">state</a></strong></li>
+<li><strong><a href="#state-transitions">state transitions</a></strong></li>
+<li><strong><a href="#transactions">Transactions</a></strong></li>
+<li><strong><a href="#abci">ABCI</a></strong></li>
+<li><strong><a href="#hooks">hooks</a></strong></li>
+<li><strong><a href="#events">Events</a></strong></li>
+<li><strong><a href="#parameters">Parameters</a></strong></li>
+<li><strong><a href="#client">client</a></strong></li>
+</ol>
+<h2 id="module-architecture">Module architecture</h2>
+<blockquote>
+<p><strong>Note:</strong>: If you are not familiar with the overall module structure of SDK modules, please read this <a href="https://docs.cosmos.network/main/building-modules/structure.html">document</a> first as a prerequisite .</p>
+</blockquote>
+<pre><code class="language-shell">evm/
+├── client
+│ └── cli
+│ ├── query.go # Module CLI query command
+│ └── tx.go # CLI transaction command of the module
+├──keeper
+│ ├── abci.go # ABCI start and end block logic
+│ ├── keeper.go # Process the business logic of the module.
+│ ├── params.go # parameter getter and setter
+│ ├── queryer.go # status query function
+│ └── statedb.go # Functions from types/statedb passed into sdk.Context
+├── types
+│ ├── chain_config.go
+│ ├── codec.go # Encoding type registration
+│ ├── errors.go # Module-specific errors
+│ ├── events.go # Events exposed to Tendermint PubSub/Websocket
+│ ├── genesis.go # Genesis state of the module
+│ ├── journal.go # Ethereum state transition transactions
+│ ├── keys.go # Store keys and utility functions
+│ ├── logs.go # Persistent Ethereum tx login status type after chain upgrade
+│ ├── msg.go #EVM module transaction message
+│ ├── params.go # Governance parameters can be used to change suggested custom module parameters
+│ ├── state_object.go # EVM state object
+│ ├── statedb.go # Implementation of StateDb interface
+│ ├── storage.go # Use arrays to implement Ethereum state storage mapping to prevent non-determinism
+│ └── tx_data.go # Ethereum transaction data type
+├── genesis.go # ABCI InitGenesis and ExportGenesis functions
+├── handler.go # message routing
+└── module.go # Module settings for the module manager
+</code></pre>
+<h2 id="concept">concept</h2>
+<h3 id="evm">EVM</h3>
+<p>The Ethereum Virtual Machine (EVM) is a computing engine that can be thought of as a single entity maintained by thousands of connected computers (nodes) running Ethereum clients.
+As a virtual machine (<a href="https://en.wikipedia.org/wiki/Virtual_machine">VM</a>), the EVM is responsible for computing state changes deterministically, regardless of its environment (hardware and operating system).
+This means that given the same starting state and transaction (tx), each node must achieve the exact same result.</p>
+<p>The EVM is considered part of the Ethereum protocol that handles deployment and execution of <a href="https://ethereum.org/en/developers/docs/smart-contracts/">smart contracts</a>.</p>
+<p>To clearly distinguish between:</p>
+<ul>
+<li>The Ethereum protocol describes a blockchain in which all Ethereum accounts and smart contracts exist.
+  It has only one canonical state (a data structure that holds all accounts) in any given block in the chain.</li>
+<li>However, the EVM is a <a href="https://en.wikipedia.org/wiki/Finite-state_machine">state machine</a>, which defines the rules for computing a new valid state from one block to another.
+  It is an isolated runtime, which means that code running inside the EVM cannot access the network, file system, or other processes (not external APIs).</li>
+</ul>
+<p>The <code>x/evm</code> module implements the EVM as a Cosmos SDK module.
+It allows users to interact with the EVM by submitting Ethereum transactions and executing the contained messages on a given state to induce state transitions.</p>
+<h4 id="state">state</h4>
+<p>The Ethereum state is a data structure, implemented as a <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle Patricia Tree</a>, that keeps all accounts on-chain.
+The EVM makes changes to this data structure, resulting in a new state with a different state root.
+Therefore, Ethereum can be viewed as a state chain that transitions from one state to another by executing transactions in blocks using the EVM.
+A new txs block can be described by its block header (parent hash, block number, timestamp, nonce, receipt...).</p>
+<h4 id="account">account</h4>
+<p>There are two types of accounts that can be stored in the state for a given address:</p>
+<ul>
+<li><strong>Externally Owned Account (EOA)</strong>: Has nonce (tx counter) and balance</li>
+<li><strong>Smart Contract</strong>: with nonce, balance, (immutable) code hash, storage root (another Merkle Patricia Trie)</li>
+</ul>
+<p>A smart contract is like a regular account on the blockchain, it also stores executable code in an Ethereum-specific binary format called <strong>EVM bytecode</strong>.
+They are usually written in an Ethereum high-level language, such as Solidity, which is compiled to EVM bytecode and deployed on the blockchain by submitting transactions using the Ethereum client.</p>
+<h4 id="structure">structure</h4>
+<p>The EVM operates as a stack-based machine.
+Its main architectural components include:</p>
+<ul>
+<li>Virtual ROM: Contract code is pulled into this read-only memory when processing txs</li>
+<li>Machine state (volatile): changes as the EVM runs and is cleared after processing each tx<ul>
+<li>Program counter (PC)</li>
+<li>Gas​​: track how much gas is used<ul>
+<li>stack and memory: computing state changes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Access account storage (persistent)</li>
+</ul>
+<h4 id="state-transition-of-smart-contract">State transition of smart contract</h4>
+<p>Typically, smart contracts expose a public ABI, which is a list of supported ways users can interact with the contract.
+To interact with a contract and invoke a state transition, a user submits a transaction carrying an arbitrary amount of gas and a data payload formatted according to the ABI, specifying the interaction type and any other parameters.
+When a tx is received, the EVM executes the EVM bytecode of the smart contract using the tx payload.</p>
+<h4 id="execute-evm-bytecode">Execute EVM bytecode</h4>
+<p>A contract's EVM bytecode consists of basic operations (addition, multiplication, store, etc.), called <strong>opcodes</strong>.
+Each Opcode execution requires gas paid for in tx.
+Therefore, the EVM is considered quasi-Turing-complete because it allows arbitrary computations, but the amount of computation during contract execution is limited to the amount of gas provided in tx.</p>
+<p>The <a href="https://www.evm.codes/"><strong>gas cost</strong></a> of each opcode reflects the cost of running these operations on actual computer hardware (e.g. <code>ADD = 3gas</code> and <code>SSTORE = 100gas</code> `).
+To calculate the gas consumption of a transaction, multiply the gas cost by the gas price, which may vary based on the demand of the network at the time.
+If the network is heavily loaded, you may need to pay a higher gas price to execute your transaction.
+If the gas limit is reached (gas exception), no changes will be made to the Ethereum state unless the sender's nonce increases and their balance decreases to pay for wasting EVM time.</p>
+<p>Smart contracts can also call other smart contracts.
+Every call to a new contract creates a new EVM instance (including new stack and memory).
+Each invocation passes the sandbox state to the next EVM.
+If the gas runs out, all state changes will be discarded.
+Otherwise, they will be preserved.</p>
+<p>For further reading, see:</p>
+<ul>
+<li><a href="https://eth.wiki/concepts/evm/evm">EVM</a></li>
+<li><a href="https://cypherpunks-core.github.io/ethereumbook/13evm.html#evm_architecture">EVM Architecture</a></li>
+<li><a href="https://ethdocs.org/en/latest/introduction/what-is-ethereum.html#what-is-ethereum">What is Ethereum</a></li>
+<li><a href="https://www.ethervm.io/">Opcodes</a></li>
+</ul>
+<h3 id="daodst-implemented-as-geth">Daodst implemented as Geth</h3>
+<p>Daodst includes an implementation of the <a href="https://geth.ethereum.org/docs/getting-started">Ethereum Protocol in Golang</a> (Geth) as a Cosmos SDK module.
+Geth includes an implementation of the EVM to compute state transitions.
+Check out the <a href="https://github.com/ethereum/go-ethereum/blob/master/core/vm/instructions.go">go-ethereum source code</a> to see how the EVM opcodes are implemented.
+Just as Geth can run as an Ethereum node, Daodst can also run as a node to compute state transitions of the EVM.
+Daodst supports Geth's standard for compatibility with Web3 and EVM.</p>
+<h4 id="json-rpc">JSON-RPC</h4>
+<p>JSON-RPC is a stateless, lightweight remote procedure call (RPC) protocol.
+The specification mainly defines several data structures and their processing rules.
+It's transport-agnostic, as the concepts can be used in the same process, over sockets, over HTTP, or in many different messaging environments.
+It uses JSON (RFC 4627) as the data format.</p>
+<p><strong> JSON-RPC example: <code>eth_call</code> </strong></p>
+<p>The JSON-RPC method allows you to execute messages against contracts.
+Typically, you need to send a transaction to a Geth node to include it in the mempool, then the nodes propagate to each other, and eventually the transaction is included in a block and executed.
+However, <code>eth_call</code> allows you to send data to a contract and see what happens without committing the transaction.</p>
+<p>In the Geth implementation, the call endpoint roughly goes through the following steps:</p>
+<ol>
+<li>The <code>eth_call</code> request is converted to call the <code>func (s *PublicBlockchainAPI) Call()</code> function using the <code>eth</code> namespace</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/master/internal/ethapi/api.go#L982"><code>Call()</code></a> is given the transaction parameters, the block to call and an optional Parameters to modify the state to call.
+   Then it calls <code>DoCall()</code>.</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/internal/ethapi/api.go#L891"><code>DoCall()</code></a>
+   Convert arguments to <code>ethtypes.message</code>, instantiate the EVM and apply the message using <code>core.ApplyMessage</code></li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/state_transition.go#L180"><code>ApplyMessage()</code></a>
+   Call state transition <code>TransitionDb()</code></li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/state_transition.go#L275"><code>TransitionDb()</code></a>
+   <code>Create()</code> is a new contract or <code>Call()</code> is a contract</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/vm/evm.go#L168"><code>evm.Call()</code></a>
+   Run the interpreter evm.interpreter.Run() to execute the message.
+   If the execution fails, the state will revert to the snapshot taken before execution and consume gas.</li>
+<li><a href="https://github.com/ethereum/go-ethereum/blob/d575a2d3bc76dfbdefdd68b6cffff115542faf75/core/vm/interpreter.go#L116"><code>Run()</code></a>
+   Execute a loop to execute opcodes.</li>
+</ol>
+<h4 id="status-db">Status DB</h4>
+<p>The <code>StateDB</code> interface from <a href="https://github.com/ethereum/go-ethereum/blob/master/core/vm/interface.go">go-ethereum</a> represents the EVM database for full state queries.
+EVM state transitions are enabled by this interface, implemented by <code>Keeper</code> in the <code>x/evm</code> module.
+The implementation of this interface makes Daodst EVM compatible.</p>
+<h3 id="consensus-engine">Consensus Engine</h3>
+<p>Applications using the <code>x/evm</code> module interact with the Tendermint core consensus engine through the Application Blockchain Interface (ABCI).
+Together, the application and Tendermint Core form a program that runs a full blockchain and combines business logic with decentralized data storage.</p>
+<p>Ethereum transactions submitted to the <code>x/evm</code> module participate in this consensus process before executing and changing application state.
+We encourage understanding the basics of the <a href="https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci">Tendermint consensus engine</a> in order to understand state transitions in detail.</p>
+<h3 id="transaction-record">Transaction Record</h3>
+<p>In each <code>x/evm</code> transaction, the result contains the Ethereum <code>log</code> from the state machine execution, which is used by the JSON-RPC Web3 server for filter queries and processing EVM hooks.</p>
+<p>The tx log is stored in temporary storage during tx execution and then emitted via cosmos events after the transaction.
+They can be queried via gRPC and JSON-RPC.</p>
+<h3 id="block-bloom">Block Bloom</h3>
+<p>bloom is the bloom filter value (in bytes) per block available for filter queries.
+Block bloom values are stored in transient storage and then emitted via cosmos events during EndBlock processing.
+They can be queried via gRPC and JSON-RPC.</p>
+<p>:::hint</p>
+<p>👉 <strong>NOTE</strong>: Since they are not stored in state, transaction logs and block blooms are not persisted after upgrades.
+Users must use an archive node after upgrading to get legacy chain events.
+:::</p>
+<h2 id="state_1">state</h2>
+<p>This section provides an overview of objects stored in the state of the <code>x/evm</code> module, functionality derived from the go-ethereum <code>StateDB</code> interface, and its implementation via Keeper and state implementation at genesis.</p>
+<h3 id="state-object">State object</h3>
+<p>The <code>x/evm</code> module maintains objects in the following states:</p>
+<h4 id="state_2">state</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+<th>Key</th>
+<th>Value</th>
+<th>Store</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>Smart contract bytecode</td>
+<td><code>[]byte{1} + []byte(address)</code></td>
+<td><code>[]byte{code}</code></td>
+<td>KV</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>Smart contract storage</td>
+<td><code>[]byte{2} + [32]byte{key}</code></td>
+<td><code>[32]byte(value)</code></td>
+<td>KV</td>
+</tr>
+<tr>
+<td>Block Bloom</td>
+<td>Block bloom filter, used to accumulate the bloom filter of the current block and send to the end blocker event.</td>
+<td><code>[]byte{1} + []byte(tx.Hash)</code></td>
+<td><code>protobuf([]Log)</code></td>
+<td>Transient</td>
+</tr>
+<tr>
+<td>Tx Index</td>
+<td>The index of the current transaction in the current block.</td>
+<td><code>[]byte{2}</code></td>
+<td><code>BigEndian(uint64)</code></td>
+<td>Transient</td>
+</tr>
+<tr>
+<td>Log Size</td>
+<td>The number of logs emitted so far in the current block. Log index used to determine subsequent logs.</td>
+<td><code>[]byte{3}</code></td>
+<td><code>BigEndian(uint64)</code></td>
+<td>Transient</td>
+</tr>
+<tr>
+<td>Gas Used</td>
+<td>The amount of gas used by the ethereum message of the current cosmos-sdk tx, which is required when the cosmos-sdk tx contains multiple ethereum messages.</td>
+<td><code>[]byte{4}</code></td>
+<td><code>BigEndian(uint64)</code></td>
+<td>Transient</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status-db_1">Status DB</h3>
+<p>The <code>StateDB</code> interface is implemented by <code>StateDB</code> in the <code>x/evm/statedb</code> module, which represents an EVM database for complete state queries of contracts and accounts.
+In the Ethereum protocol, <code>StateDB</code> is used to store anything in the IAVL tree and is responsible for caching and storing nested states.</p>
+<pre><code class="language-go">// github.com/ethereum/go-ethereum/core/vm/interface.go
+type StateDB interface {
+ CreateAccount(common.Address)
+
+ SubBalance(common.Address, *big.Int)
+ AddBalance(common.Address, *big.Int)
+ GetBalance(common.Address) *big.Int
+
+ GetNonce(common.Address) uint64
+ SetNonce(common.Address, uint64)
+
+ GetCodeHash(common.Address) common.Hash
+ GetCode(common.Address) []byte
+ SetCode(common.Address, []byte)
+ GetCodeSize(common.Address) int
+
+ AddRefund(uint64)
+ SubRefund(uint64)
+ GetRefund() uint64
+
+ GetCommittedState(common.Address, common.Hash) common.Hash
+ GetState(common.Address, common.Hash) common.Hash
+ SetState(common.Address, common.Hash, common.Hash)
+
+ Suicide(common.Address) bool
+ HasSuicided(common.Address) bool
+
+ // Exist reports whether the given account exists in state.
+ // Notably this should also return true for suicided accounts.
+ Exist(common.Address) bool
+ // Empty returns whether the given account is empty. Empty
+ // is defined according to EIP161 (balance = nonce = code = 0).
+ Empty(common.Address) bool
+
+ PrepareAccessList(sender common.Address, dest *common.Address, precompiles []common.Address, txAccesses types.AccessList)
+ AddressInAccessList(addr common.Address) bool
+ SlotInAccessList(addr common.Address, slot common.Hash) (addressOk bool, slotOk bool)
+ // AddAddressToAccessList adds the given address to the access list. This operation is safe to perform
+ // even if the feature/fork is not active yet
+ AddAddressToAccessList(addr common.Address)
+ // AddSlotToAccessList adds the given (address,slot) to the access list. This operation is safe to perform
+ // even if the feature/fork is not active yet
+ AddSlotToAccessList(addr common.Address, slot common.Hash)
+
+ RevertToSnapshot(int)
+ Snapshot() int
+
+ AddLog(*types.Log)
+ AddPreimage(common.Hash, []byte)
+
+ ForEachStorage(common.Address, func(common.Hash, common.Hash) bool) error
+}
+</code></pre>
+<p>The <code>StateDB</code> in the <code>x/evm</code> provides the following functionalities:</p>
+<h4 id="crud-for-ethereum-accounts">CRUD for Ethereum accounts</h4>
+<p>You can create an <code>EthAccount</code> instance from a provided address and use <code>createAccount()</code> to set the value to be stored on the <code>AccountKeeper</code>.
+If an account with the given address already exists, this function also resets any pre-existing code and storage associated with that address.</p>
+<p>An account's currency balance can be managed through <code>BankKeeper</code>, which can be read using <code>GetBalance()</code> and updated using <code>AddBalance()</code> and <code>SubBalance()</code>.</p>
+<ul>
+<li><code>GetBalance()</code> returns the EVM currency balance of the provided address.
+  The currency name is taken from the module parameters.</li>
+<li><code>AddBalance()</code> adds the given amount to the address currency balance by minting new currency and transferring it to the address.
+  The currency name is taken from the module parameters.</li>
+<li><code>SubBalance()</code> subtracts the given amount from the address balance by transferring currency to escrow accounts and then destroying them.
+  The currency name is taken from the module parameters.
+  This function will perform a no-op if the amount is negative or the user does not have enough funds to transfer.</li>
+</ul>
+<p>The nonce (or transaction sequence) can be obtained from the account <code>Sequence</code> by the authentication module <code>AccountKeeper</code>.</p>
+<ul>
+<li><code>GetNonce()</code> retrieves the account with the given address and returns the tx sequence (i.e. the nonce).
+  If the account cannot be found, the function will perform a no-op.</li>
+<li><code>SetNonce()</code> sets the given nonce as sequence of address accounts.
+  If the account does not exist, a new account will be created from this address.</li>
+</ul>
+<p>Smart contract bytecode containing arbitrary contract logic is stored on <code>EVMKeeper</code> and can be queried using <code>GetCodeHash()</code>, <code>GetCode()</code> and <code>GetCodeSize()</code>, and updated using <code>SetCode()</code>.</p>
+<ul>
+<li><code>GetCodeHash()</code> gets an account from storage and returns its code hash.
+  Returns an empty code hash if the account does not exist or is not of type EthAccount.</li>
+<li><code>GetCode()</code> returns the code byte array associated with the given address.
+  This function returns nil if the code hash from the account is empty.</li>
+<li><code>SetCode()</code> stores the code byte array to the application KVStore and sets the code hash to the given account.
+  If the code is empty, it will be removed from storage.</li>
+<li><code>GetCodeSize()</code> returns the size of the contract code associated with this object, or zero if none.</li>
+</ul>
+<p>The refunded gas needs to be tracked and stored in a separate variable so that it can be subtracted/added to the gas usage value after the EVM execution is complete. The refund value is cleared at the end of each transaction and each block.</p>
+<ul>
+<li><code>AddRefund()</code> adds the given amount of gas to the refund value in memory.</li>
+<li><code>SubRefund()</code> subtracts the given amount of gas from the refund value in memory.
+  This function will panic if the gas amount is greater than the current refund.</li>
+<li><code>GetRefund()</code> returns the amount of gas available for return after tx execution completes.
+  The value resets to 0 on every transaction.</li>
+</ul>
+<p>State is stored on <code>EVMKeeper</code>.
+Can be queried with <code>GetCommittedState()</code>, <code>GetState()</code> and updated with <code>SetState()</code>.</p>
+<ul>
+<li><code>GetCommittedState()</code> returns the value set in storage for the given key hash.
+  If the key is not registered, this function returns an empty hash.</li>
+<li><code>GetState()</code> returns the in-memory dirty state for the given key hash,
+  If not present, the submitted value is loaded from the KVStore.</li>
+<li><code>SetState()</code> sets the given hash (key, value) as state.
+  This function removes the key from the state if the value hash is empty,
+  The new value is first kept dirty and finally committed to KVStore.</li>
+</ul>
+<p>Accounts can also be set to commit suicide.
+When the contract commits suicide, the account is marked as suicide, and when the code is committed, the storage and account are deleted (starting from the next block).</p>
+<ul>
+<li><code>Suicide()</code> marks the given account as having committed suicide and clears the account balance in EVM tokens.</li>
+<li><code>HasSuicided()</code> queries the flags in memory to check if the account has been marked as suicidal in the current transaction.
+  Suicided accounts will return non-zero during queries and be "cleared" after the block is committed.</li>
+</ul>
+<p>To check if an account exists, use <code>Exist()</code> and <code>Empty()</code>.</p>
+<ul>
+<li><code>Exist()</code> returns true if the given account exists in storage or has been marked as suicidal.</li>
+<li><code>Empty()</code> returns true if the address satisfies the following conditions:<ul>
+<li>nonce is 0</li>
+<li>Balance of evm currency is 0</li>
+<li>account code hash is empty</li>
+</ul>
+</li>
+</ul>
+<h4 id="eip2930-functionality">EIP2930 functionality</h4>
+<p>Supports transaction types that contain an <a href="https://eips.ethereum.org/EIPS/eip-2930">access list</a>, addresses and storage key lists that the transaction plans to access.
+Access list state is kept in memory and discarded after transaction commit.</p>
+<ul>
+<li><code>PrepareAccessList()</code> handles the preparation steps for performing state transitions on EIP-2929 and EIP-2930.
+  This method should only be called if Yolov3/Berlin/2929+2930 applies to the current number.<ul>
+<li>Add sender to access list (EIP-2929)</li>
+<li>Add destination to access list (EIP-2929)</li>
+<li>Add precompile to access list (EIP-2929)</li>
+<li>Add optional tx access list content (EIP-2930)</li>
+</ul>
+</li>
+<li><code>AddressInAccessList()</code> returns true if the address is registered.</li>
+<li><code>SlotInAccessList()</code> checks if address and slot are registered.</li>
+<li><code>AddAddressToAccessList()</code> adds the given address to the access list.
+  If the address is already in the access list, this function performs a no-op.</li>
+<li><code>AddSlotToAccessList()</code> adds the given (address, slot) to the access list.
+  This function performs a no-op if the address and slot are already in the access list.</li>
+</ul>
+<h4 id="snapshot-state-and-restore-functions">Snapshot state and restore functions</h4>
+<p>The EVM uses state restoration exceptions to handle errors.
+Such an exception will undo all changes made to the state in the current call (and all its sub-calls), and the caller can handle the error and not propagate.
+You can use <code>Snapshot()</code> to identify the current state by revision, and <code>RevertToSnapshot()</code> to revert the state to a given revision to support this feature.
+- <code>Snapshot()</code> creates a new snapshot and returns the identifier.
+- <code>RevertToSnapshot(rev)</code> undoes all modifications up to the snapshot identified by <code>rev</code>.</p>
+<p>Daodst adapted the to support this, it uses a journal list in order to record For all the state modification operations done so far, the snapshot consists of a unique id and index in the log list, to revert to a snapshot it just undoes the log logs after the snapshot index in reverse order.</p>
+<h4 id="ethereum-transaction-log">Ethereum transaction log</h4>
+<p>With <code>AddLog()</code>, you can append a given Ethereum <code>Log</code> to the list of logs associated with the transaction hash saved in the current state.
+The function also fills in the tx hash, block hash, tx index and log index fields before setting the log to be stored.</p>
+<h3 id="keeper">Keeper</h3>
+<p>The EVM module <code>Keeper</code> grants access to the state of the EVM module and implements the <code>statedb.Keeper</code> interface to support <code>StateDB</code> implementations.
+The Keeper contains a storage key that allows the DB to write to a concrete subtree of the multistore that can only be accessed by the EVM module.
+Instead of using trie and database for query and persistence (<code>StateDB</code> implementation), Daodst uses Cosmos' KVStore (key-value store) and Cosmos SDK's <code>Keeper</code> to facilitate state transitions.</p>
+<p>To support interface functionality, it imports 4 modules Keepers:</p>
+<ul>
+<li><code>auth</code>: CRUD account</li>
+<li><code>bank</code>: CRUD for accounting (supply) and balances</li>
+<li><code>staking</code>: query historical headers</li>
+<li><code>fee market</code>: handle EIP1559 base fee for <code>DynamicFeeTx</code>
+  After activating the <code>London</code> hard fork on the <code>ChainConfig</code> parameter</li>
+</ul>
+<pre><code class="language-go">type Keeper struct {
+ // Protobuf codec
+ cdc codec.BinaryCodec
+ // Store key required for the EVM Prefix KVStore. It is required by:
+ // - storing account's Storage State
+ // - storing account's Code
+ // - storing Bloom filters by block height. Needed for the Web3 API.
+ // For the full list, check the module specification
+ storeKey sdk.StoreKey
+
+ // key to access the transient store, which is reset on every block during Commit
+ transientKey sdk.StoreKey
+
+ // module specific parameter space that can be configured through governance
+ paramSpace paramtypes.Subspace
+ // access to account state
+ accountKeeper types.AccountKeeper
+ // update balance and accounting operations with coins
+ bankKeeper types.BankKeeper
+ // access historical headers for EVM state transition execution
+ stakingKeeper types.StakingKeeper
+ // fetch EIP1559 base fee and parameters
+ feeMarketKeeper types.FeeMarketKeeper
+
+ // chain ID number obtained from the context's chain id
+ eip155ChainID *big.Int
+
+ // Tracer used to collect execution traces from the EVM transaction execution
+ tracer string
+ // trace EVM state transition execution. This value is obtained from the `--trace` flag.
+ // For more info check https://geth.ethereum.org/docs/dapp/tracing
+ debug bool
+
+ // EVM Hooks for tx post-processing
+ hooks types.EvmHooks
+}
+</code></pre>
+<h3 id="genesis-state">Genesis state</h3>
+<p>The <code>x/evm</code> module <code>GenesisState</code> defines the state required to initialize a chain from a previously exported height.
+It contains <code>GenesisAccounts</code> and module parameters</p>
+<pre><code class="language-go">type GenesisState struct {
+   // accounts is an array containing the ethereum genesis accounts.
+   Accounts []GenesisAccount `protobuf:&quot;bytes,1,rep,name=accounts,proto3&quot; json:&quot;accounts&quot;`
+   // params defines all the parameters of the module.
+   Params Params `protobuf:&quot;bytes,2,opt,name=params,proto3&quot; json:&quot;params&quot;`
+}
+</code></pre>
+<h3 id="genesis-account">Genesis account</h3>
+<p>The <code>GenesisAccount</code> type corresponds to an adaptation of the Ethereum <code>GenesisAccount</code> type.
+It defines an account that is initialized in the genesis state.</p>
+<p>Its main difference is that the one on Daodst uses a custom <code>Storage</code> type that uses slices instead of evm <code>State</code>'s map (due to non-determinism), and it does not contain a private key field.</p>
+<p>It is also important to note that since the <code>auth</code> module on the Cosmos SDK manages account state, the <code>Address</code> field must correspond to an existing <code>EthAccount</code> (i.e. <code>AccountKeeper</code>) stored in the <code>auth</code> module <code>Keeper</code>.</p>
+<p>The address uses <strong><a href="https://eips.ethereum.org/EIPS/eip-55">EIP55</a></strong> hexadecimal<strong>[format]</strong>
+on <code>genesis.json</code>.</p>
+<pre><code class="language-go">type GenesisAccount struct {
+   // address defines an ethereum hex formatted address of an account
+   Address string `protobuf:&quot;bytes,1,opt,name=address,proto3&quot; json:&quot;address,omitempty&quot;`
+   // code defines the hex bytes of the account code.
+   Code string `protobuf:&quot;bytes,2,opt,name=code,proto3&quot; json:&quot;code,omitempty&quot;`
+   // storage defines the set of state key values for the account.
+   Storage Storage `protobuf:&quot;bytes,3,rep,name=storage,proto3,castrepeated=Storage&quot; json:&quot;storage&quot;`
+}
+</code></pre>
+<h2 id="state-transition">state transition</h2>
+<p>The <code>x/evm</code> module allows users to submit Ethereum transactions (<code>Tx</code>) and execute the messages they contain to induce a state transition on a given state.</p>
+<p>Users submit transactions on the client side to broadcast them to the network.
+When a transaction is included in a block during the consensus process, it is executed server-side.
+We strongly recommend that you learn the basics of the <a href="https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci">Tendermint consensus engine</a> to learn more about state transitions.</p>
+<h3 id="client">client</h3>
+<p>:::hint
+👉 This is based on <code>eth_sendTransaction</code> JSON-RPC
+:::</p>
+<ol>
+<li>
+<p>A user submits a transaction via one of the available JSON-RPC endpoints using an Ethereum-compatible client or wallet (e.g. Metamask, WalletConnect, Ledger, etc.):</p>
+<ul>
+<li>eth (public) namespace: <code>eth_sendTransaction</code> and <code>eth_sendRawTransaction</code></li>
+<li>Personal (private) namespace: <code>personal_sendTransaction</code></li>
+</ul>
+</li>
+<li>
+<p>Create a MsgEthereumTx instance after filling the RPC transaction with SetTxDefaults to fill the missing tx parameter with default values</p>
+</li>
+<li>Use ValidateBasic() to validate the <code>Tx</code> field (stateless)</li>
+<li><code>Tx</code> is <strong>signed</strong> using the key associated with the sender address and the latest Ethereum hard fork (<code>London</code>, <code>Berlin</code>, etc.) from <code>ChainConfig</code></li>
+<li><code>Tx</code> is <strong>constructed</strong> from the msg field using the Cosmos Config builder</li>
+<li><code>Tx</code> in synchronous mode <a href="https://docs.cosmos.network/main/run-node/txs.html#broadcasting-a-transaction">broadcasting</a>
+   Make sure to wait for the <a href="https://docs.tendermint.com/main/introduction/what-is-tendermint.html#intro-to-abci"><code>CheckTx</code></a> execution response.
+   The application verifies the transaction using <code>CheckTx()</code> before adding to the consensus engine's mempool.</li>
+<li>The JSON-RPC user receives a response with the <a href="https://eth.wiki/en/fundamentals/rlp"><code>RLP</code></a> hash of the transaction field.
+   This hash is different from the default hash used by SDK transactions, which computes a <code>sha256</code> hash of the transaction bytes.</li>
+</ol>
+<h3 id="server">Server</h3>
+<p>Once a block (containing "Tx") is committed during consensus, it is applied to the application in a series of ABCI messages on the server side.</p>
+<p>Each <code>Tx</code> is handled by the application by calling <a href="https://docs.cosmos.network/main/core/baseapp.html#runtx"><code>RunTx</code></a>.
+After stateless verification of each <code>sdk.Msg</code> in <code>Tx</code>, <code>AnteHandler</code> confirms whether <code>Tx</code> is an Ethereum transaction or an SDK transaction.
+As an Ethereum transaction, it contains messages, which are then processed by the <code>x/evm</code> module to update the state of the application.</p>
+<h4 id="preprocessor">Preprocessor</h4>
+<p><code>anteHandler</code> runs for every transaction.
+It checks whether <code>Tx</code> is an Ethereum transaction and routes it to the internal ante handler.
+Here, <code>Tx</code> is handled using EthereumTx extension options to handle them differently than normal Cosmos SDK transactions.
+<code>antehandler</code> runs through a list of options and its <code>AnteHandle</code> function for each <code>Tx</code>:</p>
+<ul>
+<li><code>EthSetUpContextDecorator()</code> adapted from cosmos-sdk's SetUpContextDecorator which ignores gas consumption by setting the gas meter to infinite</li>
+<li><code>EthValidateBasicDecorator(evmKeeper)</code> validates fields of Ethereum type Cosmos <code>Tx</code> messages</li>
+<li><code>EthSigVerificationDecorator(evmKeeper)</code> verifies that the registered chain ID is the same as on the message, and that the signer address matches that defined on the message.
+  RecheckTx won't skip it because it sets the <code>From</code> address, which is essential for other ante handlers to work.
+  A failure of RecheckTx will prevent the tx from being included into the block, especially when CheckTx is successful, in which case the user will not see the error message.<ul>
+<li><code>EthAccountVerificationDecorator(ak, bankKeeper, evmKeeper)</code>
+  Will verify that the sender balance is greater than the total transaction cost.
+  If the account does not exist, i.e. cannot be found in the store, the account will be set into the store.
+  This AnteHandler decorator will fail if:<ul>
+<li>Any message is not MsgEthereumTx</li>
+<li>sender address is empty</li>
+<li>The account balance is lower than the transaction cost</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>EthNonceVerificationDecorator(ak)</code> verifies that the transaction nonce is valid and equal to the sender account's current nonce.</li>
+<li><code>EthGasConsumeDecorator(evmKeeper)</code> verifies that the Ethereum tx message is sufficient to pay for inherent gas (during CheckTx only) and that the sender has enough balance to cover the gas cost.
+  The intrinsic gas of a transaction is the amount of gas used by the transaction before execution.
+  Gas is a constant value plus any cost incurred by the extra data bytes provided by the transaction.
+  This AnteHandler decorator will fail if:<ul>
+<li>Transaction contains multiple messages</li>
+<li>Message is not MsgEthereumTx</li>
+<li>No sender account found</li>
+<li>the gas limit of the transaction is lower than the intrinsic gas</li>
+<li>User does not have enough balance to deduct transaction fee (gas_limit * gas_price)</li>
+<li>Transaction or block gas meter runs out of gas</li>
+</ul>
+</li>
+<li><code>CanTransferDecorator(evmKeeper, feeMarketKeeper)</code> creates an EVM from the message and calls the BlockContext CanTransfer function to see if the address can perform a transaction.</li>
+<li><code>EthIncrementSenderSequenceDecorator(ak)</code> handles the sequence of incrementing signers (i.e. senders).
+  If the transaction is a contract creation, the nonce will be incremented during transaction execution, not within this AnteHandler decorator.</li>
+</ul>
+<p>The options <code>authante.NewMempoolFeeDecorator()</code>, <code>authante.NewTxTimeoutHeightDecorator()</code> and <code>authante.NewValidateMemoDecorator(ak)</code> are the same as Cosmos <code>Tx</code>.
+Click <a href="https://docs.cosmos.network/main/basics/gas-fees.html#antehandler">here</a> to learn more about <code>anteHandler</code>.</p>
+<h4 id="evm-module">EVM module</h4>
+<p>Each <code>sdk.Msg</code> in <code>Tx</code> (in this case <code>MsgEthereumTx</code>) after being authenticated by <code>antehandler</code>
+Passed to the Msg Handler in the <code>x/evm</code> module and run through the following steps:</p>
+<ol>
+<li>Convert <code>Msg</code> to Ethereum's <code>Tx</code> type</li>
+<li>Apply <code>Tx</code> with <code>EVMConfig</code> and attempt to perform a state transition, only persisting (committing) to the underlying KVStore if the transaction has not failed:<ol>
+<li>Confirm that <code>EVMConfig</code> is created</li>
+<li>Create an Ethereum signer using the chain configuration values from "EVMConfig"</li>
+<li>Set the Ethereum transaction hash to (temporary) temporary storage so that it can also be used for StateDB functions<ol>
+<li>Generate a new EVM instance</li>
+</ol>
+</li>
+<li>Verify that the EVM parameters for contract creation (<code>EnableCreate</code>) and contract execution (<code>EnableCall</code>) are enabled<ol>
+<li>App message. If the <code>To</code> address is <code>nil</code>, create a new contract with the code as the deployed code. Else invokes the contract at the given address with the given input as arguments</li>
+<li>Calculate the gas used by the evm operation</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>If the <code>Tx</code> application is successful<ol>
+<li>Execute the EVM <code>Tx</code> post-processing hook. If the hook returns an error, restore the entire "Tx"<ol>
+<li>Return gas according to the Ethereum gas bookkeeping rules</li>
+</ol>
+</li>
+<li>Update block bloom filter value with log generated from tx</li>
+<li>Emit SDK events for transaction fields and tx logs</li>
+</ol>
+</li>
+</ol>
+<h2 id="trade">trade</h2>
+<p>This section defines the <code>sdk.Msg</code> concrete types that cause the state transitions defined in the previous section.</p>
+<h2 id="msgethereumtx"><code>MsgEthereumTx</code></h2>
+<p>EVM state transitions can be achieved by using "MsgEthereumTx".
+This message encapsulates the Ethereum transaction data (<code>TxData</code>) as <code>sdk.Msg</code>.
+It contains the necessary transaction data fields.
+Note that <code>MsgEthereumTx</code> implements <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L7-L29"><code>sdk.Msg</code></a> and <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L33-L41"><code>sdk .Tx</code></a> interface.
+Typically, SDK messages only implement the former, while the latter is a set of messages bundled together.</p>
+<p>This section defines the <code>sdk.Msg</code> concrete types that cause the state transitions defined in the previous section.</p>
+<h2 id="msgethereumtx_1"><code>MsgEthereumTx</code></h2>
+<p>EVM state transitions can be achieved using <code>MsgEthereumTx</code>.
+This message encapsulates the Ethereum transaction data (<code>TxData</code>) as <code>sdk.Msg</code>.
+It contains the necessary transaction data fields.
+Note that <code>MsgEthereumTx</code> implements <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L7-L29"><code>sdk.Msg</code></a> and <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.39.2/types/tx_msg.go#L33-L41"><code>sdk .Tx</code></a> interface.</p>
+<p>Typically, SDK messages only implement the former, while the latter is a set of messages bundled together.</p>
+<pre><code class="language-go">type MsgEthereumTx struct {
+ // inner transaction data
+ Data *types.Any `protobuf:&quot;bytes,1,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ // DEPRECATED: encoded storage size of the transaction
+ Size_ float64 `protobuf:&quot;fixed64,2,opt,name=size,proto3&quot; json:&quot;-&quot;`
+ // transaction hash in hex format
+ Hash string `protobuf:&quot;bytes,3,opt,name=hash,proto3&quot; json:&quot;hash,omitempty&quot; rlp:&quot;-&quot;`
+ // ethereum signer address in hex format. This address value is checked
+ // against the address derived from the signature (V, R, S) using the
+ // secp256k1 elliptic curve
+ From string `protobuf:&quot;bytes,4,opt,name=from,proto3&quot; json:&quot;from,omitempty&quot;`
+}
+</code></pre>
+<p>This message field validation is expected to fail if:</p>
+<ul>
+<li>The <code>From</code> field is defined and the address is invalid</li>
+<li><code>TxData</code> stateless validation failed</li>
+</ul>
+<p>Transaction execution is expected to fail if:</p>
+<ul>
+<li>Any custom <code>AnteHandler</code> ethereum decorator check fails:<ul>
+<li>Minimum gas requirement for transactions</li>
+<li>Tx sender account does not exist or does not have sufficient fee balance</li>
+<li>account sequence does not match transaction <code>Data.AccountNonce</code></li>
+<li>message signature verification failed</li>
+</ul>
+</li>
+<li>EVM contract creation (i.e. <code>evm.Create</code>) failed, or <code>evm.Call</code> failed</li>
+</ul>
+<h4 id="conversion">Conversion</h4>
+<p><code>MsgEthreumTx</code> can be converted to go-ethereum <code>Transaction</code> and <code>Message</code> types
+In order to create and call evm contracts.</p>
+<pre><code class="language-go">// AsTransaction creates an Ethereum Transaction type from the msg fields
+func (msg MsgEthereumTx) AsTransaction() *ethtypes.Transaction {
+  txData, err := UnpackTxData(msg.Data)
+  if err != nil {
+   return nil
+  }
+
+  return ethtypes. NewTx(txData. AsEthereumData())
+}
+
+// AsMessage returns the transaction as a core.Message.
+func (tx *Transaction) AsMessage(s Signer, baseFee *big.Int) (Message, error) {
+  msg := Message{
+   nonce: tx.Nonce(),
+   gasLimit: tx. Gas(),
+   gasPrice: new(big.Int).Set(tx.GasPrice()),
+   gasFeeCap: new(big.Int).Set(tx.GasFeeCap()),
+   gasTipCap: new(big.Int).Set(tx.GasTipCap()),
+   to: tx.To(),
+   amount: tx. Value(),
+   data: tx.Data(),
+   accessList: tx.AccessList(),
+   isFake: false,
+  }
+  // If baseFee provided, set gasPrice to effectiveGasPrice.
+  if baseFee != nil {
+   msg.gasPrice = math.BigMin(msg.gasPrice.Add(msg.gasTipCap, baseFee), msg.gasFeeCap)
+  }
+  var err error
+  msg.from, err = Sender(s, tx)
+  return msg, err
+}
+</code></pre>
+<h4 id="sign">sign</h4>
+<p>For signature verification to work, <code>TxData</code> must contain the <code>v|r|s</code> value from <code>Signer</code>.
+Sign computes the secp256k1 ECDSA signature and signs the transaction.
+According to the EIP155 standard, it requires a keyring signer and chainID to sign Ethereum transactions.
+This method mutates the transaction when filling the V, R, S fields of the transaction signature.
+The function will fail if no sender address is defined for the message or if the sender is not registered on the keyring.</p>
+<pre><code class="language-go">// Sign calculates a secp256k1 ECDSA signature and signs the transaction. It
+// takes a keyring signer and the chainID to sign an Ethereum transaction according to
+// EIP155 standard.
+// This method mutates the transaction as it populates the V, R, S
+// fields of the Transaction's Signature.
+// The function will fail if the sender address is not defined for the msg or if
+// the sender is not registered on the keyring
+func (msg *MsgEthereumTx) Sign(ethSigner ethtypes.Signer, keyringSigner keyring.Signer) error {
+ from := msg.GetFrom()
+ if from.Empty() {
+  return fmt.Errorf(&quot;sender address not defined for message&quot;)
+ }
+
+ tx := msg.AsTransaction()
+ txHash := ethSigner.Hash(tx)
+
+ sig, _, err := keyringSigner.SignByAddress(from, txHash.Bytes())
+ if err != nil {
+  return err
+ }
+
+ tx, err = tx.WithSignature(ethSigner, sig)
+ if err != nil {
+  return err
+ }
+
+ msg.FromEthereumTx(tx)
+ return nil
+}
+</code></pre>
+<h3 id="txdata">TxData</h3>
+<p><code>MsgEthereumTx</code> supports 3 valid Ethereum transaction data types from go-ethereum:
+<code>LegacyTx</code>, <code>AccessListTx</code>, and <code>DynamicFeeTx</code>.
+These types are defined as protobuf messages and packed into the <code>proto.Any</code> interface type in the <code>MsgEthereumTx</code> field.</p>
+<ul>
+<li><code>LegacyTx</code>: <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP-155</a> transaction type</li>
+<li><code>DynamicFeeTx</code>: <a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> transaction type.</li>
+<li><code>AccessListTx</code>: <a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> transaction type.</li>
+</ul>
+<h3 id="legacytx"><code>LegacyTx</code></h3>
+<p>Transaction data for regular Ethereum transactions.</p>
+<pre><code class="language-go">type LegacyTx struct {
+ // nonce corresponds to the account nonce (transaction sequence).
+ Nonce uint64 `protobuf:&quot;varint,1,opt,name=nonce,proto3&quot; json:&quot;nonce,omitempty&quot;`
+ // gas price defines the value for each gas unit
+ GasPrice *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,2,opt,name=gas_price,json=gasPrice,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_price,omitempty&quot;`
+ // gas defines the gas limit defined for the transaction.
+ GasLimit uint64 `protobuf:&quot;varint,3,opt,name=gas,proto3&quot; json:&quot;gas,omitempty&quot;`
+ // hex formatted address of the recipient
+ To string `protobuf:&quot;bytes,4,opt,name=to,proto3&quot; json:&quot;to,omitempty&quot;`
+ // value defines the unsigned integer value of the transaction amount.
+ Amount *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,5,opt,name=value,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;value,omitempty&quot;`
+ // input defines the data payload bytes of the transaction.
+ Data []byte `protobuf:&quot;bytes,6,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ // v defines the signature value
+ V []byte `protobuf:&quot;bytes,7,opt,name=v,proto3&quot; json:&quot;v,omitempty&quot;`
+ // r defines the signature value
+ R []byte `protobuf:&quot;bytes,8,opt,name=r,proto3&quot; json:&quot;r,omitempty&quot;`
+ // s define the signature value
+ S []byte `protobuf:&quot;bytes,9,opt,name=s,proto3&quot; json:&quot;s,omitempty&quot;`
+}
+</code></pre>
+<p>This message field validation is expected to fail if:</p>
+<ul>
+<li><code>GasPrice</code> is invalid (<code>nil</code>, negative or out of range of int256)</li>
+<li><code>Fee</code> (gasprice * gaslimit) is invalid</li>
+<li><code>Amount</code> is invalid (negative or out of range of int256)</li>
+<li>Invalid <code>To</code> address (invalid Ethereum hex address)</li>
+</ul>
+<h3 id="dynamicfeetx"><code>DynamicFeeTx</code></h3>
+<p>Transaction data for EIP-1559 dynamic fee transactions.</p>
+<pre><code class="language-go">type DynamicFeeTx struct {
+ // destination EVM chain ID
+ ChainID *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,1,opt,name=chain_id,json=chainId,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;chainID&quot;`
+ // nonce corresponds to the account nonce (transaction sequence).
+ Nonce uint64 `protobuf:&quot;varint,2,opt,name=nonce,proto3&quot; json:&quot;nonce,omitempty&quot;`
+ // gas tip cap defines the max value for the gas tip
+ GasTipCap *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,3,opt,name=gas_tip_cap,json=gasTipCap,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_tip_cap,omitempty&quot;`
+ // gas fee cap defines the max value for the gas fee
+ GasFeeCap *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,4,opt,name=gas_fee_cap,json=gasFeeCap,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_fee_cap,omitempty&quot;`
+ // gas defines the gas limit defined for the transaction.
+ GasLimit uint64 `protobuf:&quot;varint,5,opt,name=gas,proto3&quot; json:&quot;gas,omitempty&quot;`
+ // hex formatted address of the recipient
+ To string `protobuf:&quot;bytes,6,opt,name=to,proto3&quot; json:&quot;to,omitempty&quot;`
+ // value defines the the transaction amount.
+ Amount *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,7,opt,name=value,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;value,omitempty&quot;`
+ // input defines the data payload bytes of the transaction.
+ Data     []byte     `protobuf:&quot;bytes,8,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ Accesses AccessList `protobuf:&quot;bytes,9,rep,name=accesses,proto3,castrepeated=AccessList&quot; json:&quot;accessList&quot;`
+ // v defines the signature value
+ V []byte `protobuf:&quot;bytes,10,opt,name=v,proto3&quot; json:&quot;v,omitempty&quot;`
+ // r defines the signature value
+ R []byte `protobuf:&quot;bytes,11,opt,name=r,proto3&quot; json:&quot;r,omitempty&quot;`
+ // s define the signature value
+ S []byte `protobuf:&quot;bytes,12,opt,name=s,proto3&quot; json:&quot;s,omitempty&quot;`
+}
+</code></pre>
+<p>This message field validation is expected to fail if:</p>
+<ul>
+<li><code>GasTipCap</code> is invalid (<code>nil</code>, negative value or overflow int256)</li>
+<li><code>GasFeeCap</code> is invalid (<code>nil</code>, negative value or overflow int256)</li>
+<li><code>GasFeeCap</code> is less than <code>GasTipCap</code></li>
+<li><code>Fee</code> (gas price * gas limit) is invalid (overflow int256)</li>
+<li>Invalid <code>Amount</code> (negative or overflow int256)</li>
+<li>Invalid <code>To</code> address (invalid Ethereum hex address)</li>
+<li><code>ChainID</code> is <code>nil</code></li>
+</ul>
+<h3 id="accesslisttx"><code>AccessListTx</code></h3>
+<p>EIP-2930 Access transaction data for list transactions.</p>
+<pre><code class="language-go">type AccessListTx struct {
+ // destination EVM chain ID
+ ChainID *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,1,opt,name=chain_id,json=chainId,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;chainID&quot;`
+ // nonce corresponds to the account nonce (transaction sequence).
+ Nonce uint64 `protobuf:&quot;varint,2,opt,name=nonce,proto3&quot; json:&quot;nonce,omitempty&quot;`
+ // gas price defines the value for each gas unit
+ GasPrice *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,3,opt,name=gas_price,json=gasPrice,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;gas_price,omitempty&quot;`
+ // gas defines the gas limit defined for the transaction.
+ GasLimit uint64 `protobuf:&quot;varint,4,opt,name=gas,proto3&quot; json:&quot;gas,omitempty&quot;`
+ // hex formatted address of the recipient
+ To string `protobuf:&quot;bytes,5,opt,name=to,proto3&quot; json:&quot;to,omitempty&quot;`
+ // value defines the unsigned integer value of the transaction amount.
+ Amount *github_com_cosmos_cosmos_sdk_types.Int `protobuf:&quot;bytes,6,opt,name=value,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int&quot; json:&quot;value,omitempty&quot;`
+ // input defines the data payload bytes of the transaction.
+ Data     []byte     `protobuf:&quot;bytes,7,opt,name=data,proto3&quot; json:&quot;data,omitempty&quot;`
+ Accesses AccessList `protobuf:&quot;bytes,8,rep,name=accesses,proto3,castrepeated=AccessList&quot; json:&quot;accessList&quot;`
+ // v defines the signature value
+ V []byte `protobuf:&quot;bytes,9,opt,name=v,proto3&quot; json:&quot;v,omitempty&quot;`
+ // r defines the signature value
+ R []byte `protobuf:&quot;bytes,10,opt,name=r,proto3&quot; json:&quot;r,omitempty&quot;`
+ // s define the signature value
+ S []byte `protobuf:&quot;bytes,11,opt,name=s,proto3&quot; json:&quot;s,omitempty&quot;`
+}
+</code></pre>
+<p>This message field validation is expected to fail if:</p>
+<ul>
+<li><code>GasPrice</code> is invalid (<code>nil</code>, negative, or overflow int256)</li>
+<li><code>Fee</code> (gas price * gas limit) is invalid (overflow int256)</li>
+<li>Invalid <code>Amount</code> (negative or overflow int256)</li>
+<li>Invalid <code>To</code> address (invalid Ethereum hex address)</li>
+<li><code>ChainID</code> is <code>nil</code></li>
+</ul>
+<h2 id="abci">ABCI</h2>
+<p>The Application Blockchain Interface (ABCI) allows applications to interact with the Tendermint consensus engine.
+The application maintains multiple ABCI connections to Tendermint.
+Most relevant to <code>x/evm</code> is <a href="https://docs.tendermint.com/v0.33/app-dev/app-development.html#consensus-connection">Consensus Connection at Commit</a>.
+This connection is responsible for block execution and calls functions <code>InitChain</code> (contains <code>InitGenesis</code>), <code>BeginBlock</code>, <code>DeliverTx</code>, <code>EndBlock</code>, <code>Commit</code>.
+<code>InitChain</code> is only called the first time a new blockchain is started, and <code>DeliverTx</code> is called for every transaction in a block.</p>
+<h3 id="initialize-genesis">Initialize Genesis</h3>
+<p><code>InitGenesis</code> initializes the EVM module genesis state by setting the <code>GenesisState</code> field to storage.
+In particular, it sets parameters and genesis accounts (state and code).</p>
+<h3 id="export-genesis">Export Genesis</h3>
+<p>The <code>ExportGenesis</code> ABCI function exports the genesis state of an EVM module.
+In particular, it retrieves all accounts and their bytecodes, balances and storage, transaction logs,
+As well as EVM parameters and chain configuration.</p>
+<h3 id="begin-block">Begin Block</h3>
+<p>The EVM module <code>BeginBlock</code> logic is executed before the state transitions that process transactions.
+The main goals of this function are:</p>
+<ul>
+<li>Set the context of the current block for block headers, storage, gas meters, etc.
+  Once one of the StateDB functions is called during an EVM state transition, these functions are available to the Keeper.</li>
+<li>Set the EIP155 <code>ChainID</code> number (obtained from the full chain ID) in case it was not previously set during <code>InitChain</code></li>
+</ul>
+<h3 id="end-block">End block</h3>
+<p>The <code>EndBlock</code> logic of the EVM module occurs after all state transitions of the transaction have been executed.
+The main goals of this function are:</p>
+<ul>
+<li>emit block bloom event<ul>
+<li>This is due to web3 compatibility, since the ethereum header includes this type as a field.
+  The JSON-RPC service uses this event query to construct Ethereum headers from Tendermint headers.</li>
+<li>The block bloom filter value is fetched from transient storage and then emitted</li>
+</ul>
+</li>
+</ul>
+<h2 id="hooks">hooks</h2>
+<p>The <code>x/evm</code> module implements an <code>EvmHooks</code> interface, which can extend and customize <code>Tx</code> processing logic externally.</p>
+<p>This supports EVM contracts calling native cosmos modules</p>
+<ol>
+<li>Define log signatures and emit specific logs from smart contracts,</li>
+<li>Identify these logs in the native tx handling code, and</li>
+<li>Convert them to native module calls.</li>
+</ol>
+<p>For this, the interface contains a PostTxProcessing hook to register custom Tx hooks in EvmKeeper.
+These <code>Tx</code> hooks are processed after the EVM state transition is complete and will not fail.
+Note that there are no default hooks implemented in the EVM module.</p>
+<pre><code class="language-go">type EvmHooks interface {
+  // Must be called after tx is processed successfully, if return an error, the whole transaction is reversed.
+  PostTxProcessing(ctx sdk.Context, msg core.Message, receipt *ethtypes.Receipt) error
+}
+</code></pre>
+<h2 id="posttxprocessing"><code>PostTxProcessing</code></h2>
+<p><code>PostTxProcessing</code> is only called after the EVM transaction has completed successfully, and delegates the call to the underlying hook.
+If no hooks are registered, this function returns a <code>nil</code> error. .</p>
+<pre><code class="language-go">func (k *Keeper) PostTxProcessing(ctx sdk.Context, msg core.Message, receipt *ethtypes.Receipt) error {
+  if k.hooks == nil {
+   return nil
+  }
+  return k.hooks.PostTxProcessing(k.Ctx(), msg, receipt)
+}
+</code></pre>
+<p>It executes in the same cache context as the EVM transaction, if it returns an error, the whole EVM transaction will be reverted, if hook implementors don't want to revert tx, they can always return <code>nil</code>.</p>
+<p>Errors returned by hooks are translated to VM errors <code>Unable to process native log</code>, with detailed error messages stored in the return value.
+Messages are sent asynchronously to native modules, and callers cannot catch and recover from errors.</p>
+<p><strong> Use case: calling native ERC20 modules on Daodst </strong></p>
+<p>The following is an example taken from the Daodst <a href="erc20.md">erc20 module</a> showing how <code>EVMHooks</code> support contracts that call native modules to convert ERC-20 tokens to Cosmos native tokens.
+Follow the steps above.</p>
+<p>You can define and emit a "Transfer" log signature in your smart contract like this:</p>
+<pre><code class="language-solidity">event Transfer(address indexed from, address indexed to, uint256 value);
+
+function _transfer(address sender, address recipient, uint256 amount) internal virtual {
+  require(sender != address(0), &quot;ERC20: transfer from the zero address&quot;);
+  require(recipient != address(0), &quot;ERC20: transfer to the zero address&quot;);
+
+  _beforeTokenTransfer(sender, recipient, amount);
+
+  _balances[sender] = _balances[sender].sub(amount, &quot;ERC20: transfer amount exceeds balance&quot;);
+  _balances[recipient] = _balances[recipient].add(amount);
+  emit Transfer(sender, recipient, amount);
+}
+</code></pre>
+<p>The application will register a <code>BankSendHook</code> with <code>EvmKeeper</code>.
+It recognizes the Ethereum tx <code>Log</code> and translates it into a call to the <code>SendCoinsFromAccountToAccount</code> method of the bank module:</p>
+<pre><code class="language-go">
+const ERC20EventTransfer = &quot;Transfer&quot;
+
+// PostTxProcessing implements EvmHooks.PostTxProcessing
+func (k Keeper) PostTxProcessing(
+ ctx sdk.Context,
+ msg core.Message,
+ receipt *ethtypes.Receipt,
+) error {
+ params := h.k.GetParams(ctx)
+ if !params.EnableErc20 || !params.EnableEVMHook {
+  // no error is returned to allow for other post-processing txs
+  // to pass
+  return nil
+ }
+
+ erc20 := contracts.ERC20BurnableContract.ABI
+
+ for i, log := range receipt.Logs {
+  if len(log.Topics) &lt; 3 {
+   continue
+  }
+
+  eventID := log.Topics[0] // event ID
+
+  event, err := erc20.EventByID(eventID)
+  if err != nil {
+   // invalid event for ERC20
+   continue
+  }
+
+  if event.Name != types.ERC20EventTransfer {
+   h.k.Logger(ctx).Info(&quot;emitted event&quot;, &quot;name&quot;, event.Name, &quot;signature&quot;, event.Sig)
+   continue
+  }
+
+  transferEvent, err := erc20.Unpack(event.Name, log.Data)
+  if err != nil {
+   h.k.Logger(ctx).Error(&quot;failed to unpack transfer event&quot;, &quot;error&quot;, err.Error())
+   continue
+  }
+
+  if len(transferEvent) == 0 {
+   continue
+  }
+
+  tokens, ok := transferEvent[0].(*big.Int)
+  // safety check and ignore if amount not positive
+  if !ok || tokens == nil || tokens.Sign() != 1 {
+   continue
+  }
+
+  // check that the contract is a registered token pair
+  contractAddr := log.Address
+
+  id := h.k.GetERC20Map(ctx, contractAddr)
+
+  if len(id) == 0 {
+   // no token is registered for the caller contract
+   continue
+  }
+
+  pair, found := h.k.GetTokenPair(ctx, id)
+  if !found {
+   continue
+  }
+
+  // check that conversion for the pair is enabled
+  if !pair.Enabled {
+   // continue to allow transfers for the ERC20 in case the token pair is disabled
+   h.k.Logger(ctx).Debug(
+    &quot;ERC20 token -&gt; Cosmos coin conversion is disabled for pair&quot;,
+    &quot;coin&quot;, pair.Denom, &quot;contract&quot;, pair.Erc20Address,
+   )
+   continue
+  }
+
+  // ignore as the burning always transfers to the zero address
+  to := common.BytesToAddress(log.Topics[2].Bytes())
+  if !bytes.Equal(to.Bytes(), types.ModuleAddress.Bytes()) {
+   continue
+  }
+
+  // check that the event is Burn from the ERC20Burnable interface
+  // NOTE: assume that if they are burning the token that has been registered as a pair, they want to mint a Cosmos coin
+
+  // create the corresponding sdk.Coin that is paired with ERC20
+  coins := sdk.Coins{{Denom: pair.Denom, Amount: sdk.NewIntFromBigInt(tokens)}}
+
+  // Mint the coin only if ERC20 is external
+  switch pair.ContractOwner {
+  case types.OWNER_MODULE:
+   _, err = h.k.CallEVM(ctx, erc20, types.ModuleAddress, contractAddr, true, &quot;burn&quot;, tokens)
+  case types.OWNER_EXTERNAL:
+   err = h.k.bankKeeper.MintCoins(ctx, types.ModuleName, coins)
+  default:
+   err = types.ErrUndefinedOwner
+  }
+
+  if err != nil {
+   h.k.Logger(ctx).Debug(
+    &quot;failed to process EVM hook for ER20 -&gt; coin conversion&quot;,
+    &quot;coin&quot;, pair.Denom, &quot;contract&quot;, pair.Erc20Address, &quot;error&quot;, err.Error(),
+   )
+   continue
+  }
+
+  // Only need last 20 bytes from log.topics
+  from := common.BytesToAddress(log.Topics[1].Bytes())
+  recipient := sdk.AccAddress(from.Bytes())
+
+  // transfer the tokens from ModuleAccount to sender address
+  if err := h.k.bankKeeper.SendCoinsFromModuleToAccount(ctx, types.ModuleName, recipient, coins); err != nil {
+   h.k.Logger(ctx).Debug(
+    &quot;failed to process EVM hook for ER20 -&gt; coin conversion&quot;,
+    &quot;tx-hash&quot;, receipt.TxHash.Hex(), &quot;log-idx&quot;, i,
+    &quot;coin&quot;, pair.Denom, &quot;contract&quot;, pair.Erc20Address, &quot;error&quot;, err.Error(),
+   )
+   continue
+  }
+ }
+
+ return nil
+</code></pre>
+<p>Finally, register the hook in app.go:</p>
+<pre><code class="language-go">app.EvmKeeper = app.EvmKeeper.SetHooks(app.Erc20Keeper)
+</code></pre>
+<h2 id="event">event</h2>
+<p>The <code>x/evm</code> module emits Cosmos SDK events after state execution.
+The EVM module emits events related to transaction fields, as well as transaction logs (Ethereum events)。</p>
+<h3 id="msgethereumtx_2">MsgEthereumTx</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property Key</th>
+<th>Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"amount"</code></td>
+<td><code>{amount}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"recipient"</code></td>
+<td><code>{hex_address}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"contract"</code></td>
+<td><code>{hex_address}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"txHash"</code></td>
+<td><code>{tendermint_hex_hash}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"ethereumTxHash"</code></td>
+<td><code>{hex_hash}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"txIndex"</code></td>
+<td><code>{tx_index}</code></td>
+</tr>
+<tr>
+<td>ethereum_tx</td>
+<td><code>"txGasUsed"</code></td>
+<td><code>{gas_used}</code></td>
+</tr>
+<tr>
+<td>tx_log</td>
+<td><code>"txLog"</code></td>
+<td><code>{tx_log}</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>"sender"</code></td>
+<td><code>{eth_address}</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>"action"</code></td>
+<td><code>"ethereum"</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>"module"</code></td>
+<td><code>"evm"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, the EVM module emits an event for the filter query block bloom during <code>EndBlock</code>.</p>
+<h3 id="abci_1">ABCI</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property Key</th>
+<th>Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block_bloom</td>
+<td><code>"bloom"</code></td>
+<td><code>string(bloomBytes)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">parameters</h2>
+<p>The evm module contains the following parameters:</p>
+<h3 id="module-parameters">Module parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Data Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EVMDenom</code></td>
+<td>string</td>
+<td><code>"dst"</code></td>
+</tr>
+<tr>
+<td><code>EnableCreate</code></td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>EnableCall</code></td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>ExtraEIPs</code></td>
+<td>[]int</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>ChainConfig</code></td>
+<td>ChainConfig</td>
+<td>See ChainConfig</td>
+</tr>
+</tbody>
+</table>
+<p>:::hint
+Note: SDK applications want to import the EVM module as a dependency
+Will need to set own <code>evm_denom</code> (i.e. not <code>"dst"</code>).
+:::</p>
+<h3 id="enablecreate">EnableCreate</h3>
+<p>The EnableCreate parameter toggles state transitions using the <code>vm.Create</code> function.
+When this parameter is disabled, it blocks all contract creation functions.</p>
+<h3 id="enablecall">EnableCall</h3>
+<p>The EnableCall parameter toggles state transitions using the <code>vm.Call</code> function.
+When this parameter is disabled, it prevents transfers between accounts and execution of smart contract calls.</p>
+<h3 id="extra-eips">Extra EIPs</h3>
+<p>The additional EIPs parameter defines a set of Ethereum Improvement Proposals that can be activated on the Ethereum VM <code>Config</code> applying a custom jump table (<em><em><a href="https://ethereum.org/en/eips/">EIPs</a></em> </em>).</p>
+<p>:::hint
+Note: Some of these EIPs are already enabled via chain configuration, depending on the number of hard forks.
+:::</p>
+<p>The supported activatable EIPS are:</p>
+<ul>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP 1344</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP 1884</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP 2200</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-2315">EIP 2315</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP 2929</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP 3198</a></strong></li>
+<li><strong><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP 3529</a></strong></li>
+</ul>
+<h3 id="chain-config">Chain Config</h3>
+<p><code>ChainConfig</code> is a protobuf wrapper type that contains the same fields as the go-ethereum <code>ChainConfig</code> parameter, but uses <code>*sdk.Int</code> type instead of <code>*big.Int</code>.</p>
+<p>By default, all block configuration fields except <code>ConstantinopleBlock</code> are enabled at Genesis (height 0).</p>
+<h4 id="default-chainconfig">Default ChainConfig</h4>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HomesteadBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>DAOForkBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>DAOForkSupport</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>EIP150Block</td>
+<td>0</td>
+</tr>
+<tr>
+<td>EIP150Hash</td>
+<td><code>0x0000000000000000000000000000000000000000000000000000000000000000</code></td>
+</tr>
+<tr>
+<td>EIP155Block</td>
+<td>0</td>
+</tr>
+<tr>
+<td>EIP158Block</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ByzantiumBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ConstantinopleBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>PetersburgBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>IstanbulBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>MuirGlacierBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>BerlinBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>LondonBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ArrowGlacierBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>GrayGlacierBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>MergeNetsplitBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ShanghaiBlock</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CancunBlock.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="client_1">client</h2>
+<p>Users can query and interact with the <code>evm</code> module using CLI, JSON-RPC, gRPC, or REST.</p>
+<h3 id="cli">CLI</h3>
+<p>Below find a list of <code>stcd</code> commands added using the <code>x/evm</code> module.
+You can get a complete list with <code>stcd -h</code> command.</p>
+<h4 id="inquire">Inquire</h4>
+<p>The <code>query</code> command allows the user to query the state of <code>evm</code>.</p>
+<p><strong><code>code</code></strong></p>
+<p>Allows users to query the smart contract code for a given address.</p>
+<pre><code class="language-bash">stcd query evm code ADDRESS [flags]
+</code></pre>
+<pre><code class="language-bash"># Example
+$ stcd query evm code 0x7bf7b17da59880d9bcca24915679668db75f9397
+
+# Output
+code: &quot;0xef616c92f3cfc9e92dc270d6acff9cea213cecc7020a76ee4395af09bdceb4837a1ebdb5735e11e7d3adb6104e0c3ac55180b4ddf5e54d022cc5e8837f6a4f971b&quot;
+</code></pre>
+<p><strong><code>storage</code></strong></p>
+<p>Allows users to query the store for accounts with a given key and height。</p>
+<pre><code class="language-bash">stcd query evm storage ADDRESS KEY [flags]
+</code></pre>
+<pre><code class="language-bash"># Example
+$ stcd query evm storage 0x0f54f47bf9b8e317b214ccd6a7c3e38b893cd7f0 0 --height 0
+
+# Output
+value: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;
+</code></pre>
+<h4 id="trade_1">trade</h4>
+<p>The <code>tx</code> command allows the user to interact with the <code>evm</code> module.</p>
+<p><strong><code>raw</code></strong></p>
+<p>Allows users to build cosmos transactions from raw Ethereum transactions.</p>
+<pre><code class="language-bash">stcd tx evm raw TX_HEX [flags]
+</code></pre>
+<pre><code class="language-bash"># Example
+$ stcd tx evm raw 0xf9ff74c86aefeb5f6019d77280bbb44fb695b4d45cfe97e6eed7acd62905f4a85034d5c68ed25a2e7a8eeb9baf1b84
+
+# Output
+value: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;
+</code></pre>
+<h3 id="grpc">gRPC</h3>
+<h4 id="inquire_1">Inquire</h4>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Account</code></td>
+<td>Get Ethereum account</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/CosmosAccount</code></td>
+<td>Get the Cosmos address of an Ethereum account</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/ValidatorAccount</code></td>
+<td>Get Ethereum account from validator consensus address</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Balance</code></td>
+<td>Get the EVM denomination balance of a single EthAccount.</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Storage</code></td>
+<td>Get the balance of all coins in a single account</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Code</code></td>
+<td>Get the balance of all coins in a single account</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/Params</code></td>
+<td>Get the parameters of the x/evm module</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/EthCall</code></td>
+<td>implements the eth_call rpc api</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/EstimateGas</code></td>
+<td>implements the eth_estimateGas rpc api</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/TraceTx</code></td>
+<td>implement debug_traceTransaction rpc api</td>
+</tr>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Query/TraceBlock</code></td>
+<td>implements debug_traceBlockByNumber and debug_traceBlockByHash rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/account/{address}</code></td>
+<td>Get Ethereum account</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/cosmos_account/{address}</code></td>
+<td>Get the Cosmos address of the Ethereum account</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/validator_account/{cons_address}</code></td>
+<td>Get Ethereum account from validator consensus address</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/balances/{address}</code></td>
+<td>Get the EVM denomination balance of a single EthAccount.</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/storage/{address}/{key}</code></td>
+<td>Get the balance of all coins in a single account</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/codes/{address}</code></td>
+<td>Get the balance of all coins in a single account</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/params</code></td>
+<td>Get the parameters of the x/evm module</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/eth_call</code></td>
+<td>implements eth_call rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/estimate_gas</code></td>
+<td>implements the eth_estimateGas rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/trace_tx</code></td>
+<td>implements debug_traceTransaction rpc api</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ethermint/evm/v1/trace_block</code></td>
+<td>implements debug_traceBlockByNumber and debug_traceBlockByHash rpc api</td>
+</tr>
+</tbody>
+</table>
+<h4 id="trade_2">trade</h4>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gRPC</code></td>
+<td><code>ethermint.evm.v1.Msg/EthereumTx</code></td>
+<td>Submit an Ethereum transaction</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/ethermint/evm/v1/ethereum_tx</code></td>
+<td>Submit an Ethereum transaction</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
