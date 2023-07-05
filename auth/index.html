@@ -1,0 +1,2604 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../pledge/">
+      
+      
+        <link rel="next" href="../bank/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Auth - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#auth" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Auth
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        Evm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Auth
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Auth
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gas-fees" class="md-nav__link">
+    Gas &amp; Fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accounts" class="md-nav__link">
+    Accounts
+  </a>
+  
+    <nav class="md-nav" aria-label="Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-interface" class="md-nav__link">
+    Account Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Account Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-account" class="md-nav__link">
+    Base Account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antehandlers" class="md-nav__link">
+    AnteHandlers
+  </a>
+  
+    <nav class="md-nav" aria-label="AnteHandlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decorators" class="md-nav__link">
+    Decorators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keepers" class="md-nav__link">
+    Keepers
+  </a>
+  
+    <nav class="md-nav" aria-label="Keepers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-keeper" class="md-nav__link">
+    Account Keeper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth_1" class="md-nav__link">
+    Auth
+  </a>
+  
+    <nav class="md-nav" aria-label="Auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts_1" class="md-nav__link">
+    accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account_1" class="md-nav__link">
+    Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts_2" class="md-nav__link">
+    Accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_1" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    REST
+  </a>
+  
+    <nav class="md-nav" aria-label="REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account_2" class="md-nav__link">
+    Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts_3" class="md-nav__link">
+    Accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_2" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vesting" class="md-nav__link">
+    Vesting
+  </a>
+  
+    <nav class="md-nav" aria-label="Vesting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli_1" class="md-nav__link">
+    CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-periodic-vesting-account" class="md-nav__link">
+    create-periodic-vesting-account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-vesting-account" class="md-nav__link">
+    create-vesting-account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        Bank
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        Gov
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        Mint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribute/" class="md-nav__link">
+        Distribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slashing/" class="md-nav__link">
+        Slashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        Staking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        mainnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        Operation Guide(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        Operation Guide(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gas-fees" class="md-nav__link">
+    Gas &amp; Fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accounts" class="md-nav__link">
+    Accounts
+  </a>
+  
+    <nav class="md-nav" aria-label="Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-interface" class="md-nav__link">
+    Account Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Account Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-account" class="md-nav__link">
+    Base Account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antehandlers" class="md-nav__link">
+    AnteHandlers
+  </a>
+  
+    <nav class="md-nav" aria-label="AnteHandlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decorators" class="md-nav__link">
+    Decorators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keepers" class="md-nav__link">
+    Keepers
+  </a>
+  
+    <nav class="md-nav" aria-label="Keepers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-keeper" class="md-nav__link">
+    Account Keeper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth_1" class="md-nav__link">
+    Auth
+  </a>
+  
+    <nav class="md-nav" aria-label="Auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts_1" class="md-nav__link">
+    accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    gRPC
+  </a>
+  
+    <nav class="md-nav" aria-label="gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account_1" class="md-nav__link">
+    Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts_2" class="md-nav__link">
+    Accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_1" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest" class="md-nav__link">
+    REST
+  </a>
+  
+    <nav class="md-nav" aria-label="REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account_2" class="md-nav__link">
+    Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts_3" class="md-nav__link">
+    Accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_2" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vesting" class="md-nav__link">
+    Vesting
+  </a>
+  
+    <nav class="md-nav" aria-label="Vesting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli_1" class="md-nav__link">
+    CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-periodic-vesting-account" class="md-nav__link">
+    create-periodic-vesting-account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-vesting-account" class="md-nav__link">
+    create-vesting-account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="auth"><code>auth</code></h1>
+<h2 id="abstract">Abstract</h2>
+<p>This document specifies the auth module.</p>
+<p>The auth module is responsible for specifying the base transaction and account types
+for an application, since the SDK itself is agnostic to these particulars. It contains
+the ante handler, where all basic transaction validity checks (signatures, nonces, auxiliary fields)
+are performed, and exposes the account keeper, which allows other modules to read, write, and modify accounts.</p>
+<h2 id="concepts">Concepts</h2>
+<h3 id="gas-fees">Gas &amp; Fees</h3>
+<p>Fees serve two purposes for an operator of the network.</p>
+<p>Fees limit the growth of the state stored by every full node and allow for
+general purpose censorship of transactions of little economic value. Fees
+are best suited as an anti-spam mechanism where validators are disinterested in
+the use of the network and identities of users.</p>
+<p>Fees are determined by the gas limits and gas prices transactions provide, where
+<code>fees = ceil(gasLimit * gasPrices)</code>. Txs incur gas costs for all state reads/writes,
+signature verification, as well as costs proportional to the tx size. Operators
+should set minimum gas prices when starting their nodes. They must set the unit
+costs of gas in each token denomination they wish to support:</p>
+<p><code>simd start ... --minimum-gas-prices=0.00001stake;0.05photinos</code></p>
+<p>When adding transactions to mempool or gossipping transactions, validators check
+if the transaction's gas prices, which are determined by the provided fees, meet
+any of the validator's minimum gas prices. In other words, a transaction must
+provide a fee of at least one denomination that matches a validator's minimum
+gas price.</p>
+<p>Tendermint does not currently provide fee based mempool prioritization, and fee
+based mempool filtering is local to node and not part of consensus. But with
+minimum gas prices set, such a mechanism could be implemented by node operators.</p>
+<p>Because the market value for tokens will fluctuate, validators are expected to
+dynamically adjust their minimum gas prices to a level that would encourage the
+use of the network.</p>
+<h3 id="state">State</h3>
+<h4 id="accounts">Accounts</h4>
+<p>Accounts contain authentication information for a uniquely identified external user of an SDK blockchain,
+including public key, address, and account number / sequence number for replay protection. For efficiency,
+since account balances must also be fetched to pay fees, account structs also store the balance of a user
+as <code>sdk.Coins</code>.</p>
+<p>Accounts are exposed externally as an interface, and stored internally as
+either a base account or vesting account. Module clients wishing to add more
+account types may do so.</p>
+<ul>
+<li><code>0x01 | Address -&gt; ProtocolBuffer(account)</code></li>
+</ul>
+<h5 id="account-interface">Account Interface</h5>
+<p>The account interface exposes methods to read and write standard account information.
+Note that all of these methods operate on an account struct confirming to the
+interface - in order to write the account to the store, the account keeper will
+need to be used.</p>
+<pre><code class="language-go">// AccountI is an interface used to store coins at a given address within state.
+// It presumes a notion of sequence numbers for replay protection,
+// a notion of account numbers for replay protection for previously pruned accounts,
+// and a pubkey for authentication purposes.
+//
+// Many complex conditions can be used in the concrete struct which implements AccountI.
+type AccountI interface {
+    proto.Message
+
+    GetAddress() sdk.AccAddress
+    SetAddress(sdk.AccAddress) error // errors if already set.
+
+    GetPubKey() crypto.PubKey // can return nil.
+    SetPubKey(crypto.PubKey) error
+
+    GetAccountNumber() uint64
+    SetAccountNumber(uint64) error
+
+    GetSequence() uint64
+    SetSequence(uint64) error
+
+    // Ensure that account implements stringer
+    String() string
+}
+</code></pre>
+<h6 id="base-account">Base Account</h6>
+<p>A base account is the simplest and most common account type, which just stores all requisite
+fields directly in a struct.</p>
+<pre><code class="language-protobuf">// BaseAccount defines a base account type. It contains all the necessary fields
+// for basic account functionality. Any custom account type should extend this
+// type for additional functionality (e.g. vesting).
+message BaseAccount {
+  string address = 1;
+  google.protobuf.Any pub_key = 2;
+  uint64 account_number = 3;
+  uint64 sequence       = 4;
+}
+</code></pre>
+<h2 id="antehandlers">AnteHandlers</h2>
+<p>The <code>x/auth</code> module presently has no transaction handlers of its own, but does expose the special <code>AnteHandler</code>, used for performing basic validity checks on a transaction, such that it could be thrown out of the mempool.
+The <code>AnteHandler</code> can be seen as a set of decorators that check transactions within the current context, per <a href="https://github.com/cosmos/cosmos-sdk/blob/v0.43.0-alpha1/docs/architecture/adr-010-modular-antehandler.md">ADR 010</a>.</p>
+<p>Note that the <code>AnteHandler</code> is called on both <code>CheckTx</code> and <code>DeliverTx</code>, as Tendermint proposers presently have the ability to include in their proposed block transactions which fail <code>CheckTx</code>.</p>
+<h3 id="decorators">Decorators</h3>
+<p>The auth module provides <code>AnteDecorator</code>s that are recursively chained together into a single <code>AnteHandler</code> in the following order:</p>
+<ul>
+<li>
+<p><code>SetUpContextDecorator</code>: Sets the <code>GasMeter</code> in the <code>Context</code> and wraps the next <code>AnteHandler</code> with a defer clause to recover from any downstream <code>OutOfGas</code> panics in the <code>AnteHandler</code> chain to return an error with information on gas provided and gas used.</p>
+</li>
+<li>
+<p><code>RejectExtensionOptionsDecorator</code>: Rejects all extension options which can optionally be included in protobuf transactions.</p>
+</li>
+<li>
+<p><code>MempoolFeeDecorator</code>: Checks if the <code>tx</code> fee is above local mempool <code>minFee</code> parameter during <code>CheckTx</code>.</p>
+</li>
+<li>
+<p><code>ValidateBasicDecorator</code>: Calls <code>tx.ValidateBasic</code> and returns any non-nil error.</p>
+</li>
+<li>
+<p><code>TxTimeoutHeightDecorator</code>: Check for a <code>tx</code> height timeout.</p>
+</li>
+<li>
+<p><code>ValidateMemoDecorator</code>: Validates <code>tx</code> memo with application parameters and returns any non-nil error.</p>
+</li>
+<li>
+<p><code>ConsumeGasTxSizeDecorator</code>: Consumes gas proportional to the <code>tx</code> size based on application parameters.</p>
+</li>
+<li>
+<p><code>DeductFeeDecorator</code>: Deducts the <code>FeeAmount</code> from first signer of the <code>tx</code>. If the <code>x/feegrant</code> module is enabled and a fee granter is s<em>et, it will deduct fees from the fee granter account.</em></p>
+</li>
+<li>
+<p><code>SetPubKeyDecorator</code>: Sets the pubkey from a <code>tx</code>'s signers that does not already have its corresponding pubkey saved in the state machine and in the current context.</p>
+</li>
+<li>
+<p><code>ValidateSigCountDecorator</code>: Validates the number of signatures in <code>tx</code> based on app-parameters.</p>
+</li>
+<li>
+<p><code>SigGasConsumeDecorator</code>: Consumes parameter-defined amount of gas for each signature. This requires pubkeys to be set in context for all signers as part of <code>SetPubKeyDecorator</code>.</p>
+</li>
+<li>
+<p><code>SigVerificationDecorator</code>: Verifies all signatures are valid. This requires pubkeys to be set in context for all signers as part of <code>SetPubKeyDecorator</code>.</p>
+</li>
+<li>
+<p><code>IncrementSequenceDecorator</code>: Increments the account sequence for each signer to prevent replay attacks.</p>
+</li>
+</ul>
+<h2 id="keepers">Keepers</h2>
+<p>The auth module only exposes one keeper, the account keeper, which can be used to read and write accounts.</p>
+<h3 id="account-keeper">Account Keeper</h3>
+<p>Presently only one fully-permissioned account keeper is exposed, which has the ability to both read and write
+all fields of all accounts, and to iterate over all stored accounts.</p>
+<pre><code class="language-go">// AccountKeeperI is the interface contract that x/auth's keeper implements.
+type AccountKeeperI interface {
+    // Return a new account with the next account number and the specified address. Does not save the new account to the store.
+    NewAccountWithAddress(sdk.Context, sdk.AccAddress) types.AccountI
+
+    // Return a new account with the next account number. Does not save the new account to the store.
+    NewAccount(sdk.Context, types.AccountI) types.AccountI
+
+    // Check if an account exists in the store.
+    HasAccount(sdk.Context, sdk.AccAddress) bool
+
+    // Retrieve an account from the store.
+    GetAccount(sdk.Context, sdk.AccAddress) types.AccountI
+
+    // Set an account in the store.
+    SetAccount(sdk.Context, types.AccountI)
+
+    // Remove an account from the store.
+    RemoveAccount(sdk.Context, types.AccountI)
+
+    // Iterate over all accounts, calling the provided function. Stop iteration when it returns true.
+    IterateAccounts(sdk.Context, func(types.AccountI) bool)
+
+    // Fetch the public key of an account at a specified address
+    GetPubKey(sdk.Context, sdk.AccAddress) (crypto.PubKey, error)
+
+    // Fetch the sequence of an account at a specified address.
+    GetSequence(sdk.Context, sdk.AccAddress) (uint64, error)
+
+    // Fetch the next account number, and increment the internal counter.
+    GetNextAccountNumber(sdk.Context) uint64
+}
+</code></pre>
+<h2 id="client">Client</h2>
+<h2 id="auth_1">Auth</h2>
+<h3 id="cli">CLI</h3>
+<p>A user can query and interact with the <code>auth</code> module using the CLI.</p>
+<h4 id="query">Query</h4>
+<p>The <code>query</code> commands allow users to query <code>auth</code> state.</p>
+<pre><code class="language-bash">simd query auth --help
+</code></pre>
+<h5 id="account">account</h5>
+<p>The <code>account</code> command allow users to query for an account by it's address.</p>
+<pre><code class="language-bash">simd query auth account [address] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query auth account cosmos1...
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">'@type': /cosmos.auth.v1beta1.BaseAccount
+account_number: &quot;0&quot;
+address: cosmos1zwg6tpl8aw4rawv8sgag9086lpw5hv33u5ctr2
+pub_key:
+  '@type': /cosmos.crypto.secp256k1.PubKey
+  key: ApDrE38zZdd7wLmFS9YmqO684y5DG6fjZ4rVeihF/AQD
+sequence: &quot;1&quot;
+</code></pre>
+<h5 id="accounts_1">accounts</h5>
+<p>The <code>accounts</code> command allow users to query all the available accounts.</p>
+<pre><code class="language-bash">simd query auth accounts [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query auth accounts
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">accounts:
+- '@type': /cosmos.auth.v1beta1.BaseAccount
+  account_number: &quot;0&quot;
+  address: cosmos1zwg6tpl8aw4rawv8sgag9086lpw5hv33u5ctr2
+  pub_key:
+    '@type': /cosmos.crypto.secp256k1.PubKey
+    key: ApDrE38zZdd7wLmFS9YmqO684y5DG6fjZ4rVeihF/AQD
+  sequence: &quot;1&quot;
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;8&quot;
+    address: cosmos1yl6hdjhmkf37639730gffanpzndzdpmhwlkfhr
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: transfer
+  permissions:
+  - minter
+  - burner
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;4&quot;
+    address: cosmos1fl48vsnmsdzcv85q5d2q4z5ajdha8yu34mf0eh
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: bonded_tokens_pool
+  permissions:
+  - burner
+  - staking
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;5&quot;
+    address: cosmos1tygms3xhhs3yv487phx3dw4a95jn7t7lpm470r
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: not_bonded_tokens_pool
+  permissions:
+  - burner
+  - staking
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;6&quot;
+    address: cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: gov
+  permissions:
+  - burner
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;3&quot;
+    address: cosmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd88lyufl
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: distribution
+  permissions: []
+- '@type': /cosmos.auth.v1beta1.BaseAccount
+  account_number: &quot;1&quot;
+  address: cosmos147k3r7v2tvwqhcmaxcfql7j8rmkrlsemxshd3j
+  pub_key: null
+  sequence: &quot;0&quot;
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;7&quot;
+    address: cosmos1m3h30wlvsf8llruxtpukdvsy0km2kum8g38c8q
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: mint
+  permissions:
+  - minter
+- '@type': /cosmos.auth.v1beta1.ModuleAccount
+  base_account:
+    account_number: &quot;2&quot;
+    address: cosmos17xpfvakm2amg962yls6f84z3kell8c5lserqta
+    pub_key: null
+    sequence: &quot;0&quot;
+  name: fee_collector
+  permissions: []
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h5 id="params">params</h5>
+<p>The <code>params</code> command allow users to query the current auth parameters.</p>
+<pre><code class="language-bash">simd query auth params [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query auth params
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">max_memo_characters: &quot;256&quot;
+sig_verify_cost_ed25519: &quot;590&quot;
+sig_verify_cost_secp256k1: &quot;1000&quot;
+tx_sig_limit: &quot;7&quot;
+tx_size_cost_per_byte: &quot;10&quot;
+</code></pre>
+<h3 id="grpc">gRPC</h3>
+<p>A user can query the <code>auth</code> module using gRPC endpoints.</p>
+<h4 id="account_1">Account</h4>
+<p>The <code>account</code> endpoint allow users to query for an account by it's address.</p>
+<pre><code class="language-bash">cosmos.auth.v1beta1.Query/Account
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+    -d '{&quot;address&quot;:&quot;cosmos1..&quot;}' \
+    localhost:9090 \
+    cosmos.auth.v1beta1.Query/Account
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;account&quot;:{
+    &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.BaseAccount&quot;,
+    &quot;address&quot;:&quot;cosmos1zwg6tpl8aw4rawv8sgag9086lpw5hv33u5ctr2&quot;,
+    &quot;pubKey&quot;:{
+      &quot;@type&quot;:&quot;/cosmos.crypto.secp256k1.PubKey&quot;,
+      &quot;key&quot;:&quot;ApDrE38zZdd7wLmFS9YmqO684y5DG6fjZ4rVeihF/AQD&quot;
+    },
+    &quot;sequence&quot;:&quot;1&quot;
+  }
+}
+</code></pre>
+<h4 id="accounts_2">Accounts</h4>
+<p>The <code>accounts</code> endpoint allow users to query all the available accounts.</p>
+<pre><code class="language-bash">cosmos.auth.v1beta1.Query/Accounts
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+    localhost:9090 \
+    cosmos.auth.v1beta1.Query/Accounts
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+   &quot;accounts&quot;:[
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.BaseAccount&quot;,
+         &quot;address&quot;:&quot;cosmos1zwg6tpl8aw4rawv8sgag9086lpw5hv33u5ctr2&quot;,
+         &quot;pubKey&quot;:{
+            &quot;@type&quot;:&quot;/cosmos.crypto.secp256k1.PubKey&quot;,
+            &quot;key&quot;:&quot;ApDrE38zZdd7wLmFS9YmqO684y5DG6fjZ4rVeihF/AQD&quot;
+         },
+         &quot;sequence&quot;:&quot;1&quot;
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos1yl6hdjhmkf37639730gffanpzndzdpmhwlkfhr&quot;,
+            &quot;accountNumber&quot;:&quot;8&quot;
+         },
+         &quot;name&quot;:&quot;transfer&quot;,
+         &quot;permissions&quot;:[
+            &quot;minter&quot;,
+            &quot;burner&quot;
+         ]
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos1fl48vsnmsdzcv85q5d2q4z5ajdha8yu34mf0eh&quot;,
+            &quot;accountNumber&quot;:&quot;4&quot;
+         },
+         &quot;name&quot;:&quot;bonded_tokens_pool&quot;,
+         &quot;permissions&quot;:[
+            &quot;burner&quot;,
+            &quot;staking&quot;
+         ]
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos1tygms3xhhs3yv487phx3dw4a95jn7t7lpm470r&quot;,
+            &quot;accountNumber&quot;:&quot;5&quot;
+         },
+         &quot;name&quot;:&quot;not_bonded_tokens_pool&quot;,
+         &quot;permissions&quot;:[
+            &quot;burner&quot;,
+            &quot;staking&quot;
+         ]
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos10d07y265gmmuvt4z0w9aw880jnsr700j6zn9kn&quot;,
+            &quot;accountNumber&quot;:&quot;6&quot;
+         },
+         &quot;name&quot;:&quot;gov&quot;,
+         &quot;permissions&quot;:[
+            &quot;burner&quot;
+         ]
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd88lyufl&quot;,
+            &quot;accountNumber&quot;:&quot;3&quot;
+         },
+         &quot;name&quot;:&quot;distribution&quot;
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.BaseAccount&quot;,
+         &quot;accountNumber&quot;:&quot;1&quot;,
+         &quot;address&quot;:&quot;cosmos147k3r7v2tvwqhcmaxcfql7j8rmkrlsemxshd3j&quot;
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos1m3h30wlvsf8llruxtpukdvsy0km2kum8g38c8q&quot;,
+            &quot;accountNumber&quot;:&quot;7&quot;
+         },
+         &quot;name&quot;:&quot;mint&quot;,
+         &quot;permissions&quot;:[
+            &quot;minter&quot;
+         ]
+      },
+      {
+         &quot;@type&quot;:&quot;/cosmos.auth.v1beta1.ModuleAccount&quot;,
+         &quot;baseAccount&quot;:{
+            &quot;address&quot;:&quot;cosmos17xpfvakm2amg962yls6f84z3kell8c5lserqta&quot;,
+            &quot;accountNumber&quot;:&quot;2&quot;
+         },
+         &quot;name&quot;:&quot;fee_collector&quot;
+      }
+   ],
+   &quot;pagination&quot;:{
+      &quot;total&quot;:&quot;9&quot;
+   }
+}
+</code></pre>
+<h4 id="params_1">Params</h4>
+<p>The <code>params</code> endpoint allow users to query the current auth parameters.</p>
+<pre><code class="language-bash">cosmos.auth.v1beta1.Query/Params
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+    localhost:9090 \
+    cosmos.auth.v1beta1.Query/Params
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;maxMemoCharacters&quot;: &quot;256&quot;,
+    &quot;txSigLimit&quot;: &quot;7&quot;,
+    &quot;txSizeCostPerByte&quot;: &quot;10&quot;,
+    &quot;sigVerifyCostEd25519&quot;: &quot;590&quot;,
+    &quot;sigVerifyCostSecp256k1&quot;: &quot;1000&quot;
+  }
+}
+</code></pre>
+<h3 id="rest">REST</h3>
+<p>A user can query the <code>auth</code> module using REST endpoints.</p>
+<h4 id="account_2">Account</h4>
+<p>The <code>account</code> endpoint allow users to query for an account by it's address.</p>
+<pre><code class="language-bash">/cosmos/auth/v1beta1/account?address={address}
+</code></pre>
+<h4 id="accounts_3">Accounts</h4>
+<p>The <code>accounts</code> endpoint allow users to query all the available accounts.</p>
+<pre><code class="language-bash">/cosmos/auth/v1beta1/accounts
+</code></pre>
+<h4 id="params_2">Params</h4>
+<p>The <code>params</code> endpoint allow users to query the current auth parameters.</p>
+<pre><code class="language-bash">/cosmos/auth/v1beta1/params
+</code></pre>
+<h2 id="vesting">Vesting</h2>
+<h3 id="cli_1">CLI</h3>
+<p>A user can query and interact with the <code>vesting</code> module using the CLI.</p>
+<h3 id="transactions">Transactions</h3>
+<p>The <code>tx</code> commands allow users to interact with the <code>vesting</code> module.</p>
+<pre><code class="language-bash">simd tx vesting --help
+</code></pre>
+<h5 id="create-periodic-vesting-account">create-periodic-vesting-account</h5>
+<p>The <code>create-periodic-vesting-account</code> command creates a new vesting account funded with an allocation of tokens, where a sequence of coins and period length in seconds. Periods are sequential, in that the duration of of a period only starts at the end of the previous period. The duration of the first period starts upon account creation.</p>
+<pre><code class="language-bash">simd tx vesting create-periodic-vesting-account [to_address] [periods_json_file] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx vesting create-periodic-vesting-account cosmos1.. periods.json
+</code></pre>
+<h5 id="create-vesting-account">create-vesting-account</h5>
+<p>The <code>create-vesting-account</code> command creates a new vesting account funded with an allocation of tokens. The account can either be a delayed or continuous vesting account, which is determined by the '--delayed' flag. All vesting accouts created will have their start time set by the committed block's time. The end_time must be provided as a UNIX epoch timestamp.</p>
+<pre><code class="language-bash">simd tx vesting create-vesting-account [to_address] [amount] [end_time] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx vesting create-vesting-account cosmos1.. 100stake 2592000
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<p>The auth module contains the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaxMemoCharacters</td>
+<td>uint64</td>
+<td>256</td>
+</tr>
+<tr>
+<td>TxSigLimit</td>
+<td>uint64</td>
+<td>7</td>
+</tr>
+<tr>
+<td>TxSizeCostPerByte</td>
+<td>uint64</td>
+<td>10</td>
+</tr>
+<tr>
+<td>SigVerifyCostED25519</td>
+<td>uint64</td>
+<td>590</td>
+</tr>
+<tr>
+<td>SigVerifyCostSecp256k1</td>
+<td>uint64</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

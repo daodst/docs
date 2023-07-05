@@ -1,0 +1,2577 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../distribute/">
+      
+      
+        <link rel="next" href="../staking/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Slashing - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xslashing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Slashing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        Evm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        Auth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        Bank
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        Gov
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        Mint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribute/" class="md-nav__link">
+        Distribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Slashing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Slashing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    States
+  </a>
+  
+    <nav class="md-nav" aria-label="States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tombstone-caps" class="md-nav__link">
+    Tombstone Caps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infraction-timelines" class="md-nav__link">
+    Infraction Timelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Infraction Timelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-double-sign-infraction" class="md-nav__link">
+    Single Double Sign Infraction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-double-sign-infractions" class="md-nav__link">
+    Multiple Double Sign Infractions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing-info-liveness" class="md-nav__link">
+    Signing Info (Liveness)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unjail" class="md-nav__link">
+    Unjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginblock" class="md-nav__link">
+    BeginBlock
+  </a>
+  
+    <nav class="md-nav" aria-label="BeginBlock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liveness-tracking" class="md-nav__link">
+    Liveness Tracking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staking-hooks" class="md-nav__link">
+    Staking hooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-bonded" class="md-nav__link">
+    Validator Bonded
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgserver" class="md-nav__link">
+    MsgServer
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgServer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgunjail" class="md-nav__link">
+    MsgUnjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keeper" class="md-nav__link">
+    Keeper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginblocker-handlevalidatorsignature" class="md-nav__link">
+    BeginBlocker: HandleValidatorSignature
+  </a>
+  
+    <nav class="md-nav" aria-label="BeginBlocker: HandleValidatorSignature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slash" class="md-nav__link">
+    Slash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jail" class="md-nav__link">
+    Jail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        Staking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        mainnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        Operation Guide(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        Operation Guide(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    States
+  </a>
+  
+    <nav class="md-nav" aria-label="States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tombstone-caps" class="md-nav__link">
+    Tombstone Caps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infraction-timelines" class="md-nav__link">
+    Infraction Timelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Infraction Timelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-double-sign-infraction" class="md-nav__link">
+    Single Double Sign Infraction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-double-sign-infractions" class="md-nav__link">
+    Multiple Double Sign Infractions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing-info-liveness" class="md-nav__link">
+    Signing Info (Liveness)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unjail" class="md-nav__link">
+    Unjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginblock" class="md-nav__link">
+    BeginBlock
+  </a>
+  
+    <nav class="md-nav" aria-label="BeginBlock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liveness-tracking" class="md-nav__link">
+    Liveness Tracking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staking-hooks" class="md-nav__link">
+    Staking hooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-bonded" class="md-nav__link">
+    Validator Bonded
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgserver" class="md-nav__link">
+    MsgServer
+  </a>
+  
+    <nav class="md-nav" aria-label="MsgServer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgunjail" class="md-nav__link">
+    MsgUnjail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keeper" class="md-nav__link">
+    Keeper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginblocker-handlevalidatorsignature" class="md-nav__link">
+    BeginBlocker: HandleValidatorSignature
+  </a>
+  
+    <nav class="md-nav" aria-label="BeginBlocker: HandleValidatorSignature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slash" class="md-nav__link">
+    Slash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jail" class="md-nav__link">
+    Jail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!--
+order: 20
+title: Slashing Overview
+parent:
+  title: "slashing"
+-->
+
+<h1 id="xslashing"><code>x/slashing</code></h1>
+<h2 id="abstract">Abstract</h2>
+<p>This section specifies the slashing module</p>
+<p>The slashing module enables Cosmos SDK-based blockchains to disincentivize any attributable action
+by a protocol-recognized actor with value at stake by penalizing them ("slashing").</p>
+<p>Penalties may include, but are not limited to:</p>
+<ul>
+<li>Burning some amount of their stake</li>
+<li>Removing their ability to vote on future blocks for a period of time.</li>
+</ul>
+<h2 id="concepts">Concepts</h2>
+<h2 id="states">States</h2>
+<p>At any given time, there are any number of validators registered in the state
+machine. Each block, the top <code>MaxValidators</code> (defined by <code>x/staking</code>) validators
+who are not jailed become <em>bonded</em>, meaning that they may propose and vote on
+blocks. Validators who are <em>bonded</em> are <em>at stake</em>, meaning that part or all of
+their stake and their delegators' stake is at risk if they commit a protocol fault.</p>
+<p>For each of these validators we keep a <code>ValidatorSigningInfo</code> record that contains
+information partaining to validator's liveness and other infraction related
+attributes.</p>
+<h3 id="tombstone-caps">Tombstone Caps</h3>
+<p>In order to mitigate the impact of initially likely categories of non-malicious protocol faults, the Cosmos Hub implements for each validator a <em>tombstone</em> cap, which only allows a validator to be slashed once for a double sign fault. For example, if you misconfigure your HSM and double-sign a bunch of old blocks, you'll only be punished for the first double-sign (and then immediately tombstombed). This will still be quite expensive and desirable to avoid, but tombstone caps somewhat blunt the economic impact of unintentional misconfiguration.</p>
+<p>Liveness faults do not have caps, as they can't stack upon each other. Liveness bugs are "detected" as soon as the infraction occurs, and the validators are immediately put in jail, so it is not possible for them to commit multiple liveness faults without unjailing in between.</p>
+<h3 id="infraction-timelines">Infraction Timelines</h3>
+<p>To illustrate how the <code>x/slashing</code> module handles submitted evidence through
+Tendermint consensus, consider the following examples:</p>
+<p><strong>Definitions</strong>:</p>
+<p><em>[</em> : timeline start<br />
+<em>]</em> : timeline end<br />
+<em>C<sub>n</sub></em> : infraction <code>n</code> committed<br />
+<em>D<sub>n</sub></em> : infraction <code>n</code> discovered<br />
+<em>V<sub>b</sub></em> : validator bonded<br />
+<em>V<sub>u</sub></em> : validator unbonded</p>
+<h4 id="single-double-sign-infraction">Single Double Sign Infraction</h4>
+<p>&lt;-----------------&gt;
+[----------C<sub>1</sub>----D<sub>1</sub>,V<sub>u</sub>-----]</p>
+<p>A single infraction is committed then later discovered, at which point the validator is unbonded and slashed at the full amount for the infraction.</p>
+<h4 id="multiple-double-sign-infractions">Multiple Double Sign Infractions</h4>
+<p>&lt;---------------------------&gt;
+[----------C<sub>1</sub>--C<sub>2</sub>---C<sub>3</sub>---D<sub>1</sub>,D<sub>2</sub>,D<sub>3</sub>V<sub>u</sub>-----]</p>
+<p>Multiple infractions are committed and then later discovered, at which point the
+validator is jailed and slashed for only one infraction. Because the validator
+is also tombstoned, they can not rejoin the validator set.</p>
+<h2 id="state">State</h2>
+<h3 id="signing-info-liveness">Signing Info (Liveness)</h3>
+<p>Every block includes a set of precommits by the validators for the previous block,
+known as the <code>LastCommitInfo</code> provided by Tendermint. A <code>LastCommitInfo</code> is valid so
+long as it contains precommits from +2/3 of total voting power.</p>
+<p>Proposers are incentivized to include precommits from all validators in the Tendermint <code>LastCommitInfo</code>
+by receiving additional fees proportional to the difference between the voting
+power included in the <code>LastCommitInfo</code> and +2/3</p>
+<pre><code>type LastCommitInfo struct {
+    Round int32
+    Votes []VoteInfo
+}
+</code></pre>
+<p>Validators are penalized for failing to be included in the <code>LastCommitInfo</code> for some
+number of blocks by being automatically jailed, potentially slashed, and unbonded.</p>
+<p>Information about validator's liveness activity is tracked through <code>ValidatorSigningInfo</code>.
+It is indexed in the store as follows:</p>
+<ul>
+<li>ValidatorSigningInfo: <code>0x01 | ConsAddrLen (1 byte) | ConsAddress -&gt; ProtocolBuffer(ValSigningInfo)</code></li>
+<li>MissedBlocksBitArray: <code>0x02 | ConsAddrLen (1 byte) | ConsAddress | LittleEndianUint64(signArrayIndex) -&gt; VarInt(didMiss)</code> (varint is a number encoding format)</li>
+</ul>
+<p>The first mapping allows us to easily lookup the recent signing info for a validator based on the validator's consensus address.</p>
+<p>The second mapping (<code>MissedBlocksBitArray</code>) acts
+as a bit-array of size <code>SignedBlocksWindow</code> that tells us if the validator missed
+the block for a given index in the bit-array. The index in the bit-array is given
+as little endian uint64.
+The result is a <code>varint</code> that takes on <code>0</code> or <code>1</code>, where <code>0</code> indicates the
+validator did not miss (did sign) the corresponding block, and <code>1</code> indicates
+they missed the block (did not sign).</p>
+<p>Note that the <code>MissedBlocksBitArray</code> is not explicitly initialized up-front. Keys
+are added as we progress through the first <code>SignedBlocksWindow</code> blocks for a newly
+bonded validator. The <code>SignedBlocksWindow</code> parameter defines the size
+(number of blocks) of the sliding window used to track validator liveness.</p>
+<p>The information stored for tracking validator liveness is as follows:</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/slashing/v1beta1/slashing.proto#L11-L33</p>
+<h2 id="messages">Messages</h2>
+<p>In this section we describe the processing of messages for the <code>slashing</code> module.</p>
+<h3 id="unjail">Unjail</h3>
+<p>If a validator was automatically unbonded due to downtime and wishes to come back online &amp;
+possibly rejoin the bonded set, it must send <code>MsgUnjail</code>:</p>
+<pre><code class="language-protobuf">// MsgUnjail is an sdk.Msg used for unjailing a jailed validator, thus returning
+// them into the bonded validator set, so they can begin receiving provisions
+// and rewards again.
+message MsgUnjail {
+  string validator_addr = 1;
+}
+</code></pre>
+<p>Below is a pseudocode of the <code>MsgSrv/Unjail</code> RPC:</p>
+<pre><code>unjail(tx MsgUnjail)
+    validator = getValidator(tx.ValidatorAddr)
+    if validator == nil
+      fail with &quot;No validator found&quot;
+
+    if getSelfDelegation(validator) == 0
+      fail with &quot;validator must self delegate before unjailing&quot;
+
+    if !validator.Jailed
+      fail with &quot;Validator not jailed, cannot unjail&quot;
+
+    info = GetValidatorSigningInfo(operator)
+    if info.Tombstoned
+      fail with &quot;Tombstoned validator cannot be unjailed&quot;
+    if block time &lt; info.JailedUntil
+      fail with &quot;Validator still jailed, cannot unjail until period has expired&quot;
+
+    validator.Jailed = false
+    setValidator(validator)
+
+    return
+</code></pre>
+<p>If the validator has enough stake to be in the top <code>n = MaximumBondedValidators</code>, it will be automatically rebonded,
+and all delegators still delegated to the validator will be rebonded and begin to again collect
+provisions and rewards.</p>
+<h2 id="beginblock">BeginBlock</h2>
+<h3 id="liveness-tracking">Liveness Tracking</h3>
+<p>At the beginning of each block, we update the <code>ValidatorSigningInfo</code> for each
+validator and check if they've crossed below the liveness threshold over a
+sliding window. This sliding window is defined by <code>SignedBlocksWindow</code> and the
+index in this window is determined by <code>IndexOffset</code> found in the validator's
+<code>ValidatorSigningInfo</code>. For each block processed, the <code>IndexOffset</code> is incremented
+regardless if the validator signed or not. Once the index is determined, the
+<code>MissedBlocksBitArray</code> and <code>MissedBlocksCounter</code> are updated accordingly.</p>
+<p>Finally, in order to determine if a validator crosses below the liveness threshold,
+we fetch the maximum number of blocks missed, <code>maxMissed</code>, which is
+<code>SignedBlocksWindow - (MinSignedPerWindow * SignedBlocksWindow)</code> and the minimum
+height at which we can determine liveness, <code>minHeight</code>. If the current block is
+greater than <code>minHeight</code> and the validator's <code>MissedBlocksCounter</code> is greater than
+<code>maxMissed</code>, they will be slashed by <code>SlashFractionDowntime</code>, will be jailed
+for <code>DowntimeJailDuration</code>, and have the following values reset:
+<code>MissedBlocksBitArray</code>, <code>MissedBlocksCounter</code>, and <code>IndexOffset</code>.</p>
+<p><strong>Note</strong>: Liveness slashes do <strong>NOT</strong> lead to a tombstombing.</p>
+<pre><code class="language-go">height := block.Height
+
+for vote in block.LastCommitInfo.Votes {
+  signInfo := GetValidatorSigningInfo(vote.Validator.Address)
+
+  // This is a relative index, so we counts blocks the validator SHOULD have
+  // signed. We use the 0-value default signing info if not present, except for
+  // start height.
+  index := signInfo.IndexOffset % SignedBlocksWindow()
+  signInfo.IndexOffset++
+
+  // Update MissedBlocksBitArray and MissedBlocksCounter. The MissedBlocksCounter
+  // just tracks the sum of MissedBlocksBitArray. That way we avoid needing to
+  // read/write the whole array each time.
+  missedPrevious := GetValidatorMissedBlockBitArray(vote.Validator.Address, index)
+  missed := !signed
+
+  switch {
+  case !missedPrevious &amp;&amp; missed:
+    // array index has changed from not missed to missed, increment counter
+    SetValidatorMissedBlockBitArray(vote.Validator.Address, index, true)
+    signInfo.MissedBlocksCounter++
+
+  case missedPrevious &amp;&amp; !missed:
+    // array index has changed from missed to not missed, decrement counter
+    SetValidatorMissedBlockBitArray(vote.Validator.Address, index, false)
+    signInfo.MissedBlocksCounter--
+
+  default:
+    // array index at this index has not changed; no need to update counter
+  }
+
+  if missed {
+    // emit events...
+  }
+
+  minHeight := signInfo.StartHeight + SignedBlocksWindow()
+  maxMissed := SignedBlocksWindow() - MinSignedPerWindow()
+
+  // If we are past the minimum height and the validator has missed too many
+  // jail and slash them.
+  if height &gt; minHeight &amp;&amp; signInfo.MissedBlocksCounter &gt; maxMissed {
+    validator := ValidatorByConsAddr(vote.Validator.Address)
+
+    // emit events...
+
+    // We need to retrieve the stake distribution which signed the block, so we
+    // subtract ValidatorUpdateDelay from the block height, and subtract an
+    // additional 1 since this is the LastCommit.
+    //
+    // Note, that this CAN result in a negative &quot;distributionHeight&quot; up to
+    // -ValidatorUpdateDelay-1, i.e. at the end of the pre-genesis block (none) = at the beginning of the genesis block.
+    // That's fine since this is just used to filter unbonding delegations &amp; redelegations.
+    distributionHeight := height - sdk.ValidatorUpdateDelay - 1
+
+    Slash(vote.Validator.Address, distributionHeight, vote.Validator.Power, SlashFractionDowntime())
+    Jail(vote.Validator.Address)
+
+    signInfo.JailedUntil = block.Time.Add(DowntimeJailDuration())
+
+    // We need to reset the counter &amp; array so that the validator won't be
+    // immediately slashed for downtime upon rebonding.
+    signInfo.MissedBlocksCounter = 0
+    signInfo.IndexOffset = 0
+    ClearValidatorMissedBlockBitArray(vote.Validator.Address)
+  }
+
+  SetValidatorSigningInfo(vote.Validator.Address, signInfo)
+}
+</code></pre>
+<h2 id="hooks">Hooks</h2>
+<p>This section contains a description of the module's <code>hooks</code>. Hooks are operations that are executed automatically when events are raised.</p>
+<h3 id="staking-hooks">Staking hooks</h3>
+<p>The slashing module implements the <code>StakingHooks</code> defined in <code>x/staking</code> and are used as record-keeping of validators information. During the app initialization, these hooks should be registered in the staking module struct.</p>
+<p>The following hooks impact the slashing state:</p>
+<ul>
+<li><code>AfterValidatorBonded</code> creates a <code>ValidatorSigningInfo</code> instance as described in the following section.</li>
+<li><code>AfterValidatorCreated</code> stores a validator's consensus key.</li>
+<li><code>AfterValidatorRemoved</code> removes a validator's consensus key.</li>
+</ul>
+<h3 id="validator-bonded">Validator Bonded</h3>
+<p>Upon successful first-time bonding of a new validator, we create a new <code>ValidatorSigningInfo</code> structure for the
+now-bonded validator, which <code>StartHeight</code> of the current block.</p>
+<pre><code>onValidatorBonded(address sdk.ValAddress)
+
+  signingInfo, found = GetValidatorSigningInfo(address)
+  if !found {
+    signingInfo = ValidatorSigningInfo {
+      StartHeight         : CurrentHeight,
+      IndexOffset         : 0,
+      JailedUntil         : time.Unix(0, 0),
+      Tombstone           : false,
+      MissedBloskCounter  : 0
+    }
+    setValidatorSigningInfo(signingInfo)
+  }
+
+  return
+</code></pre>
+<h2 id="tags">Tags</h2>
+<p>The slashing module emits the following events/tags:</p>
+<h2 id="msgserver">MsgServer</h2>
+<h3 id="msgunjail">MsgUnjail</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>slashing</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{validatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="keeper">Keeper</h2>
+<h2 id="beginblocker-handlevalidatorsignature">BeginBlocker: HandleValidatorSignature</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slash</td>
+<td>address</td>
+<td>{validatorConsensusAddress}</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>power</td>
+<td>{validatorPower}</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>reason</td>
+<td>{slashReason}</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>jailed [0]</td>
+<td>{validatorConsensusAddress}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>[0] Only included if the validator is jailed.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>liveness</td>
+<td>address</td>
+<td>{validatorConsensusAddress}</td>
+</tr>
+<tr>
+<td>liveness</td>
+<td>missed_blocks</td>
+<td>{missedBlocksCounter}</td>
+</tr>
+<tr>
+<td>liveness</td>
+<td>height</td>
+<td>{blockHeight}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slash">Slash</h3>
+<ul>
+<li>same as <code>"slash"</code> event from <code>HandleValidatorSignature</code>, but without the <code>jailed</code> attribute.</li>
+</ul>
+<h3 id="jail">Jail</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slash</td>
+<td>jailed</td>
+<td>{validatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h1 id="staking-tombstone">Staking Tombstone</h1>
+<h2 id="abstract_1">Abstract</h2>
+<p>In the current implementation of the <code>slashing</code> module, when the consensus engine
+informs the state machine of a validator's consensus fault, the validator is
+partially slashed, and put into a "jail period", a period of time in which they
+are not allowed to rejoin the validator set. However, because of the nature of
+consensus faults and ABCI, there can be a delay between an infraction occurring,
+and evidence of the infraction reaching the state machine (this is one of the
+primary reasons for the existence of the unbonding period).</p>
+<blockquote>
+<p>Note: The tombstone concept, only applies to faults that have a delay between
+the infraction occurring and evidence reaching the state machine. For example,
+evidence of a validator double signing may take a while to reach the state machine
+due to unpredictable evidence gossip layer delays and the ability of validators to
+selectively reveal double-signatures (e.g. to infrequently-online light clients).
+Liveness slashing, on the other hand, is detected immediately as soon as the
+infraction occurs, and therefore no slashing period is needed. A validator is
+immediately put into jail period, and they cannot commit another liveness fault
+until they unjail. In the future, there may be other types of byzantine faults
+that have delays (for example, submitting evidence of an invalid proposal as a transaction).
+When implemented, it will have to be decided whether these future types of
+byzantine faults will result in a tombstoning (and if not, the slash amounts
+will not be capped by a slashing period).</p>
+</blockquote>
+<p>In the current system design, once a validator is put in the jail for a consensus
+fault, after the <code>JailPeriod</code> they are allowed to send a transaction to <code>unjail</code>
+themselves, and thus rejoin the validator set.</p>
+<p>One of the "design desires" of the <code>slashing</code> module is that if multiple
+infractions occur before evidence is executed (and a validator is put in jail),
+they should only be punished for single worst infraction, but not cumulatively.
+For example, if the sequence of events is:</p>
+<ol>
+<li>Validator A commits Infraction 1 (worth 30% slash)</li>
+<li>Validator A commits Infraction 2 (worth 40% slash)</li>
+<li>Validator A commits Infraction 3 (worth 35% slash)</li>
+<li>Evidence for Infraction 1 reaches state machine (and validator is put in jail)</li>
+<li>Evidence for Infraction 2 reaches state machine</li>
+<li>Evidence for Infraction 3 reaches state machine</li>
+</ol>
+<p>Only Infraction 2 should have its slash take effect, as it is the highest. This
+is done, so that in the case of the compromise of a validator's consensus key,
+they will only be punished once, even if the hacker double-signs many blocks.
+Because, the unjailing has to be done with the validator's operator key, they
+have a chance to re-secure their consensus key, and then signal that they are
+ready using their operator key. We call this period during which we track only
+the max infraction, the "slashing period".</p>
+<p>Once, a validator rejoins by unjailing themselves, we begin a new slashing period;
+if they commit a new infraction after unjailing, it gets slashed cumulatively on
+top of the worst infraction from the previous slashing period.</p>
+<p>However, while infractions are grouped based off of the slashing periods, because
+evidence can be submitted up to an <code>unbondingPeriod</code> after the infraction, we
+still have to allow for evidence to be submitted for previous slashing periods.
+For example, if the sequence of events is:</p>
+<ol>
+<li>Validator A commits Infraction 1 (worth 30% slash)</li>
+<li>Validator A commits Infraction 2 (worth 40% slash)</li>
+<li>Evidence for Infraction 1 reaches state machine (and Validator A is put in jail)</li>
+<li>Validator A unjails</li>
+</ol>
+<p>We are now in a new slashing period, however we still have to keep the door open
+for the previous infraction, as the evidence for Infraction 2 may still come in.
+As the number of slashing periods increase, it creates more complexity as we have
+to keep track of the highest infraction amount for every single slashing period.</p>
+<blockquote>
+<p>Note: Currently, according to the <code>slashing</code> module spec, a new slashing period
+is created every time a validator is unbonded then rebonded. This should probably
+be changed to jailed/unjailed. See issue <a href="https://github.com/cosmos/cosmos-sdk/issues/3205">#3205</a>
+for further details. For the remainder of this, I will assume that we only start
+a new slashing period when a validator gets unjailed.</p>
+</blockquote>
+<p>The maximum number of slashing periods is the <code>len(UnbondingPeriod) / len(JailPeriod)</code>.
+The current defaults in Gaia for the <code>UnbondingPeriod</code> and <code>JailPeriod</code> are 3 weeks
+and 2 days, respectively. This means there could potentially be up to 11 slashing
+periods concurrently being tracked per validator. If we set the <code>JailPeriod &gt;= UnbondingPeriod</code>,
+we only have to track 1 slashing period (i.e not have to track slashing periods).</p>
+<p>Currently, in the jail period implementation, once a validator unjails, all of
+their delegators who are delegated to them (haven't unbonded / redelegated away),
+stay with them. Given that consensus safety faults are so egregious
+(way more so than liveness faults), it is probably prudent to have delegators not
+"auto-rebond" to the validator.</p>
+<h3 id="proposal-infinite-jail">Proposal: infinite jail</h3>
+<p>We propose setting the "jail time" for a
+validator who commits a consensus safety fault, to <code>infinite</code> (i.e. a tombstone state).
+This essentially kicks the validator out of the validator set and does not allow
+them to re-enter the validator set. All of their delegators (including the operator themselves)
+have to either unbond or redelegate away. The validator operator can create a new
+validator if they would like, with a new operator key and consensus key, but they
+have to "re-earn" their delegations back.</p>
+<p>Implementing the tombstone system and getting rid of the slashing period tracking
+will make the <code>slashing</code> module way simpler, especially because we can remove all
+of the hooks defined in the <code>slashing</code> module consumed by the <code>staking</code> module
+(the <code>slashing</code> module still consumes hooks defined in <code>staking</code>).</p>
+<h3 id="single-slashing-amount">Single slashing amount</h3>
+<p>Another optimization that can be made is that if we assume that all ABCI faults
+for Tendermint consensus are slashed at the same level, we don't have to keep
+track of "max slash". Once an ABCI fault happens, we don't have to worry about
+comparing potential future ones to find the max.</p>
+<p>Currently the only Tendermint ABCI fault is:</p>
+<ul>
+<li>Unjustified precommits (double signs)</li>
+</ul>
+<p>It is currently planned to include the following fault in the near future:</p>
+<ul>
+<li>Signing a precommit when you're in unbonding phase (needed to make light client bisection safe)</li>
+</ul>
+<p>Given that these faults are both attributable byzantine faults, we will likely
+want to slash them equally, and thus we can enact the above change.</p>
+<blockquote>
+<p>Note: This change may make sense for current Tendermint consensus, but maybe
+not for a different consensus algorithm or future versions of Tendermint that
+may want to punish at different levels (for example, partial slashing).</p>
+</blockquote>
+<h1 id="parameters">Parameters</h1>
+<p>The slashing module contains the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SignedBlocksWindow</td>
+<td>string (int64)</td>
+<td>"100"</td>
+</tr>
+<tr>
+<td>MinSignedPerWindow</td>
+<td>string (dec)</td>
+<td>"0.500000000000000000"</td>
+</tr>
+<tr>
+<td>DowntimeJailDuration</td>
+<td>string (ns)</td>
+<td>"600000000000"</td>
+</tr>
+<tr>
+<td>SlashFractionDoubleSign</td>
+<td>string (dec)</td>
+<td>"0.050000000000000000"</td>
+</tr>
+<tr>
+<td>SlashFractionDowntime</td>
+<td>string (dec)</td>
+<td>"0.010000000000000000"</td>
+</tr>
+</tbody>
+</table>
+<h1 id="cli">CLI</h1>
+<p>A user can query and interact with the <code>slashing</code> module using the CLI.</p>
+<h3 id="query">Query</h3>
+<p>The <code>query</code> commands allow users to query <code>slashing</code> state.</p>
+<pre><code class="language-bash">simd query slashing --help
+</code></pre>
+<h4 id="params">params</h4>
+<p>The <code>params</code> command allows users to query genesis parameters for the slashing module.</p>
+<pre><code class="language-bash">simd query slashing params [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query slashing params
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">downtime_jail_duration: 600s
+min_signed_per_window: &quot;0.500000000000000000&quot;
+signed_blocks_window: &quot;100&quot;
+slash_fraction_double_sign: &quot;0.050000000000000000&quot;
+slash_fraction_downtime: &quot;0.010000000000000000&quot;
+</code></pre>
+<h4 id="signing-info">signing-info</h4>
+<p>The <code>signing-info</code> command allows users to query signing-info of the validator using consensus public key.</p>
+<pre><code class="language-bash">simd query slashing signing-infos [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query slashing signing-info '{&quot;@type&quot;:&quot;/cosmos.crypto.ed25519.PubKey&quot;,&quot;key&quot;:&quot;Auxs3865HpB/EfssYOzfqNhEJjzys6jD5B6tPgC8=&quot;}'
+
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">address: cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c
+index_offset: &quot;2068&quot;
+jailed_until: &quot;1970-01-01T00:00:00Z&quot;
+missed_blocks_counter: &quot;0&quot;
+start_height: &quot;0&quot;
+tombstoned: false
+</code></pre>
+<h4 id="signing-infos">signing-infos</h4>
+<p>The <code>signing-infos</code> command allows users to query signing infos of all validators.</p>
+<pre><code class="language-bash">simd query slashing signing-infos [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query slashing signing-infos
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">info:
+- address: cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c
+  index_offset: &quot;2075&quot;
+  jailed_until: &quot;1970-01-01T00:00:00Z&quot;
+  missed_blocks_counter: &quot;0&quot;
+  start_height: &quot;0&quot;
+  tombstoned: false
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h3 id="transactions">Transactions</h3>
+<p>The <code>tx</code> commands allow users to interact with the <code>slashing</code> module.</p>
+<pre><code class="language-bash">simd tx slashing --help
+</code></pre>
+<h4 id="unjail_1">unjail</h4>
+<p>The <code>unjail</code> command allows users to unjail a validator previously jailed for downtime.</p>
+<pre><code class="language-bash">  simd tx slashing unjail --from mykey [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx slashing unjail --from mykey
+</code></pre>
+<h2 id="grpc">gRPC</h2>
+<p>A user can query the <code>slashing</code> module using gRPC endpoints.</p>
+<h3 id="params_1">Params</h3>
+<p>The <code>Params</code> endpoint allows users to query the parameters of slashing module.</p>
+<pre><code class="language-bash">cosmos.slashing.v1beta1.Query/Params
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.slashing.v1beta1.Query/Params
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;signedBlocksWindow&quot;: &quot;100&quot;,
+    &quot;minSignedPerWindow&quot;: &quot;NTAwMDAwMDAwMDAwMDAwMDAw&quot;,
+    &quot;downtimeJailDuration&quot;: &quot;600s&quot;,
+    &quot;slashFractionDoubleSign&quot;: &quot;NTAwMDAwMDAwMDAwMDAwMDA=&quot;,
+    &quot;slashFractionDowntime&quot;: &quot;MTAwMDAwMDAwMDAwMDAwMDA=&quot;
+  }
+}
+</code></pre>
+<h3 id="signinginfo">SigningInfo</h3>
+<p>The SigningInfo queries the signing info of given cons address.</p>
+<pre><code class="language-bash">cosmos.slashing.v1beta1.Query/SigningInfo
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;cons_address&quot;:&quot;cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c&quot;}' localhost:9090 cosmos.slashing.v1beta1.Query/SigningInfo
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;valSigningInfo&quot;: {
+    &quot;address&quot;: &quot;cosmosvalcons1nrqsld3aw6lh6t082frdqc84uwxn0t958c&quot;,
+    &quot;indexOffset&quot;: &quot;3493&quot;,
+    &quot;jailedUntil&quot;: &quot;1970-01-01T00:00:00Z&quot;
+  }
+}
+</code></pre>
+<h3 id="signinginfos">SigningInfos</h3>
+<p>The SigningInfos queries signing info of all validators.</p>
+<pre><code class="language-bash">cosmos.slashing.v1beta1.Query/SigningInfos
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.slashing.v1beta1.Query/SigningInfos
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;info&quot;: [
+    {
+      &quot;address&quot;: &quot;cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;,
+      &quot;indexOffset&quot;: &quot;2467&quot;,
+      &quot;jailedUntil&quot;: &quot;1970-01-01T00:00:00Z&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h2 id="rest">REST</h2>
+<p>A user can query the <code>slashing</code> module using REST endpoints.</p>
+<h3 id="params_2">Params</h3>
+<pre><code class="language-bash">/cosmos/slashing/v1beta1/params
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl &quot;localhost:1317/cosmos/slashing/v1beta1/params&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;signed_blocks_window&quot;: &quot;100&quot;,
+    &quot;min_signed_per_window&quot;: &quot;0.500000000000000000&quot;,
+    &quot;downtime_jail_duration&quot;: &quot;600s&quot;,
+    &quot;slash_fraction_double_sign&quot;: &quot;0.050000000000000000&quot;,
+    &quot;slash_fraction_downtime&quot;: &quot;0.010000000000000000&quot;
+}
+</code></pre>
+<h3 id="signing_info">signing_info</h3>
+<pre><code class="language-bash">/cosmos/slashing/v1beta1/signing_infos/%s
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl &quot;localhost:1317/cosmos/slashing/v1beta1/signing_infos/cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;val_signing_info&quot;: {
+    &quot;address&quot;: &quot;cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;,
+    &quot;start_height&quot;: &quot;0&quot;,
+    &quot;index_offset&quot;: &quot;4184&quot;,
+    &quot;jailed_until&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;tombstoned&quot;: false,
+    &quot;missed_blocks_counter&quot;: &quot;0&quot;
+  }
+}
+</code></pre>
+<h3 id="signing_infos">signing_infos</h3>
+<pre><code class="language-bash">/cosmos/slashing/v1beta1/signing_infos
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl &quot;localhost:1317/cosmos/slashing/v1beta1/signing_infos
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;info&quot;: [
+    {
+      &quot;address&quot;: &quot;cosmosvalcons1nrqslkwd3pz096lh6t082frdqc84uwxn0t958c&quot;,
+      &quot;start_height&quot;: &quot;0&quot;,
+      &quot;index_offset&quot;: &quot;4169&quot;,
+      &quot;jailed_until&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;tombstoned&quot;: false,
+      &quot;missed_blocks_counter&quot;: &quot;0&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

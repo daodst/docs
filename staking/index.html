@@ -1,0 +1,3843 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../slashing/">
+      
+      
+        <link rel="next" href="../gateway/run/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Staking - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#staking" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Staking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        Evm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        Auth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        Bank
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        Gov
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        Mint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribute/" class="md-nav__link">
+        Distribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slashing/" class="md-nav__link">
+        Slashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Staking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Staking
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lasttotalpower" class="md-nav__link">
+    LastTotalPower
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validator" class="md-nav__link">
+    Validator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delegation" class="md-nav__link">
+    Delegation
+  </a>
+  
+    <nav class="md-nav" aria-label="Delegation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delegator-shares" class="md-nav__link">
+    Delegator Shares
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbondingdelegation" class="md-nav__link">
+    UnbondingDelegation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queues" class="md-nav__link">
+    Queues
+  </a>
+  
+    <nav class="md-nav" aria-label="Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegationqueue" class="md-nav__link">
+    UnbondingDelegationQueue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatorqueue" class="md-nav__link">
+    ValidatorQueue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historicalinfo" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        mainnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        Operation Guide(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        Operation Guide(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lasttotalpower" class="md-nav__link">
+    LastTotalPower
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    Params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validator" class="md-nav__link">
+    Validator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delegation" class="md-nav__link">
+    Delegation
+  </a>
+  
+    <nav class="md-nav" aria-label="Delegation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delegator-shares" class="md-nav__link">
+    Delegator Shares
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbondingdelegation" class="md-nav__link">
+    UnbondingDelegation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queues" class="md-nav__link">
+    Queues
+  </a>
+  
+    <nav class="md-nav" aria-label="Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unbondingdelegationqueue" class="md-nav__link">
+    UnbondingDelegationQueue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatorqueue" class="md-nav__link">
+    ValidatorQueue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historicalinfo" class="md-nav__link">
+    HistoricalInfo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<!--
+order: 0
+title: Staking Overview
+parent:
+  title: "staking"
+-->
+
+<h1 id="staking"><code>staking</code></h1>
+<h2 id="abstract">Abstract</h2>
+<p>This paper specifies the Staking module</p>
+<p>The module enables Cosmos-SDK based blockchain to support an advanced
+Proof-of-Stake system. In this system, holders of the native staking token of
+the chain can become validators and can delegate tokens to validators,
+ultimately determining the effective validator set for the system.</p>
+<h2 id="contents">Contents</h2>
+<h2 id="state">State</h2>
+<h2 id="pool">Pool</h2>
+<p>Pool is used for tracking bonded and not-bonded token supply of the bond denomination.</p>
+<h2 id="lasttotalpower">LastTotalPower</h2>
+<p>LastTotalPower tracks the total amounts of bonded tokens recorded during the previous end block.
+Store entries prefixed with "Last" must remain unchanged until EndBlock.</p>
+<ul>
+<li>LastTotalPower: <code>0x12 -&gt; ProtocolBuffer(sdk.Int)</code></li>
+</ul>
+<h2 id="params">Params</h2>
+<p>Params is a module-wide configuration structure that stores system parameters
+and defines overall functioning of the staking module.</p>
+<ul>
+<li>Params: <code>Paramsspace("staking") -&gt; legacy_amino(params)</code></li>
+</ul>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.1/proto/cosmos/staking/v1beta1/staking.proto#L230-L241</p>
+<h2 id="validator">Validator</h2>
+<p>Validators can have one of three statuses</p>
+<ul>
+<li><code>Unbonded</code>: The validator is not in the active set. They cannot sign blocks and do not earn
+  rewards. They can receive delegations.</li>
+<li><code>Bonded</code>: Once the validator receives sufficient bonded tokens they automtically join the
+  active set during <a href="./05_end_block.md#validator-set-changes"><code>EndBlock</code></a> and their status is updated to <code>Bonded</code>.
+  They are signing blocks and receiving rewards. They can receive further delegations.
+  They can be slashed for misbehavior. Delegators to this validator who unbond their delegation
+  must wait the duration of the UnbondingTime, a chain-specific param, during which time
+  they are still slashable for offences of the source validator if those offences were committed
+  during the period of time that the tokens were bonded.</li>
+<li><code>Unbonding</code>: When a validator leaves the active set, either by choice or due to slashing, jailing or
+  tombstoning, an unbonding of all their delegations begins. All delegations must then wait the UnbondingTime
+  before their tokens are moved to their accounts from the <code>BondedPool</code>.</li>
+</ul>
+<p>Validators objects should be primarily stored and accessed by the
+<code>OperatorAddr</code>, an SDK validator address for the operator of the validator. Two
+additional indices are maintained per validator object in order to fulfill
+required lookups for slashing and validator-set updates. A third special index
+(<code>LastValidatorPower</code>) is also maintained which however remains constant
+throughout each block, unlike the first two indices which mirror the validator
+records within a block.</p>
+<ul>
+<li>Validators: <code>0x21 | OperatorAddrLen (1 byte) | OperatorAddr -&gt; ProtocolBuffer(validator)</code></li>
+<li>ValidatorsByConsAddr: <code>0x22 | ConsAddrLen (1 byte) | ConsAddr -&gt; OperatorAddr</code></li>
+<li>ValidatorsByPower: <code>0x23 | BigEndian(ConsensusPower) | OperatorAddrLen (1 byte) | OperatorAddr -&gt; OperatorAddr</code></li>
+<li>LastValidatorsPower: <code>0x11 | OperatorAddrLen (1 byte) | OperatorAddr -&gt; ProtocolBuffer(ConsensusPower)</code></li>
+</ul>
+<p><code>Validators</code> is the primary index - it ensures that each operator can have only one
+associated validator, where the public key of that validator can change in the
+future. Delegators can refer to the immutable operator of the validator, without
+concern for the changing public key.</p>
+<p><code>ValidatorByConsAddr</code> is an additional index that enables lookups for slashing.
+When Tendermint reports evidence, it provides the validator address, so this
+map is needed to find the operator. Note that the <code>ConsAddr</code> corresponds to the
+address which can be derived from the validator's <code>ConsPubKey</code>.</p>
+<p><code>ValidatorsByPower</code> is an additional index that provides a sorted list of
+potential validators to quickly determine the current active set. Here
+ConsensusPower is validator.Tokens/10^6 by default. Note that all validators
+where <code>Jailed</code> is true are not stored within this index.</p>
+<p><code>LastValidatorsPower</code> is a special index that provides a historical list of the
+last-block's bonded validators. This index remains constant during a block but
+is updated during the validator set update process which takes place in <a href="./05_end_block.md"><code>EndBlock</code></a>.</p>
+<p>Each validator's state is stored in a <code>Validator</code> struct:</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L65-L99</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L24-L63</p>
+<h2 id="delegation">Delegation</h2>
+<p>Delegations are identified by combining <code>DelegatorAddr</code> (the address of the delegator)
+with the <code>ValidatorAddr</code> Delegators are indexed in the store as follows:</p>
+<ul>
+<li>Delegation: <code>0x31 | DelegatorAddrLen (1 byte) | DelegatorAddr | ValidatorAddrLen (1 byte) | ValidatorAddr -&gt; ProtocolBuffer(delegation)</code></li>
+</ul>
+<p>Stake holders may delegate coins to validators; under this circumstance their
+funds are held in a <code>Delegation</code> data structure. It is owned by one
+delegator, and is associated with the shares for one validator. The sender of
+the transaction is the owner of the bond.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L159-L170</p>
+<h3 id="delegator-shares">Delegator Shares</h3>
+<p>When one Delegates tokens to a Validator they are issued a number of delegator shares based on a
+dynamic exchange rate, calculated as follows from the total number of tokens delegated to the
+validator and the number of shares issued so far:</p>
+<p><code>Shares per Token = validator.TotalShares() / validator.Tokens()</code></p>
+<p>Only the number of shares received is stored on the DelegationEntry. When a delegator then
+Undelegates, the token amount they receive is calculated from the number of shares they currently
+hold and the inverse exchange rate:</p>
+<p><code>Tokens per Share = validator.Tokens() / validatorShares()</code></p>
+<p>These <code>Shares</code> are simply an accounting mechanism. They are not a fungible asset. The reason for
+this mechanism is to simplify the accounting around slashing. Rather than iteratively slashing the
+tokens of every delegation entry, instead the Validators total bonded tokens can be slashed,
+effectively reducing the value of each issued delegator share.</p>
+<h2 id="unbondingdelegation">UnbondingDelegation</h2>
+<p>Shares in a <code>Delegation</code> can be unbonded, but they must for some time exist as
+an <code>UnbondingDelegation</code>, where shares can be reduced if Byzantine behavior is
+detected.</p>
+<p><code>UnbondingDelegation</code> are indexed in the store as:</p>
+<ul>
+<li>UnbondingDelegation: <code>0x32 | DelegatorAddrLen (1 byte) | DelegatorAddr | ValidatorAddrLen (1 byte) | ValidatorAddr -&gt; ProtocolBuffer(unbondingDelegation)</code></li>
+<li>UnbondingDelegationsFromValidator: <code>0x33 | ValidatorAddrLen (1 byte) | ValidatorAddr | DelegatorAddrLen (1 byte) | DelegatorAddr -&gt; nil</code></li>
+</ul>
+<p>The first map here is used in queries, to lookup all unbonding delegations for
+a given delegator, while the second map is used in slashing, to lookup all
+unbonding delegations associated with a given validator that need to be
+slashed.</p>
+<p>A UnbondingDelegation object is created every time an unbonding is initiated.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L172-L198</p>
+<h2 id="queues">Queues</h2>
+<p>All queues objects are sorted by timestamp. The time used within any queue is
+first rounded to the nearest nanosecond then sorted. The sortable time format
+used is a slight modification of the RFC3339Nano and uses the the format string
+<code>"2006-01-02T15:04:05.000000000"</code>. Notably this format:</p>
+<ul>
+<li>right pads all zeros</li>
+<li>drops the time zone info (uses UTC)</li>
+</ul>
+<p>In all cases, the stored timestamp represents the maturation time of the queue
+element.</p>
+<h3 id="unbondingdelegationqueue">UnbondingDelegationQueue</h3>
+<p>For the purpose of tracking progress of unbonding delegations the unbonding
+delegations queue is kept.</p>
+<ul>
+<li>UnbondingDelegation: <code>0x41 | format(time) -&gt; []DVPair</code></li>
+</ul>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L123-L133</p>
+<h3 id="validatorqueue">ValidatorQueue</h3>
+<p>For the purpose of tracking progress of unbonding validators the validator
+queue is kept.</p>
+<ul>
+<li>ValidatorQueueTime: <code>0x43 | format(time) -&gt; []sdk.ValAddress</code></li>
+</ul>
+<p>The stored object as each key is an array of validator operator addresses from
+which the validator object can be accessed. Typically it is expected that only
+a single validator record will be associated with a given timestamp however it is possible
+that multiple validators exist in the queue at the same location.</p>
+<h2 id="historicalinfo">HistoricalInfo</h2>
+<p>HistoricalInfo objects are stored and pruned at each block such that the staking keeper persists
+the <code>n</code> most recent historical info defined by staking module parameter: <code>HistoricalEntries</code>.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L15-L22</p>
+<p>At each BeginBlock, the staking keeper will persist the current Header and the Validators that committed
+the current block in a <code>HistoricalInfo</code> object. The Validators are sorted on their address to ensure that
+they are in a determisnistic order.
+The oldest HistoricalEntries will be pruned to ensure that there only exist the parameter-defined number of
+historical entries.</p>
+<h1 id="state-transitions">State Transitions</h1>
+<p>This document describes the state transition operations pertaining to:</p>
+<h2 id="validators">Validators</h2>
+<p>State transitions in validators are performed on every <a href="./05_end_block.md#validator-set-changes"><code>EndBlock</code></a>
+in order to check for changes in the active <code>ValidatorSet</code>.</p>
+<p>A validator can be <code>Unbonded</code>, <code>Unbonding</code> or <code>Bonded</code>. <code>Unbonded</code>
+and <code>Unbonding</code> are collectively called <code>Not Bonded</code>. A validator can move
+directly between all the states, except for from <code>Bonded</code> to <code>Unbonded</code>.</p>
+<h3 id="not-bonded-to-bonded">Not bonded to Bonded</h3>
+<p>The following transition occurs when a validator's ranking in the <code>ValidatorPowerIndex</code> surpasses
+that of the <code>LastValidator</code>.</p>
+<ul>
+<li>set <code>validator.Status</code> to <code>Bonded</code></li>
+<li>send the <code>validator.Tokens</code> from the <code>NotBondedTokens</code> to the <code>BondedPool</code> <code>ModuleAccount</code></li>
+<li>delete the existing record from <code>ValidatorByPowerIndex</code></li>
+<li>add a new updated record to the <code>ValidatorByPowerIndex</code></li>
+<li>update the <code>Validator</code> object for this validator</li>
+<li>if it exists, delete any <code>ValidatorQueue</code> record for this validator</li>
+</ul>
+<h3 id="bonded-to-unbonding">Bonded to Unbonding</h3>
+<p>When a validator begins the unbonding process the following operations occur:</p>
+<ul>
+<li>send the <code>validator.Tokens</code> from the <code>BondedPool</code> to the <code>NotBondedTokens</code> <code>ModuleAccount</code></li>
+<li>set <code>validator.Status</code> to <code>Unbonding</code></li>
+<li>delete the existing record from <code>ValidatorByPowerIndex</code></li>
+<li>add a new updated record to the <code>ValidatorByPowerIndex</code></li>
+<li>update the <code>Validator</code> object for this validator</li>
+<li>insert a new record into the <code>ValidatorQueue</code> for this validator</li>
+</ul>
+<h3 id="unbonding-to-unbonded">Unbonding to Unbonded</h3>
+<p>A validator moves from unbonding to unbonded when the <code>ValidatorQueue</code> object
+moves from bonded to unbonded</p>
+<ul>
+<li>update the <code>Validator</code> object for this validator</li>
+<li>set <code>validator.Status</code> to <code>Unbonded</code></li>
+</ul>
+<h3 id="jailunjail">Jail/Unjail</h3>
+<p>when a validator is jailed it is effectively removed from the Tendermint set.
+this process may be also be reversed. the following operations occur:</p>
+<ul>
+<li>set <code>Validator.Jailed</code> and update object</li>
+<li>if jailed delete record from <code>ValidatorByPowerIndex</code></li>
+<li>if unjailed add record to <code>ValidatorByPowerIndex</code></li>
+</ul>
+<p>Jailed validators are not present in any of the following stores:</p>
+<ul>
+<li>the power store (from consensus power to address)</li>
+</ul>
+<h2 id="delegations">Delegations</h2>
+<h3 id="delegate">Delegate</h3>
+<p>When a delegation occurs both the validator and the delegation objects are affected</p>
+<ul>
+<li>determine the delegators shares based on tokens delegated and the validator's exchange rate</li>
+<li>remove tokens from the sending account</li>
+<li>add shares the delegation object or add them to a created validator object</li>
+<li>add new delegator shares and update the <code>Validator</code> object</li>
+<li>transfer the <code>delegation.Amount</code> from the delegator's account to the <code>BondedPool</code> or the <code>NotBondedPool</code> <code>ModuleAccount</code> depending if the <code>validator.Status</code> is <code>Bonded</code> or not</li>
+<li>delete the existing record from <code>ValidatorByPowerIndex</code></li>
+<li>add an new updated record to the <code>ValidatorByPowerIndex</code></li>
+</ul>
+<h3 id="begin-unbonding">Begin Unbonding</h3>
+<p>As a part of the Undelegate and Complete Unbonding state transitions Unbond
+Delegation may be called.</p>
+<ul>
+<li>subtract the unbonded shares from delegator</li>
+<li>if the validator is <code>Unbonding</code> or <code>Bonded</code> add the tokens to an <code>UnbondingDelegation</code> Entry</li>
+<li>if the validator is <code>Unbonded</code> send the tokens directly to the withdraw
+  account</li>
+<li>update the delegation or remove the delegation if there are no more shares</li>
+<li>if the delegation is the operator of the validator and no more shares exist then trigger a jail validator</li>
+<li>update the validator with removed the delegator shares and associated coins</li>
+<li>if the validator state is <code>Bonded</code>, transfer the <code>Coins</code> worth of the unbonded
+  shares from the <code>BondedPool</code> to the <code>NotBondedPool</code> <code>ModuleAccount</code></li>
+<li>remove the validator if it is unbonded and there are no more delegation shares.</li>
+</ul>
+<h3 id="complete-unbonding">Complete Unbonding</h3>
+<p>For undelegations which do not complete immediately, the following operations
+occur when the unbonding delegation queue element matures:</p>
+<ul>
+<li>remove the entry from the <code>UnbondingDelegation</code> object</li>
+<li>transfer the tokens from the <code>NotBondedPool</code> <code>ModuleAccount</code> to the delegator <code>Account</code></li>
+</ul>
+<h2 id="slashing">Slashing</h2>
+<h3 id="slash-validator">Slash Validator</h3>
+<p>When a Validator is slashed, the following occurs:</p>
+<ul>
+<li>The total <code>slashAmount</code> is calculated as the <code>slashFactor</code> (a chain parameter) * <code>TokensFromConsensusPower</code>,
+  the total number of tokens bonded to the validator at the time of the infraction.</li>
+<li>Every unbonding delegation and pseudo-unbonding redelegation such that the infraction occured before the unbonding or
+  redelegation began from the validator are slashed by the <code>slashFactor</code> percentage of the initialBalance.</li>
+<li>Each amount slashed from unbonding delegations is subtracted from the
+  total slash amount.</li>
+<li>The <code>remaingSlashAmount</code> is then slashed from the validator's tokens in the <code>BondedPool</code> or
+  <code>NonBondedPool</code> depending on the validator's status. This reduces the total supply of tokens.</li>
+</ul>
+<p>In the case of a slash due to any infraction that requires evidence to submitted (for example double-sign), the slash
+occurs at the block where the evidence is included, not at the block where the infraction occured.
+Put otherwise, validators are not slashed retroactively, only when they are caught.</p>
+<h3 id="slash-unbonding-delegation">Slash Unbonding Delegation</h3>
+<p>When a validator is slashed, so are those unbonding delegations from the validator that began unbonding
+after the time of the infraction. Every entry in every unbonding delegation from the validator
+is slashed by <code>slashFactor</code>. The amount slashed is calculated from the <code>InitialBalance</code> of the
+delegation and is capped to prevent a resulting negative balance. Completed (or mature) unbondings are not slashed.</p>
+<h2 id="how-shares-are-calculated">How Shares are calculated</h2>
+<p>At any given point in time, each validator has a number of tokens, <code>T</code>, and has a number of shares issued, <code>S</code>.
+Each delegator, <code>i</code>, holds a number of shares, <code>S_i</code>.
+The number of tokens is the sum of all tokens delegated to the validator, plus the rewards, minus the slashes.</p>
+<p>The delegator is entitled to a portion of the underlying tokens proportional to their proportion of shares.
+So delegator <code>i</code> is entitled to <code>T * S_i / S</code> of the validator's tokens.</p>
+<p>When a delegator delegates new tokens to the validator, they receive a number of shares proportional to their contribution.
+So when delegator <code>j</code> delegates <code>T_j</code> tokens, they receive <code>S_j = S * T_j / T</code> shares.
+The total number of tokens is now <code>T + T_j</code>, and the total number of shares is <code>S + S_j</code>.
+<code>j</code>s proportion of the shares is the same as their proportion of the total tokens contributed: <code>(S + S_j) / S = (T + T_j) / T</code>.</p>
+<p>A special case is the initial delegation, when <code>T = 0</code> and <code>S = 0</code>, so <code>T_j / T</code> is undefined.
+For the initial delegation, delegator <code>j</code> who delegates <code>T_j</code> tokens receive <code>S_j = T_j</code> shares.
+So a validator that hasn't received any rewards and has not been slashed will have <code>T = S</code>.</p>
+<h1 id="messages">Messages</h1>
+<p>In this section we describe the processing of the staking messages and the corresponding updates to the state. All created/modified state objects specified by each message are defined within the <a href="./02_state_transitions.md">state</a> section.</p>
+<h2 id="msgcreatevalidator">MsgCreateValidator</h2>
+<p>A validator is created using the <code>MsgCreateValidator</code> message.
+The validator must be created with an initial delegation from the operator.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L16-L17</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L35-L51</p>
+<p>This message is expected to fail if:</p>
+<ul>
+<li>another validator with this operator address is already registered</li>
+<li>another validator with this pubkey is already registered</li>
+<li>the initial self-delegation tokens are of a denom not specified as the bonding denom</li>
+<li>the commission parameters are faulty, namely:</li>
+<li><code>MaxRate</code> is either &gt; 1 or &lt; 0</li>
+<li>the initial <code>Rate</code> is either negative or &gt; <code>MaxRate</code></li>
+<li>the initial <code>MaxChangeRate</code> is either negative or &gt; <code>MaxRate</code></li>
+<li>the description fields are too large</li>
+</ul>
+<p>This message creates and stores the <code>Validator</code> object at appropriate indexes.
+Additionally a self-delegation is made with the initial tokens delegation
+tokens <code>Delegation</code>. The validator always starts as unbonded but may be bonded
+in the first end-block.</p>
+<h2 id="msgeditvalidator">MsgEditValidator</h2>
+<p>The <code>Description</code>, <code>CommissionRate</code> of a validator can be updated using the
+<code>MsgEditValidator</code> message.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L19-L20</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L56-L76</p>
+<p>This message is expected to fail if:</p>
+<ul>
+<li>the initial <code>CommissionRate</code> is either negative or &gt; <code>MaxRate</code></li>
+<li>the <code>CommissionRate</code> has already been updated within the previous 24 hours</li>
+<li>the <code>CommissionRate</code> is &gt; <code>MaxChangeRate</code></li>
+<li>the description fields are too large</li>
+</ul>
+<p>This message stores the updated <code>Validator</code> object.</p>
+<h2 id="msgdelegate">MsgDelegate</h2>
+<p>Within this message the delegator provides coins, and in return receives
+some amount of their validator's (newly created) delegator-shares that are
+assigned to <code>Delegation.Shares</code>.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L22-L24</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L81-L90</p>
+<p>This message is expected to fail if:</p>
+<ul>
+<li>the validator does not exist</li>
+<li>the <code>Amount</code> <code>Coin</code> has a denomination different than one defined by <code>params.BondDenom</code></li>
+<li>the exchange rate is invalid, meaning the validator has no tokens (due to slashing) but there are outstanding shares</li>
+<li>the amount delegated is less than the minimum allowed delegation</li>
+</ul>
+<p>If an existing <code>Delegation</code> object for provided addresses does not already
+exist then it is created as part of this message otherwise the existing
+<code>Delegation</code> is updated to include the newly received shares.</p>
+<p>The delegator receives newly minted shares at the current exchange rate.
+The exchange rate is the number of existing shares in the validator divided by
+the number of currently delegated tokens.</p>
+<p>The validator is updated in the <code>ValidatorByPower</code> index, and the delegation is
+tracked in validator object in the <code>Validators</code> index.</p>
+<p>It is possible to delegate to a jailed validator, the only difference being it
+will not be added to the power index until it is unjailed.</p>
+<p><img alt="Delegation sequence" src="../../../docs/uml/svg/delegation_sequence.svg" /></p>
+<h2 id="msgundelegate">MsgUndelegate</h2>
+<p>The <code>MsgUndelegate</code> message allows delegators to undelegate their tokens from
+validator.</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L30-L32</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L112-L121</p>
+<p>This message returns a response containing the completion time of the undelegation:</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/tx.proto#L123-L126</p>
+<p>This message is expected to fail if:</p>
+<ul>
+<li>the delegation doesn't exist</li>
+<li>the validator doesn't exist</li>
+<li>the delegation has less shares than the ones worth of <code>Amount</code></li>
+<li>existing <code>UnbondingDelegation</code> has maximum entries as defined by <code>params.MaxEntries</code></li>
+<li>the <code>Amount</code> has a denomination different than one defined by <code>params.BondDenom</code></li>
+</ul>
+<p>When this message is processed the following actions occur:</p>
+<ul>
+<li>validator's <code>DelegatorShares</code> and the delegation's <code>Shares</code> are both reduced by the message <code>SharesAmount</code></li>
+<li>calculate the token worth of the shares remove that amount tokens held within the validator</li>
+<li>with those removed tokens, if the validator is:</li>
+<li><code>Bonded</code> - add them to an entry in <code>UnbondingDelegation</code> (create <code>UnbondingDelegation</code> if it doesn't exist) with a completion time a full unbonding period from the current time. Update pool shares to reduce BondedTokens and increase NotBondedTokens by token worth of the shares.</li>
+<li><code>Unbonding</code> - add them to an entry in <code>UnbondingDelegation</code> (create <code>UnbondingDelegation</code> if it doesn't exist) with the same completion time as the validator (<code>UnbondingMinTime</code>).</li>
+<li><code>Unbonded</code> - then send the coins the message <code>DelegatorAddr</code></li>
+<li>if there are no more <code>Shares</code> in the delegation, then the delegation object is removed from the store</li>
+<li>under this situation if the delegation is the validator's self-delegation then also jail the validator.</li>
+</ul>
+<p><img alt="Unbond sequence" src="../../../docs/uml/svg/unbond_sequence.svg" /></p>
+<h1 id="begin-block">Begin-Block</h1>
+<p>Each abci begin block call, the historical info will get stored and pruned
+according to the <code>HistoricalEntries</code> parameter.</p>
+<h2 id="historical-info-tracking">Historical Info Tracking</h2>
+<p>If the <code>HistoricalEntries</code> parameter is 0, then the <code>BeginBlock</code> performs a no-op.</p>
+<p>Otherwise, the latest historical info is stored under the key <code>historicalInfoKey|height</code>, while any entries older than <code>height - HistoricalEntries</code> is deleted.
+In most cases, this results in a single entry being pruned per block.
+However, if the parameter <code>HistoricalEntries</code> has changed to a lower value there will be multiple entries in the store that must be pruned.</p>
+<h1 id="end-block">End-Block</h1>
+<p>Each abci end block call, the operations to update queues and validator set
+changes are specified to execute.</p>
+<h2 id="validator-set-changes">Validator Set Changes</h2>
+<p>The staking validator set is updated during this process by state transitions
+that run at the end of every block. As a part of this process any updated
+validators are also returned back to Tendermint for inclusion in the Tendermint
+validator set which is responsible for validating Tendermint messages at the
+consensus layer. Operations are as following:</p>
+<ul>
+<li>the new validator set is taken as the top <code>params.MaxValidators</code> number of
+  validators retrieved from the <code>ValidatorsByPower</code> index</li>
+<li>the previous validator set is compared with the new validator set:</li>
+<li>missing validators begin unbonding and their <code>Tokens</code> are transferred from the
+     <code>BondedPool</code> to the <code>NotBondedPool</code> <code>ModuleAccount</code></li>
+<li>new validators are instantly bonded and their <code>Tokens</code> are transferred from the
+     <code>NotBondedPool</code> to the <code>BondedPool</code> <code>ModuleAccount</code></li>
+</ul>
+<p>In all cases, any validators leaving or entering the bonded validator set or
+changing balances and staying within the bonded validator set incur an update
+message reporting their new consensus power which is passed back to Tendermint.</p>
+<p>The <code>LastTotalPower</code> and <code>LastValidatorsPower</code> hold the state of the total power
+and validator power from the end of the last block, and are used to check for
+changes that have occured in <code>ValidatorsByPower</code> and the total new power, which
+is calculated during <code>EndBlock</code>.</p>
+<h2 id="queues_1">Queues</h2>
+<p>Within staking, certain state-transitions are not instantaneous but take place
+over a duration of time (typically the unbonding period). When these
+transitions are mature certain operations must take place in order to complete
+the state operation. This is achieved through the use of queues which are
+checked/processed at the end of each block.</p>
+<h3 id="unbonding-validators">Unbonding Validators</h3>
+<p>When a validator is kicked out of the bonded validator set (either through
+being jailed, or not having sufficient bonded tokens) it begins the unbonding
+process along with all its delegations begin unbonding (while still being
+delegated to this validator). At this point the validator is said to be an
+"unbonding validator", whereby it will mature to become an "unbonded validator"
+after the unbonding period has passed.</p>
+<p>Each block the validator queue is to be checked for mature unbonding validators
+(namely with a completion time &lt;= current time and completion height &lt;= current
+block height). At this point any mature validators which do not have any
+delegations remaining are deleted from state. For all other mature unbonding
+validators that still have remaining delegations, the <code>validator.Status</code> is
+switched from <code>types.Unbonding</code> to
+<code>types.Unbonded</code>.</p>
+<h3 id="unbonding-delegations">Unbonding Delegations</h3>
+<p>Complete the unbonding of all mature <code>UnbondingDelegations.Entries</code> within the
+<code>UnbondingDelegations</code> queue with the following procedure:</p>
+<ul>
+<li>transfer the balance coins to the delegator's wallet address</li>
+<li>remove the mature entry from <code>UnbondingDelegation.Entries</code></li>
+<li>remove the <code>UnbondingDelegation</code> object from the store if there are no
+  remaining entries.</li>
+</ul>
+<h1 id="hooks">Hooks</h1>
+<p>Other modules may register operations to execute when a certain event has
+occurred within staking.  These events can be registered to execute either
+right <code>Before</code> or <code>After</code> the staking event (as per the hook name). The
+following hooks can registered with staking:</p>
+<ul>
+<li><code>AfterValidatorCreated(Context, ValAddress)</code></li>
+<li>called when a validator is created</li>
+<li><code>BeforeValidatorModified(Context, ValAddress)</code></li>
+<li>called when a validator's state is changed</li>
+<li><code>AfterValidatorRemoved(Context, ConsAddress, ValAddress)</code></li>
+<li>called when a validator is deleted</li>
+<li><code>AfterValidatorBonded(Context, ConsAddress, ValAddress)</code></li>
+<li>called when a validator is bonded</li>
+<li><code>AfterValidatorBeginUnbonding(Context, ConsAddress, ValAddress)</code></li>
+<li>called when a validator begins unbonding</li>
+<li><code>BeforeDelegationCreated(Context, AccAddress, ValAddress)</code></li>
+<li>called when a delegation is created</li>
+<li><code>BeforeDelegationRemoved(Context, AccAddress, ValAddress)</code></li>
+<li>called when a delegation is removed</li>
+</ul>
+<h1 id="events">Events</h1>
+<p>The staking module emits the following events:</p>
+<h2 id="endblocker">EndBlocker</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>complete_unbonding</td>
+<td>amount</td>
+<td>{totalUnbondingAmount}</td>
+</tr>
+<tr>
+<td>complete_unbonding</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>complete_unbonding</td>
+<td>delegator</td>
+<td>{delegatorAddress}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>amount</td>
+<td>{totalRedelegationAmount}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>source_validator</td>
+<td>{srcValidatorAddress}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>destination_validator</td>
+<td>{dstValidatorAddress}</td>
+</tr>
+<tr>
+<td>complete_redelegation</td>
+<td>delegator</td>
+<td>{delegatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="msgs">Msg's</h2>
+<h3 id="msgcreatevalidator_1">MsgCreateValidator</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create_validator</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>create_validator</td>
+<td>amount</td>
+<td>{delegationAmount}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>create_validator</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="msgeditvalidator_1">MsgEditValidator</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>edit_validator</td>
+<td>commission_rate</td>
+<td>{commissionRate}</td>
+</tr>
+<tr>
+<td>edit_validator</td>
+<td>min_self_delegation</td>
+<td>{minSelfDelegation}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>edit_validator</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="msgdelegate_1">MsgDelegate</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegate</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>delegate</td>
+<td>amount</td>
+<td>{delegationAmount}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>delegate</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="msgundelegate_1">MsgUndelegate</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unbond</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>unbond</td>
+<td>amount</td>
+<td>{unbondAmount}</td>
+</tr>
+<tr>
+<td>unbond</td>
+<td>completion_time [0]</td>
+<td>{completionTime}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>staking</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>begin_unbonding</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>[0] Time is formatted in the RFC3339 standard</li>
+</ul>
+<h1 id="parameters">Parameters</h1>
+<p>The staking module contains the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnbondingTime</td>
+<td>string (time ns)</td>
+<td>"259200000000000"</td>
+</tr>
+<tr>
+<td>MaxValidators</td>
+<td>uint16</td>
+<td>100</td>
+</tr>
+<tr>
+<td>KeyMaxEntries</td>
+<td>uint16</td>
+<td>7</td>
+</tr>
+<tr>
+<td>HistoricalEntries</td>
+<td>uint16</td>
+<td>3</td>
+</tr>
+<tr>
+<td>BondDenom</td>
+<td>string</td>
+<td>"stake"</td>
+</tr>
+<tr>
+<td>PowerReduction</td>
+<td>string</td>
+<td>"1000000"</td>
+</tr>
+</tbody>
+</table>
+<h1 id="client">Client</h1>
+<h2 id="cli">CLI</h2>
+<p>A user can query and interact with the <code>staking</code> module using the CLI.</p>
+<h3 id="query">Query</h3>
+<p>The <code>query</code> commands allows users to query <code>staking</code> state.</p>
+<pre><code class="language-bash">simd query staking --help
+</code></pre>
+<h4 id="delegation_1">delegation</h4>
+<p>The <code>delegation</code> command allows users to query delegations for an individual delegator on an individual validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking delegation [delegator-addr] [validator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking delegation cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">balance:
+  amount: &quot;10000000000&quot;
+  denom: stake
+delegation:
+  delegator_address: cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+  shares: &quot;10000000000.000000000000000000&quot;
+  validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<h4 id="delegations_1">delegations</h4>
+<p>The <code>delegations</code> command allows users to query delegations for an individual delegator on all validators.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking delegations [delegator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking delegations cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">delegation_responses:
+- balance:
+    amount: &quot;10000000000&quot;
+    denom: stake
+  delegation:
+    delegator_address: cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+    shares: &quot;10000000000.000000000000000000&quot;
+    validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+- balance:
+    amount: &quot;10000000000&quot;
+    denom: stake
+  delegation:
+    delegator_address: cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+    shares: &quot;10000000000.000000000000000000&quot;
+    validator_address: cosmosvaloper1x20lytyf6zkcrv5edpkfkn8sz578qg5sqfyqnp
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h4 id="delegations-to">delegations-to</h4>
+<p>The <code>delegations-to</code> command allows users to query delegations on an individual validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking delegations-to [validator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking delegations-to cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">- balance:
+    amount: &quot;504000000&quot;
+    denom: stake
+  delegation:
+    delegator_address: cosmos1q2qwwynhv8kh3lu5fkeex4awau9x8fwt45f5cp
+    shares: &quot;504000000.000000000000000000&quot;
+    validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+- balance:
+    amount: &quot;78125000000&quot;
+    denom: uixo
+  delegation:
+    delegator_address: cosmos1qvppl3479hw4clahe0kwdlfvf8uvjtcd99m2ca
+    shares: &quot;78125000000.000000000000000000&quot;
+    validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+pagination:
+  next_key: null
+  total: &quot;0&quot;
+</code></pre>
+<h4 id="historical-info">historical-info</h4>
+<p>The <code>historical-info</code> command allows users to query historical information at given height.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking historical-info [height] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking historical-info 10
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">header:
+  app_hash: Lbx8cXpI868wz8sgp4qPYVrlaKjevR5WP/IjUxwp3oo=
+  chain_id: testnet
+  consensus_hash: BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=
+  data_hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+  evidence_hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+  height: &quot;10&quot;
+  last_block_id:
+    hash: RFbkpu6pWfSThXxKKl6EZVDnBSm16+U0l0xVjTX08Fk=
+    part_set_header:
+      hash: vpIvXD4rxD5GM4MXGz0Sad9I7//iVYLzZsEU4BVgWIU=
+      total: 1
+  last_commit_hash: Ne4uXyx4QtNp4Zx89kf9UK7oG9QVbdB6e7ZwZkhy8K0=
+  last_results_hash: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+  next_validators_hash: nGBgKeWBjoxeKFti00CxHsnULORgKY4LiuQwBuUrhCs=
+  proposer_address: mMEP2c2IRPLr99LedSRtBg9eONM=
+  time: &quot;2021-10-01T06:00:49.785790894Z&quot;
+  validators_hash: nGBgKeWBjoxeKFti00CxHsnULORgKY4LiuQwBuUrhCs=
+  version:
+    app: &quot;0&quot;
+    block: &quot;11&quot;
+valset:
+- commission:
+    commission_rates:
+      max_change_rate: &quot;0.010000000000000000&quot;
+      max_rate: &quot;0.200000000000000000&quot;
+      rate: &quot;0.100000000000000000&quot;
+    update_time: &quot;2021-10-01T05:52:50.380144238Z&quot;
+  consensus_pubkey:
+    '@type': /cosmos.crypto.ed25519.PubKey
+    key: Auxs3865HpB/EfssYOzfqNhEJjzys2Fo6jD5B8tPgC8=
+  delegator_shares: &quot;10000000.000000000000000000&quot;
+  description:
+    details: &quot;&quot;
+    identity: &quot;&quot;
+    moniker: myvalidator
+    security_contact: &quot;&quot;
+    website: &quot;&quot;
+  jailed: false
+  min_self_delegation: &quot;1&quot;
+  operator_address: cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc
+  status: BOND_STATUS_BONDED
+  tokens: &quot;10000000&quot;
+  unbonding_height: &quot;0&quot;
+  unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+</code></pre>
+<h4 id="params_1">params</h4>
+<p>The <code>params</code> command allows users to query values set as staking parameters.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking params [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking params
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">bond_denom: stake
+historical_entries: 10000
+max_entries: 7
+max_validators: 50
+unbonding_time: 1814400s
+</code></pre>
+<h4 id="pool_1">pool</h4>
+<p>The <code>pool</code> command allows users to query values for amounts stored in the staking pool.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd q staking pool [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd q staking pool
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">bonded_tokens: &quot;10000000&quot;
+not_bonded_tokens: &quot;0&quot;
+</code></pre>
+<h4 id="redelegation">redelegation</h4>
+<p>The <code>redelegation</code> command allows users to query a redelegation record based on delegator and a source and destination validator address.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking redelegation [delegator-addr] [src-validator-addr] [dst-validator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking redelegation cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p cosmosvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">pagination: null
+redelegation_responses:
+- entries:
+  - balance: &quot;50000000&quot;
+    redelegation_entry:
+      completion_time: &quot;2021-10-24T20:33:21.960084845Z&quot;
+      creation_height: 2.382847e+06
+      initial_balance: &quot;50000000&quot;
+      shares_dst: &quot;50000000.000000000000000000&quot;
+  - balance: &quot;5000000000&quot;
+    redelegation_entry:
+      completion_time: &quot;2021-10-25T21:33:54.446846862Z&quot;
+      creation_height: 2.397271e+06
+      initial_balance: &quot;5000000000&quot;
+      shares_dst: &quot;5000000000.000000000000000000&quot;
+  redelegation:
+    delegator_address: cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+    entries: null
+    validator_dst_address: cosmosvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
+    validator_src_address: cosmosvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
+</code></pre>
+<h4 id="unbonding-delegation">unbonding-delegation</h4>
+<p>The <code>unbonding-delegation</code> command allows users to query unbonding delegations for an individual delegator on an individual validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking unbonding-delegation [delegator-addr] [validator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking unbonding-delegation cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">delegator_address: cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+entries:
+- balance: &quot;52000000&quot;
+  completion_time: &quot;2021-11-02T11:35:55.391594709Z&quot;
+  creation_height: &quot;55078&quot;
+  initial_balance: &quot;52000000&quot;
+validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<h4 id="unbonding-delegations_1">unbonding-delegations</h4>
+<p>The <code>unbonding-delegations</code> command allows users to query all unbonding-delegations records for one delegator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking unbonding-delegations [delegator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking unbonding-delegations cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">pagination:
+  next_key: null
+  total: &quot;0&quot;
+unbonding_responses:
+- delegator_address: cosmos1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+  entries:
+  - balance: &quot;52000000&quot;
+    completion_time: &quot;2021-11-02T11:35:55.391594709Z&quot;
+    creation_height: &quot;55078&quot;
+    initial_balance: &quot;52000000&quot;
+  validator_address: cosmosvaloper1t8ehvswxjfn3ejzkjtntcyrqwvmvuknzmvtaaa
+
+</code></pre>
+<h4 id="unbonding-delegations-from">unbonding-delegations-from</h4>
+<p>The <code>unbonding-delegations-from</code> command allows users to query delegations that are unbonding <em>from</em> a validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking unbonding-delegations-from [validator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking unbonding-delegations-from cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">pagination:
+  next_key: null
+  total: &quot;0&quot;
+unbonding_responses:
+- delegator_address: cosmos1qqq9txnw4c77sdvzx0tkedsafl5s3vk7hn53fn
+  entries:
+  - balance: &quot;150000000&quot;
+    completion_time: &quot;2021-11-01T21:41:13.098141574Z&quot;
+    creation_height: &quot;46823&quot;
+    initial_balance: &quot;150000000&quot;
+  validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+- delegator_address: cosmos1peteje73eklqau66mr7h7rmewmt2vt99y24f5z
+  entries:
+  - balance: &quot;24000000&quot;
+    completion_time: &quot;2021-10-31T02:57:18.192280361Z&quot;
+    creation_height: &quot;21516&quot;
+    initial_balance: &quot;24000000&quot;
+  validator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<h4 id="validator_1">validator</h4>
+<p>The <code>validator</code> command allows users to query details about an individual validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking validator [validator-addr] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking validator cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">commission:
+  commission_rates:
+    max_change_rate: &quot;0.020000000000000000&quot;
+    max_rate: &quot;0.200000000000000000&quot;
+    rate: &quot;0.050000000000000000&quot;
+  update_time: &quot;2021-10-01T19:24:52.663191049Z&quot;
+consensus_pubkey:
+  '@type': /cosmos.crypto.ed25519.PubKey
+  key: sIiexdJdYWn27+7iUHQJDnkp63gq/rzUq1Y+fxoGjXc=
+delegator_shares: &quot;32948270000.000000000000000000&quot;
+description:
+  details: Witval is the validator arm from Vitwit. Vitwit is into software consulting
+    and services business since 2015. We are working closely with Cosmos ecosystem
+    since 2018. We are also building tools for the ecosystem, Aneka is our explorer
+    for the cosmos ecosystem.
+  identity: 51468B615127273A
+  moniker: Witval
+  security_contact: &quot;&quot;
+  website: &quot;&quot;
+jailed: false
+min_self_delegation: &quot;1&quot;
+operator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+status: BOND_STATUS_BONDED
+tokens: &quot;32948270000&quot;
+unbonding_height: &quot;0&quot;
+unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+</code></pre>
+<h4 id="validators_1">validators</h4>
+<p>The <code>validators</code> command allows users to query details about all validators on a network.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd query staking validators [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd query staking validators
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">pagination:
+  next_key: FPTi7TKAjN63QqZh+BaXn6gBmD5/
+  total: &quot;0&quot;
+validators:
+commission:
+  commission_rates:
+    max_change_rate: &quot;0.020000000000000000&quot;
+    max_rate: &quot;0.200000000000000000&quot;
+    rate: &quot;0.050000000000000000&quot;
+  update_time: &quot;2021-10-01T19:24:52.663191049Z&quot;
+consensus_pubkey:
+  '@type': /cosmos.crypto.ed25519.PubKey
+  key: sIiexdJdYWn27+7iUHQJDnkp63gq/rzUq1Y+fxoGjXc=
+delegator_shares: &quot;32948270000.000000000000000000&quot;
+description:
+    details: Witval is the validator arm from Vitwit. Vitwit is into software consulting
+      and services business since 2015. We are working closely with Cosmos ecosystem
+      since 2018. We are also building tools for the ecosystem, Aneka is our explorer
+      for the cosmos ecosystem.
+    identity: 51468B615127273A
+    moniker: Witval
+    security_contact: &quot;&quot;
+    website: &quot;&quot;
+  jailed: false
+  min_self_delegation: &quot;1&quot;
+  operator_address: cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+  status: BOND_STATUS_BONDED
+  tokens: &quot;32948270000&quot;
+  unbonding_height: &quot;0&quot;
+  unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+- commission:
+    commission_rates:
+      max_change_rate: &quot;0.100000000000000000&quot;
+      max_rate: &quot;0.200000000000000000&quot;
+      rate: &quot;0.050000000000000000&quot;
+    update_time: &quot;2021-10-04T18:02:21.446645619Z&quot;
+  consensus_pubkey:
+    '@type': /cosmos.crypto.ed25519.PubKey
+    key: GDNpuKDmCg9GnhnsiU4fCWktuGUemjNfvpCZiqoRIYA=
+  delegator_shares: &quot;559343421.000000000000000000&quot;
+  description:
+    details: Noderunners is a professional validator in POS networks. We have a huge
+      node running experience, reliable soft and hardware. Our commissions are always
+      low, our support to delegators is always full. Stake with us and start receiving
+      your Cosmos rewards now!
+    identity: 812E82D12FEA3493
+    moniker: Noderunners
+    security_contact: info@noderunners.biz
+    website: http://noderunners.biz
+  jailed: false
+  min_self_delegation: &quot;1&quot;
+  operator_address: cosmosvaloper1q5ku90atkhktze83j9xjaks2p7uruag5zp6wt7
+  status: BOND_STATUS_BONDED
+  tokens: &quot;559343421&quot;
+  unbonding_height: &quot;0&quot;
+  unbonding_time: &quot;1970-01-01T00:00:00Z&quot;
+</code></pre>
+<h3 id="transactions">Transactions</h3>
+<p>The <code>tx</code> commands allows users to interact with the <code>staking</code> module.</p>
+<pre><code class="language-bash">simd tx staking --help
+</code></pre>
+<h4 id="create-validator">create-validator</h4>
+<p>The command <code>create-validator</code> allows users to create new validator initialized with a self-delegation to it.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd tx staking create-validator [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx staking create-validator \
+  --amount=1000000stake \
+  --pubkey=$(simd tendermint show-validator) \
+  --moniker=&quot;my-moniker&quot; \
+  --website=&quot;https://myweb.site&quot; \
+  --details=&quot;description of your validator&quot; \
+  --chain-id=&quot;name_of_chain_id&quot; \
+  --commission-rate=&quot;0.10&quot; \
+  --commission-max-rate=&quot;0.20&quot; \
+  --commission-max-change-rate=&quot;0.01&quot; \
+  --min-self-delegation=&quot;1&quot; \
+  --gas=&quot;auto&quot; \
+  --gas-adjustment=&quot;1.2&quot; \
+  --gas-prices=&quot;0.025stake&quot; \
+  --from=mykey
+</code></pre>
+<h4 id="delegate_1">delegate</h4>
+<p>The command <code>delegate</code> allows users to delegate liquid tokens to a validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd tx staking delegate [validator-addr] [amount] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx staking delegate cosmosvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 1000stake --from mykey
+</code></pre>
+<h4 id="edit-validator">edit-validator</h4>
+<p>The command <code>edit-validator</code> allows users to edit an existing validator account.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd tx staking edit-validator [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx staking edit-validator --moniker &quot;new_moniker_name&quot; --website &quot;new_webiste_url&quot; --from mykey
+</code></pre>
+<h4 id="unbond">unbond</h4>
+<p>The command <code>unbond</code> allows users to unbond shares from a validator.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">simd tx staking unbond [validator-addr] [amount] [flags]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">simd tx staking unbond cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake --from mykey
+</code></pre>
+<h2 id="grpc">gRPC</h2>
+<p>A user can query the <code>staking</code> module using gRPC endpoints.</p>
+<h3 id="validators_2">Validators</h3>
+<p>The <code>Validators</code> endpoint queries all validators that match the given status.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Validators
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.staking.v1beta1.Query/Validators
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operatorAddress&quot;: &quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+      &quot;consensusPubkey&quot;: {&quot;@type&quot;:&quot;/cosmos.crypto.ed25519.PubKey&quot;,&quot;key&quot;:&quot;Auxs3865HpB/EfssYOzfqNhEJjzys2Fo6jD5B8tPgC8=&quot;},
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;10000000&quot;,
+      &quot;delegatorShares&quot;: &quot;10000000000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;myvalidator&quot;
+      },
+      &quot;unbondingTime&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commissionRates&quot;: {
+          &quot;rate&quot;: &quot;100000000000000000&quot;,
+          &quot;maxRate&quot;: &quot;200000000000000000&quot;,
+          &quot;maxChangeRate&quot;: &quot;10000000000000000&quot;
+        },
+        &quot;updateTime&quot;: &quot;2021-10-01T05:52:50.380144238Z&quot;
+      },
+      &quot;minSelfDelegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validator_2">Validator</h3>
+<p>The <code>Validator</code> endpoint queries validator information for given validator address.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Validator
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;validator_addr&quot;:&quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/Validator
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operatorAddress&quot;: &quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+    &quot;consensusPubkey&quot;: {&quot;@type&quot;:&quot;/cosmos.crypto.ed25519.PubKey&quot;,&quot;key&quot;:&quot;Auxs3865HpB/EfssYOzfqNhEJjzys2Fo6jD5B8tPgC8=&quot;},
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;10000000&quot;,
+    &quot;delegatorShares&quot;: &quot;10000000000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;myvalidator&quot;
+    },
+    &quot;unbondingTime&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commissionRates&quot;: {
+        &quot;rate&quot;: &quot;100000000000000000&quot;,
+        &quot;maxRate&quot;: &quot;200000000000000000&quot;,
+        &quot;maxChangeRate&quot;: &quot;10000000000000000&quot;
+      },
+      &quot;updateTime&quot;: &quot;2021-10-01T05:52:50.380144238Z&quot;
+    },
+    &quot;minSelfDelegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validatordelegations">ValidatorDelegations</h3>
+<p>The <code>ValidatorDelegations</code> endpoint queries delegate information for given validator.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/ValidatorDelegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;validator_addr&quot;:&quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/ValidatorDelegations
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;delegationResponses&quot;: [
+    {
+      &quot;delegation&quot;: {
+        &quot;delegatorAddress&quot;: &quot;cosmos1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgy3ua5t&quot;,
+        &quot;validatorAddress&quot;: &quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+        &quot;shares&quot;: &quot;10000000000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;10000000&quot;
+      }
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validatorunbondingdelegations">ValidatorUnbondingDelegations</h3>
+<p>The <code>ValidatorUnbondingDelegations</code> endpoint queries delegate information for given validator.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/ValidatorUnbondingDelegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;validator_addr&quot;:&quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/ValidatorUnbondingDelegations
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;cosmos1z3pzzw84d6xn00pw9dy3yapqypfde7vg6965fy&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;25325&quot;,
+          &quot;completion_time&quot;: &quot;2021-10-31T09:24:36.797320636Z&quot;,
+          &quot;initial_balance&quot;: &quot;20000000&quot;,
+          &quot;balance&quot;: &quot;20000000&quot;
+        }
+      ]
+    },
+    {
+      &quot;delegator_address&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;13100&quot;,
+          &quot;completion_time&quot;: &quot;2021-10-30T12:53:02.272266791Z&quot;,
+          &quot;initial_balance&quot;: &quot;1000000&quot;,
+          &quot;balance&quot;: &quot;1000000&quot;
+        }
+      ]
+    },
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;8&quot;
+  }
+}
+</code></pre>
+<h3 id="delegation_2">Delegation</h3>
+<p>The <code>Delegation</code> endpoint queries delegate information for given validator delegator pair.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Delegation
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;, validator_addr&quot;:&quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/Delegation
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_response&quot;:
+  {
+    &quot;delegation&quot;:
+      {
+        &quot;delegator_address&quot;:&quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+        &quot;validator_address&quot;:&quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+        &quot;shares&quot;:&quot;25083119936.000000000000000000&quot;
+      },
+    &quot;balance&quot;:
+      {
+        &quot;denom&quot;:&quot;stake&quot;,
+        &quot;amount&quot;:&quot;25083119936&quot;
+      }
+  }
+}
+</code></pre>
+<h3 id="unbondingdelegation_1">UnbondingDelegation</h3>
+<p>The <code>UnbondingDelegation</code> endpoint queries unbonding information for given validator delegator.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/UnbondingDelegation
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;, validator_addr&quot;:&quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/UnbondingDelegation
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;unbond&quot;: {
+    &quot;delegator_address&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+    &quot;validator_address&quot;: &quot;cosmosvaloper1rne8lgs98p0jqe82sgt0qr4rdn4hgvmgp9ggcc&quot;,
+    &quot;entries&quot;: [
+      {
+        &quot;creation_height&quot;: &quot;136984&quot;,
+        &quot;completion_time&quot;: &quot;2021-11-08T05:38:47.505593891Z&quot;,
+        &quot;initial_balance&quot;: &quot;400000000&quot;,
+        &quot;balance&quot;: &quot;400000000&quot;
+      },
+      {
+        &quot;creation_height&quot;: &quot;137005&quot;,
+        &quot;completion_time&quot;: &quot;2021-11-08T05:40:53.526196312Z&quot;,
+        &quot;initial_balance&quot;: &quot;385000000&quot;,
+        &quot;balance&quot;: &quot;385000000&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="delegatordelegations">DelegatorDelegations</h3>
+<p>The <code>DelegatorDelegations</code> endpoint queries all delegations of a given delegator address.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorDelegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorDelegations
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_responses&quot;: [
+    {&quot;delegation&quot;:{&quot;delegator_address&quot;:&quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,&quot;validator_address&quot;:&quot;cosmosvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;,&quot;shares&quot;:&quot;25083339023.000000000000000000&quot;},&quot;balance&quot;:{&quot;denom&quot;:&quot;stake&quot;,&quot;amount&quot;:&quot;25083339023&quot;}}
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorunbondingdelegations">DelegatorUnbondingDelegations</h3>
+<p>The <code>DelegatorUnbondingDelegations</code> endpoint queries all unbonding delegations of a given delegator address.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorUnbondingDelegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorUnbondingDelegations
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;cosmos1y8nyfvmqh50p6ldpzljk3yrglppdv3t8phju77&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper1sjllsnramtg3ewxqwwrwjxfgc4n4ef9uxyejze&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;136984&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-08T05:38:47.505593891Z&quot;,
+          &quot;initial_balance&quot;: &quot;400000000&quot;,
+          &quot;balance&quot;: &quot;400000000&quot;
+        },
+        {
+          &quot;creation_height&quot;: &quot;137005&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-08T05:40:53.526196312Z&quot;,
+          &quot;initial_balance&quot;: &quot;385000000&quot;,
+          &quot;balance&quot;: &quot;385000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidators">DelegatorValidators</h3>
+<p>The <code>DelegatorValidators</code> endpoint queries all validators information for given delegator.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorValidators
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;cosmos1ld5p7hn43yuh8ht28gm9pfjgj2fctujp2tgwvf&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorValidators
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operator_address&quot;: &quot;cosmosvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;UPwHWxH1zHJWGOa/m6JB3f5YjHMvPQPkVbDqqi+U7Uw=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;347260647559&quot;,
+      &quot;delegator_shares&quot;: &quot;347260647559.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;BouBouNode&quot;,
+        &quot;identity&quot;: &quot;&quot;,
+        &quot;website&quot;: &quot;https://boubounode.com&quot;,
+        &quot;security_contact&quot;: &quot;&quot;,
+        &quot;details&quot;: &quot;AI-based Validator. #1 AI Validator on Game of Stakes. Fairly priced. Don't trust (humans), verify. Made with BouBou love.&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;0&quot;,
+      &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.061000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.300000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.150000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidator">DelegatorValidator</h3>
+<p>The <code>DelegatorValidator</code> endpoint queries validator information for given delegator validator</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/DelegatorValidator
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext \
+-d '{&quot;delegator_addr&quot;: &quot;cosmos1eh5mwu044gd5ntkkc2xgfg8247mgc56f3n8rr7&quot;, &quot;validator_addr&quot;: &quot;cosmosvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;}' \
+localhost:9090 cosmos.staking.v1beta1.Query/DelegatorValidator
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operator_address&quot;: &quot;cosmosvaloper1eh5mwu044gd5ntkkc2xgfg8247mgc56fww3vc8&quot;,
+    &quot;consensus_pubkey&quot;: {
+      &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+      &quot;key&quot;: &quot;UPwHWxH1zHJWGOa/m6JB3f5YjHMvPQPkVbDqqi+U7Uw=&quot;
+    },
+    &quot;jailed&quot;: false,
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;347262754841&quot;,
+    &quot;delegator_shares&quot;: &quot;347262754841.000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;BouBouNode&quot;,
+      &quot;identity&quot;: &quot;&quot;,
+      &quot;website&quot;: &quot;https://boubounode.com&quot;,
+      &quot;security_contact&quot;: &quot;&quot;,
+      &quot;details&quot;: &quot;AI-based Validator. #1 AI Validator on Game of Stakes. Fairly priced. Don't trust (humans), verify. Made with BouBou love.&quot;
+    },
+    &quot;unbonding_height&quot;: &quot;0&quot;,
+    &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commission_rates&quot;: {
+        &quot;rate&quot;: &quot;0.061000000000000000&quot;,
+        &quot;max_rate&quot;: &quot;0.300000000000000000&quot;,
+        &quot;max_change_rate&quot;: &quot;0.150000000000000000&quot;
+      },
+      &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+    },
+    &quot;min_self_delegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="historicalinfo_1">HistoricalInfo</h3>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/HistoricalInfo
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d '{&quot;height&quot; : 1}' localhost:9090 cosmos.staking.v1beta1.Query/HistoricalInfo
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;hist&quot;: {
+    &quot;header&quot;: {
+      &quot;version&quot;: {
+        &quot;block&quot;: &quot;11&quot;,
+        &quot;app&quot;: &quot;0&quot;
+      },
+      &quot;chain_id&quot;: &quot;simd-1&quot;,
+      &quot;height&quot;: &quot;140142&quot;,
+      &quot;time&quot;: &quot;2021-10-11T10:56:29.720079569Z&quot;,
+      &quot;last_block_id&quot;: {
+        &quot;hash&quot;: &quot;9gri/4LLJUBFqioQ3NzZIP9/7YHR9QqaM6B2aJNQA7o=&quot;,
+        &quot;part_set_header&quot;: {
+          &quot;total&quot;: 1,
+          &quot;hash&quot;: &quot;Hk1+C864uQkl9+I6Zn7IurBZBKUevqlVtU7VqaZl1tc=&quot;
+        }
+      },
+      &quot;last_commit_hash&quot;: &quot;VxrcS27GtvGruS3I9+AlpT7udxIT1F0OrRklrVFSSKc=&quot;,
+      &quot;data_hash&quot;: &quot;80BjOrqNYUOkTnmgWyz9AQ8n7SoEmPVi4QmAe8RbQBY=&quot;,
+      &quot;validators_hash&quot;: &quot;95W49n2hw8RWpr1GPTAO5MSPi6w6Wjr3JjjS7AjpBho=&quot;,
+      &quot;next_validators_hash&quot;: &quot;95W49n2hw8RWpr1GPTAO5MSPi6w6Wjr3JjjS7AjpBho=&quot;,
+      &quot;consensus_hash&quot;: &quot;BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=&quot;,
+      &quot;app_hash&quot;: &quot;ZZaxnSY3E6Ex5Bvkm+RigYCK82g8SSUL53NymPITeOE=&quot;,
+      &quot;last_results_hash&quot;: &quot;47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=&quot;,
+      &quot;evidence_hash&quot;: &quot;47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=&quot;,
+      &quot;proposer_address&quot;: &quot;aH6dO428B+ItuoqPq70efFHrSMY=&quot;
+    },
+  &quot;valset&quot;: [
+      {
+        &quot;operator_address&quot;: &quot;cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcqcnylw&quot;,
+        &quot;consensus_pubkey&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+          &quot;key&quot;: &quot;/O7BtNW0pafwfvomgR4ZnfldwPXiFfJs9mHg3gwfv5Q=&quot;
+        },
+        &quot;jailed&quot;: false,
+        &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+        &quot;tokens&quot;: &quot;1426045203613&quot;,
+        &quot;delegator_shares&quot;: &quot;1426045203613.000000000000000000&quot;,
+        &quot;description&quot;: {
+          &quot;moniker&quot;: &quot;SG-1&quot;,
+          &quot;identity&quot;: &quot;48608633F99D1B60&quot;,
+          &quot;website&quot;: &quot;https://sg-1.online&quot;,
+          &quot;security_contact&quot;: &quot;&quot;,
+          &quot;details&quot;: &quot;SG-1 - your favorite validator on Witval. We offer 100% Soft Slash protection.&quot;
+        },
+        &quot;unbonding_height&quot;: &quot;0&quot;,
+        &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+        &quot;commission&quot;: {
+          &quot;commission_rates&quot;: {
+            &quot;rate&quot;: &quot;0.037500000000000000&quot;,
+            &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+            &quot;max_change_rate&quot;: &quot;0.030000000000000000&quot;
+          },
+          &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+        },
+        &quot;min_self_delegation&quot;: &quot;1&quot;
+      }
+    ]
+  }
+}
+
+</code></pre>
+<h3 id="pool_2">Pool</h3>
+<p>The <code>Pool</code> endpoint queries the pool information.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Pool
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext -d localhost:9090 cosmos.staking.v1beta1.Query/Pool
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;pool&quot;: {
+    &quot;not_bonded_tokens&quot;: &quot;369054400189&quot;,
+    &quot;bonded_tokens&quot;: &quot;15657192425623&quot;
+  }
+}
+</code></pre>
+<h3 id="params_2">Params</h3>
+<p>The <code>Params</code> endpoint queries the pool information.</p>
+<pre><code class="language-bash">cosmos.staking.v1beta1.Query/Params
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">grpcurl -plaintext localhost:9090 cosmos.staking.v1beta1.Query/Params
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;unbondingTime&quot;: &quot;1814400s&quot;,
+    &quot;maxValidators&quot;: 100,
+    &quot;maxEntries&quot;: 7,
+    &quot;historicalEntries&quot;: 10000,
+    &quot;bondDenom&quot;: &quot;stake&quot;
+  }
+}
+</code></pre>
+<h2 id="rest">REST</h2>
+<p>A user can query the <code>staking</code> module using REST endpoints.</p>
+<h3 id="delegatordelegations_1">DelegatorDelegations</h3>
+<p>The <code>DelegtaorDelegations</code> REST endpoint queries all delegations of a given delegator address.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegations/{delegatorAddr}
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/delegations/cosmos1vcs68xf2tnqes5tg0khr0vyevm40ff6zdxatp5&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_responses&quot;: [
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos1vcs68xf2tnqes5tg0khr0vyevm40ff6zdxatp5&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper1quqxfrxkycr0uzt4yk0d57tcq3zk7srm7sm6r8&quot;,
+        &quot;shares&quot;: &quot;256250000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;256250000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos1vcs68xf2tnqes5tg0khr0vyevm40ff6zdxatp5&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper194v8uwee2fvs2s8fa5k7j03ktwc87h5ym39jfv&quot;,
+        &quot;shares&quot;: &quot;255150000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;255150000&quot;
+      }
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;2&quot;
+  }
+}
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;redelegation_responses&quot;: [
+    {
+      &quot;redelegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos1thfntksw0d35n2tkr0k8v54fr8wxtxwxl2c56e&quot;,
+        &quot;validator_src_address&quot;: &quot;cosmosvaloper1lzhlnpahvznwfv4jmay2tgaha5kmz5qx4cuznf&quot;,
+        &quot;validator_dst_address&quot;: &quot;cosmosvaloper1vq8tw77kp8lvxq9u3c8eeln9zymn68rng8pgt4&quot;,
+        &quot;entries&quot;: null
+      },
+      &quot;entries&quot;: [
+        {
+          &quot;redelegation_entry&quot;: {
+            &quot;creation_height&quot;: 151523,
+            &quot;completion_time&quot;: &quot;2021-11-09T06:03:25.640682116Z&quot;,
+            &quot;initial_balance&quot;: &quot;200000000&quot;,
+            &quot;shares_dst&quot;: &quot;200000000.000000000000000000&quot;
+          },
+          &quot;balance&quot;: &quot;200000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: null
+}
+</code></pre>
+<h3 id="delegatorunbondingdelegations_1">DelegatorUnbondingDelegations</h3>
+<p>The <code>DelegatorUnbondingDelegations</code> REST endpoint queries all unbonding delegations of a given delegator address.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegators/{delegatorAddr}/unbonding_delegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/delegators/cosmos1nxv42u3lv642q0fuzu2qmrku27zgut3n3z7lll/unbonding_delegations&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;cosmos1nxv42u3lv642q0fuzu2qmrku27zgut3n3z7lll&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper1e7mvqlz50ch6gw4yjfemsc069wfre4qwmw53kq&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;2442278&quot;,
+          &quot;completion_time&quot;: &quot;2021-10-12T10:59:03.797335857Z&quot;,
+          &quot;initial_balance&quot;: &quot;50000000000&quot;,
+          &quot;balance&quot;: &quot;50000000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidators_1">DelegatorValidators</h3>
+<p>The <code>DelegatorValidators</code> REST endpoint queries all validators information for given delegator address.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegators/{delegatorAddr}/validators
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/delegators/cosmos1xwazl8ftks4gn00y5x3c47auquc62ssune9ppv/validators&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operator_address&quot;: &quot;cosmosvaloper1xwazl8ftks4gn00y5x3c47auquc62ssuvynw64&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;5v4n3px3PkfNnKflSgepDnsMQR1hiNXnqOC11Y72/PQ=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;21592843799&quot;,
+      &quot;delegator_shares&quot;: &quot;21592843799.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;jabbey&quot;,
+        &quot;identity&quot;: &quot;&quot;,
+        &quot;website&quot;: &quot;https://twitter.com/JoeAbbey&quot;,
+        &quot;security_contact&quot;: &quot;&quot;,
+        &quot;details&quot;: &quot;just another dad in the cosmos&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;0&quot;,
+      &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.100000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-09T19:03:54.984821705Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="delegatorvalidator_1">DelegatorValidator</h3>
+<p>The <code>DelegatorValidator</code> REST endpoint queries validator information for given delegator validator pair.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/delegators/{delegatorAddr}/validators/{validatorAddr}
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/delegators/cosmos1xwazl8ftks4gn00y5x3c47auquc62ssune9ppv/validators/cosmosvaloper1xwazl8ftks4gn00y5x3c47auquc62ssuvynw64&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operator_address&quot;: &quot;cosmosvaloper1xwazl8ftks4gn00y5x3c47auquc62ssuvynw64&quot;,
+    &quot;consensus_pubkey&quot;: {
+      &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+      &quot;key&quot;: &quot;5v4n3px3PkfNnKflSgepDnsMQR1hiNXnqOC11Y72/PQ=&quot;
+    },
+    &quot;jailed&quot;: false,
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;21592843799&quot;,
+    &quot;delegator_shares&quot;: &quot;21592843799.000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;jabbey&quot;,
+      &quot;identity&quot;: &quot;&quot;,
+      &quot;website&quot;: &quot;https://twitter.com/JoeAbbey&quot;,
+      &quot;security_contact&quot;: &quot;&quot;,
+      &quot;details&quot;: &quot;just another dad in the cosmos&quot;
+    },
+    &quot;unbonding_height&quot;: &quot;0&quot;,
+    &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commission_rates&quot;: {
+        &quot;rate&quot;: &quot;0.100000000000000000&quot;,
+        &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+        &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+      },
+      &quot;update_time&quot;: &quot;2021-10-09T19:03:54.984821705Z&quot;
+    },
+    &quot;min_self_delegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="historicalinfo_2">HistoricalInfo</h3>
+<p>The <code>HistoricalInfo</code> REST endpoint queries the historical information for given height.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/historical_info/{height}
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/historical_info/153332&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;hist&quot;: {
+    &quot;header&quot;: {
+      &quot;version&quot;: {
+        &quot;block&quot;: &quot;11&quot;,
+        &quot;app&quot;: &quot;0&quot;
+      },
+      &quot;chain_id&quot;: &quot;cosmos-1&quot;,
+      &quot;height&quot;: &quot;153332&quot;,
+      &quot;time&quot;: &quot;2021-10-12T09:05:35.062230221Z&quot;,
+      &quot;last_block_id&quot;: {
+        &quot;hash&quot;: &quot;NX8HevR5khb7H6NGKva+jVz7cyf0skF1CrcY9A0s+d8=&quot;,
+        &quot;part_set_header&quot;: {
+          &quot;total&quot;: 1,
+          &quot;hash&quot;: &quot;zLQ2FiKM5tooL3BInt+VVfgzjlBXfq0Hc8Iux/xrhdg=&quot;
+        }
+      },
+      &quot;last_commit_hash&quot;: &quot;P6IJrK8vSqU3dGEyRHnAFocoDGja0bn9euLuy09s350=&quot;,
+      &quot;data_hash&quot;: &quot;eUd+6acHWrNXYju8Js449RJ99lOYOs16KpqQl4SMrEM=&quot;,
+      &quot;validators_hash&quot;: &quot;mB4pravvMsJKgi+g8aYdSeNlt0kPjnRFyvtAQtaxcfw=&quot;,
+      &quot;next_validators_hash&quot;: &quot;mB4pravvMsJKgi+g8aYdSeNlt0kPjnRFyvtAQtaxcfw=&quot;,
+      &quot;consensus_hash&quot;: &quot;BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=&quot;,
+      &quot;app_hash&quot;: &quot;fuELArKRK+CptnZ8tu54h6xEleSWenHNmqC84W866fU=&quot;,
+      &quot;last_results_hash&quot;: &quot;p/BPexV4LxAzlVcPRvW+lomgXb6Yze8YLIQUo/4Kdgc=&quot;,
+      &quot;evidence_hash&quot;: &quot;47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=&quot;,
+      &quot;proposer_address&quot;: &quot;G0MeY8xQx7ooOsni8KE/3R/Ib3Q=&quot;
+    },
+    &quot;valset&quot;: [
+      {
+        &quot;operator_address&quot;: &quot;cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcqcnylw&quot;,
+        &quot;consensus_pubkey&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+          &quot;key&quot;: &quot;/O7BtNW0pafwfvomgR4ZnfldwPXiFfJs9mHg3gwfv5Q=&quot;
+        },
+        &quot;jailed&quot;: false,
+        &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+        &quot;tokens&quot;: &quot;1416521659632&quot;,
+        &quot;delegator_shares&quot;: &quot;1416521659632.000000000000000000&quot;,
+        &quot;description&quot;: {
+          &quot;moniker&quot;: &quot;SG-1&quot;,
+          &quot;identity&quot;: &quot;48608633F99D1B60&quot;,
+          &quot;website&quot;: &quot;https://sg-1.online&quot;,
+          &quot;security_contact&quot;: &quot;&quot;,
+          &quot;details&quot;: &quot;SG-1 - your favorite validator on cosmos. We offer 100% Soft Slash protection.&quot;
+        },
+        &quot;unbonding_height&quot;: &quot;0&quot;,
+        &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+        &quot;commission&quot;: {
+          &quot;commission_rates&quot;: {
+            &quot;rate&quot;: &quot;0.037500000000000000&quot;,
+            &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+            &quot;max_change_rate&quot;: &quot;0.030000000000000000&quot;
+          },
+          &quot;update_time&quot;: &quot;2021-10-01T15:00:00Z&quot;
+        },
+        &quot;min_self_delegation&quot;: &quot;1&quot;
+      },
+      {
+        &quot;operator_address&quot;: &quot;cosmosvaloper1t8ehvswxjfn3ejzkjtntcyrqwvmvuknzmvtaaa&quot;,
+        &quot;consensus_pubkey&quot;: {
+          &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+          &quot;key&quot;: &quot;uExZyjNLtr2+FFIhNDAMcQ8+yTrqE7ygYTsI7khkA5Y=&quot;
+        },
+        &quot;jailed&quot;: false,
+        &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+        &quot;tokens&quot;: &quot;1348298958808&quot;,
+        &quot;delegator_shares&quot;: &quot;1348298958808.000000000000000000&quot;,
+        &quot;description&quot;: {
+          &quot;moniker&quot;: &quot;Cosmostation&quot;,
+          &quot;identity&quot;: &quot;AE4C403A6E7AA1AC&quot;,
+          &quot;website&quot;: &quot;https://www.cosmostation.io&quot;,
+          &quot;security_contact&quot;: &quot;admin@stamper.network&quot;,
+          &quot;details&quot;: &quot;Cosmostation validator node. Delegate your tokens and Start Earning Staking Rewards&quot;
+        },
+        &quot;unbonding_height&quot;: &quot;0&quot;,
+        &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+        &quot;commission&quot;: {
+          &quot;commission_rates&quot;: {
+            &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+            &quot;max_rate&quot;: &quot;1.000000000000000000&quot;,
+            &quot;max_change_rate&quot;: &quot;0.200000000000000000&quot;
+          },
+          &quot;update_time&quot;: &quot;2021-10-01T15:06:38.821314287Z&quot;
+        },
+        &quot;min_self_delegation&quot;: &quot;1&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="parameters_1">Parameters</h3>
+<p>The <code>Parameters</code> REST endpoint queries the staking parameters.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/params
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/params&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;params&quot;: {
+    &quot;unbonding_time&quot;: &quot;2419200s&quot;,
+    &quot;max_validators&quot;: 100,
+    &quot;max_entries&quot;: 7,
+    &quot;historical_entries&quot;: 10000,
+    &quot;bond_denom&quot;: &quot;stake&quot;
+  }
+}
+</code></pre>
+<h3 id="pool_3">Pool</h3>
+<p>The <code>Pool</code> REST endpoint queries the pool information.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/pool
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/pool&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;pool&quot;: {
+    &quot;not_bonded_tokens&quot;: &quot;432805737458&quot;,
+    &quot;bonded_tokens&quot;: &quot;15783637712645&quot;
+  }
+}
+</code></pre>
+<h3 id="validators_3">Validators</h3>
+<p>The <code>Validators</code> REST endpoint queries all validators that match the given status.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/validators&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validators&quot;: [
+    {
+      &quot;operator_address&quot;: &quot;cosmosvaloper1q3jsx9dpfhtyqqgetwpe5tmk8f0ms5qywje8tw&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;N7BPyek2aKuNZ0N/8YsrqSDhGZmgVaYUBuddY8pwKaE=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+      &quot;tokens&quot;: &quot;383301887799&quot;,
+      &quot;delegator_shares&quot;: &quot;383301887799.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;SmartNodes&quot;,
+        &quot;identity&quot;: &quot;D372724899D1EDC8&quot;,
+        &quot;website&quot;: &quot;https://smartnodes.co&quot;,
+        &quot;security_contact&quot;: &quot;&quot;,
+        &quot;details&quot;: &quot;Earn Rewards with Crypto Staking &amp; Node Deployment&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;0&quot;,
+      &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-01T15:51:31.596618510Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    },
+    {
+      &quot;operator_address&quot;: &quot;cosmosvaloper1q5ku90atkhktze83j9xjaks2p7uruag5zp6wt7&quot;,
+      &quot;consensus_pubkey&quot;: {
+        &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+        &quot;key&quot;: &quot;GDNpuKDmCg9GnhnsiU4fCWktuGUemjNfvpCZiqoRIYA=&quot;
+      },
+      &quot;jailed&quot;: false,
+      &quot;status&quot;: &quot;BOND_STATUS_UNBONDING&quot;,
+      &quot;tokens&quot;: &quot;1017819654&quot;,
+      &quot;delegator_shares&quot;: &quot;1017819654.000000000000000000&quot;,
+      &quot;description&quot;: {
+        &quot;moniker&quot;: &quot;Noderunners&quot;,
+        &quot;identity&quot;: &quot;812E82D12FEA3493&quot;,
+        &quot;website&quot;: &quot;http://noderunners.biz&quot;,
+        &quot;security_contact&quot;: &quot;info@noderunners.biz&quot;,
+        &quot;details&quot;: &quot;Noderunners is a professional validator in POS networks. We have a huge node running experience, reliable soft and hardware. Our commissions are always low, our support to delegators is always full. Stake with us and start receiving your cosmos rewards now!&quot;
+      },
+      &quot;unbonding_height&quot;: &quot;147302&quot;,
+      &quot;unbonding_time&quot;: &quot;2021-11-08T22:58:53.718662452Z&quot;,
+      &quot;commission&quot;: {
+        &quot;commission_rates&quot;: {
+          &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+          &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+          &quot;max_change_rate&quot;: &quot;0.100000000000000000&quot;
+        },
+        &quot;update_time&quot;: &quot;2021-10-04T18:02:21.446645619Z&quot;
+      },
+      &quot;min_self_delegation&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: &quot;FONDBFkE4tEEf7yxWWKOD49jC2NK&quot;,
+    &quot;total&quot;: &quot;2&quot;
+  }
+}
+</code></pre>
+<h3 id="validator_3">Validator</h3>
+<p>The <code>Validator</code> REST endpoint queries validator information for given validator address.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;validator&quot;: {
+    &quot;operator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+    &quot;consensus_pubkey&quot;: {
+      &quot;@type&quot;: &quot;/cosmos.crypto.ed25519.PubKey&quot;,
+      &quot;key&quot;: &quot;sIiexdJdYWn27+7iUHQJDnkp63gq/rzUq1Y+fxoGjXc=&quot;
+    },
+    &quot;jailed&quot;: false,
+    &quot;status&quot;: &quot;BOND_STATUS_BONDED&quot;,
+    &quot;tokens&quot;: &quot;33027900000&quot;,
+    &quot;delegator_shares&quot;: &quot;33027900000.000000000000000000&quot;,
+    &quot;description&quot;: {
+      &quot;moniker&quot;: &quot;Witval&quot;,
+      &quot;identity&quot;: &quot;51468B615127273A&quot;,
+      &quot;website&quot;: &quot;&quot;,
+      &quot;security_contact&quot;: &quot;&quot;,
+      &quot;details&quot;: &quot;Witval is the validator arm from Vitwit. Vitwit is into software consulting and services business since 2015. We are working closely with Cosmos ecosystem since 2018. We are also building tools for the ecosystem, Aneka is our explorer for the cosmos ecosystem.&quot;
+    },
+    &quot;unbonding_height&quot;: &quot;0&quot;,
+    &quot;unbonding_time&quot;: &quot;1970-01-01T00:00:00Z&quot;,
+    &quot;commission&quot;: {
+      &quot;commission_rates&quot;: {
+        &quot;rate&quot;: &quot;0.050000000000000000&quot;,
+        &quot;max_rate&quot;: &quot;0.200000000000000000&quot;,
+        &quot;max_change_rate&quot;: &quot;0.020000000000000000&quot;
+      },
+      &quot;update_time&quot;: &quot;2021-10-01T19:24:52.663191049Z&quot;
+    },
+    &quot;min_self_delegation&quot;: &quot;1&quot;
+  }
+}
+</code></pre>
+<h3 id="validatordelegations_1">ValidatorDelegations</h3>
+<p>The <code>ValidatorDelegations</code> REST endpoint queries delegate information for given validator.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/delegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET &quot;http://localhost:1317/cosmos/staking/v1beta1/validators/cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q/delegations&quot; -H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_responses&quot;: [
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos190g5j8aszqhvtg7cprmev8xcxs6csra7xnk3n3&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;31000000000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;31000000000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos1ddle9tczl87gsvmeva3c48nenyng4n56qwq4ee&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;628470000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;628470000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos10fdvkczl76m040smd33lh9xn9j0cf26kk4s2nw&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;838120000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;838120000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos1n8f5fknsv2yt7a8u6nrx30zqy7lu9jfm0t5lq8&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;500000000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;500000000&quot;
+      }
+    },
+    {
+      &quot;delegation&quot;: {
+        &quot;delegator_address&quot;: &quot;cosmos16msryt3fqlxtvsy8u5ay7wv2p8mglfg9hrek2e&quot;,
+        &quot;validator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+        &quot;shares&quot;: &quot;61310000.000000000000000000&quot;
+      },
+      &quot;balance&quot;: {
+        &quot;denom&quot;: &quot;stake&quot;,
+        &quot;amount&quot;: &quot;61310000&quot;
+      }
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;5&quot;
+  }
+}
+</code></pre>
+<h3 id="delegation_3">Delegation</h3>
+<p>The <code>Delegation</code> REST endpoint queries delegate information for given validator delegator pair.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/delegations/{delegatorAddr}
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q/delegations/cosmos1n8f5fknsv2yt7a8u6nrx30zqy7lu9jfm0t5lq8&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;delegation_response&quot;: {
+    &quot;delegation&quot;: {
+      &quot;delegator_address&quot;: &quot;cosmos1n8f5fknsv2yt7a8u6nrx30zqy7lu9jfm0t5lq8&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper16msryt3fqlxtvsy8u5ay7wv2p8mglfg9g70e3q&quot;,
+      &quot;shares&quot;: &quot;500000000.000000000000000000&quot;
+    },
+    &quot;balance&quot;: {
+      &quot;denom&quot;: &quot;stake&quot;,
+      &quot;amount&quot;: &quot;500000000&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="unbondingdelegation_2">UnbondingDelegation</h3>
+<p>The <code>UnbondingDelegation</code> REST endpoint queries unbonding information for given validator delegator pair.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/delegations/{delegatorAddr}/unbonding_delegation
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/cosmosvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu/delegations/cosmos1ze2ye5u5k3qdlexvt2e0nn0508p04094ya0qpm/unbonding_delegation&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;unbond&quot;: {
+    &quot;delegator_address&quot;: &quot;cosmos1ze2ye5u5k3qdlexvt2e0nn0508p04094ya0qpm&quot;,
+    &quot;validator_address&quot;: &quot;cosmosvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu&quot;,
+    &quot;entries&quot;: [
+      {
+        &quot;creation_height&quot;: &quot;153687&quot;,
+        &quot;completion_time&quot;: &quot;2021-11-09T09:41:18.352401903Z&quot;,
+        &quot;initial_balance&quot;: &quot;525111&quot;,
+        &quot;balance&quot;: &quot;525111&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="validatorunbondingdelegations_1">ValidatorUnbondingDelegations</h3>
+<p>The <code>ValidatorUnbondingDelegations</code> REST endpoint queries unbonding delegations of a validator.</p>
+<pre><code class="language-bash">/cosmos/staking/v1beta1/validators/{validatorAddr}/unbonding_delegations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X GET \
+&quot;http://localhost:1317/cosmos/staking/v1beta1/validators/cosmosvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu/unbonding_delegations&quot; \
+-H  &quot;accept: application/json&quot;
+</code></pre>
+<p>Example Output:</p>
+<pre><code class="language-bash">{
+  &quot;unbonding_responses&quot;: [
+    {
+      &quot;delegator_address&quot;: &quot;cosmos1q9snn84jfrd9ge8t46kdcggpe58dua82vnj7uy&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;90998&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-05T00:14:37.005841058Z&quot;,
+          &quot;initial_balance&quot;: &quot;24000000&quot;,
+          &quot;balance&quot;: &quot;24000000&quot;
+        }
+      ]
+    },
+    {
+      &quot;delegator_address&quot;: &quot;cosmos1qf36e6wmq9h4twhdvs6pyq9qcaeu7ye0s3dqq2&quot;,
+      &quot;validator_address&quot;: &quot;cosmosvaloper13v4spsah85ps4vtrw07vzea37gq5la5gktlkeu&quot;,
+      &quot;entries&quot;: [
+        {
+          &quot;creation_height&quot;: &quot;47478&quot;,
+          &quot;completion_time&quot;: &quot;2021-11-01T22:47:26.714116854Z&quot;,
+          &quot;initial_balance&quot;: &quot;8000000&quot;,
+          &quot;balance&quot;: &quot;8000000&quot;
+        }
+      ]
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;next_key&quot;: null,
+    &quot;total&quot;: &quot;2&quot;
+  }
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

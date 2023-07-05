@@ -1,0 +1,2608 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mint/">
+      
+      
+        <link rel="next" href="../slashing/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Distribute - DAODST document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#distribution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAODST document" class="md-header__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAODST document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Distribute
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://zh-tw.docs.daodst.com" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="https://docs.daodst.com" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../protocol/stcd/" class="md-tabs__link">
+        🔍Protocol
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules_accounts/" class="md-tabs__link md-tabs__link--active">
+        🧱Module
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gateway/run/" class="md-tabs__link">
+        ✈Gateways and Authenticators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chat/installation/" class="md-tabs__link">
+        📞Chat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../faq/" class="md-tabs__link">
+      📋FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAODST document" class="md-nav__button md-logo" aria-label="DAODST document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAODST document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          🔍Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🔍Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/" class="md-nav__link">
+        install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/single-node/" class="md-nav__link">
+        Single-node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/stcd/command/" class="md-nav__link">
+        CLI command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/account/" class="md-nav__link">
+        account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/chainid/" class="md-nav__link">
+        chain ID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/encode/" class="md-nav__link">
+        encode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/gas/" class="md-nav__link">
+        Gas and fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/keyring/" class="md-nav__link">
+        keyring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/key-management/" class="md-nav__link">
+        Key Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/state-migrate/" class="md-nav__link">
+        State import and export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/pending/" class="md-nav__link">
+        waiting queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/multsign/" class="md-nav__link">
+        Multsignature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/coin/" class="md-nav__link">
+        token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocol/transfer/" class="md-nav__link">
+        Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          🧱Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧱Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules_accounts/" class="md-nav__link">
+        Module Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evm/" class="md-nav__link">
+        Evm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mgateway/" class="md-nav__link">
+        Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract/" class="md-nav__link">
+        Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pledge/" class="md-nav__link">
+        Pledge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        Auth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bank/" class="md-nav__link">
+        Bank
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gov/" class="md-nav__link">
+        Gov
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mint/" class="md-nav__link">
+        Mint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Distribute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Distribute
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcomings" class="md-nav__link">
+    Shortcomings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effect-on-staking" class="md-nav__link">
+    Effect on Staking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-counting-in-f1-fee-distribution" class="md-nav__link">
+    Reference Counting in F1 Fee Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feepool" class="md-nav__link">
+    FeePool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-distribution" class="md-nav__link">
+    Validator Distribution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation-distribution" class="md-nav__link">
+    Delegation Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begin-block" class="md-nav__link">
+    Begin Block
+  </a>
+  
+    <nav class="md-nav" aria-label="Begin Block">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-distribution-scheme" class="md-nav__link">
+    The Distribution Scheme
+  </a>
+  
+    <nav class="md-nav" aria-label="The Distribution Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reward-to-the-community-pool" class="md-nav__link">
+    Reward to the Community Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward-to-the-validators" class="md-nav__link">
+    Reward To the Validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rewards-to-delegators" class="md-nav__link">
+    Rewards to Delegators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-distribution" class="md-nav__link">
+    Example Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withdrawvalidatorcommission" class="md-nav__link">
+    WithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundcommunitypool" class="md-nav__link">
+    FundCommunityPool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-distribution-operations" class="md-nav__link">
+    Common distribution operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Common distribution operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-delegation" class="md-nav__link">
+    Initialize delegation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-or-modify-delegation-distribution" class="md-nav__link">
+    Create or modify delegation distribution
+  </a>
+  
+    <nav class="md-nav" aria-label="Create or modify delegation distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-created" class="md-nav__link">
+    Validator created
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-removed" class="md-nav__link">
+    Validator removed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-is-slashed" class="md-nav__link">
+    Validator is slashed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginblocker" class="md-nav__link">
+    BeginBlocker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    Handlers
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgsetwithdrawaddress" class="md-nav__link">
+    MsgSetWithdrawAddress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward_1" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawvalidatorcommission" class="md-nav__link">
+    MsgWithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slashing/" class="md-nav__link">
+        Slashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        Staking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ✈Gateways and Authenticators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ✈Gateways and Authenticators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Settings and configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Settings and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/run/" class="md-nav__link">
+        Run Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/disk-usage/" class="md-nav__link">
+        Disk usage optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/state-sync/" class="md-nav__link">
+        state-sync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mempool/" class="md-nav__link">
+        mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key Backup Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/list/" class="md-nav__link">
+        Upgrade List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/hard-fork/" class="md-nav__link">
+        Hard Fork Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/auto/" class="md-nav__link">
+        Auto Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/manual/" class="md-nav__link">
+        Manual upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/rollback/" class="md-nav__link">
+        rollback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/template/" class="md-nav__link">
+        Proposal Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/testnet/" class="md-nav__link">
+        testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/mainnet/" class="md-nav__link">
+        mainnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Gateway Operation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gateway Operation Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-linux/" class="md-nav__link">
+        Operation Guide(linux)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/guide-win/" class="md-nav__link">
+        Operation Guide(win)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/key-backup/" class="md-nav__link">
+        Key backup and recovery
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          📞Chat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          📞Chat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/installation/" class="md-nav__link">
+        Installation Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/chat_doc/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/customise_doc/" class="md-nav__link">
+        Customise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/voip_signaling/" class="md-nav__link">
+        Call flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/optional_cfg/" class="md-nav__link">
+        Optional Configuration*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        📋FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcomings" class="md-nav__link">
+    Shortcomings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effect-on-staking" class="md-nav__link">
+    Effect on Staking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-counting-in-f1-fee-distribution" class="md-nav__link">
+    Reference Counting in F1 Fee Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feepool" class="md-nav__link">
+    FeePool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-distribution" class="md-nav__link">
+    Validator Distribution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegation-distribution" class="md-nav__link">
+    Delegation Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begin-block" class="md-nav__link">
+    Begin Block
+  </a>
+  
+    <nav class="md-nav" aria-label="Begin Block">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-distribution-scheme" class="md-nav__link">
+    The Distribution Scheme
+  </a>
+  
+    <nav class="md-nav" aria-label="The Distribution Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reward-to-the-community-pool" class="md-nav__link">
+    Reward to the Community Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward-to-the-validators" class="md-nav__link">
+    Reward To the Validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rewards-to-delegators" class="md-nav__link">
+    Rewards to Delegators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-distribution" class="md-nav__link">
+    Example Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withdrawvalidatorcommission" class="md-nav__link">
+    WithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundcommunitypool" class="md-nav__link">
+    FundCommunityPool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-distribution-operations" class="md-nav__link">
+    Common distribution operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Common distribution operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-delegation" class="md-nav__link">
+    Initialize delegation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-or-modify-delegation-distribution" class="md-nav__link">
+    Create or modify delegation distribution
+  </a>
+  
+    <nav class="md-nav" aria-label="Create or modify delegation distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-created" class="md-nav__link">
+    Validator created
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-removed" class="md-nav__link">
+    Validator removed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-is-slashed" class="md-nav__link">
+    Validator is slashed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginblocker" class="md-nav__link">
+    BeginBlocker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    Handlers
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msgsetwithdrawaddress" class="md-nav__link">
+    MsgSetWithdrawAddress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawdelegatorreward_1" class="md-nav__link">
+    MsgWithdrawDelegatorReward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgwithdrawvalidatorcommission" class="md-nav__link">
+    MsgWithdrawValidatorCommission
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="distribution"><code>distribution</code></h1>
+<h2 id="overview">Overview</h2>
+<p>This <em>simple</em> distribution mechanism describes a functional way to passively
+distribute rewards between validators and delegators. Note that this mechanism does
+not distribute funds in as precisely as active reward distribution mechanisms and
+will therefore be upgraded in the future.</p>
+<p>The mechanism operates as follows. Collected rewards are pooled globally and
+divided out passively to validators and delegators. Each validator has the
+opportunity to charge commission to the delegators on the rewards collected on
+behalf of the delegators. Fees are collected directly into a global reward pool
+and validator proposer-reward pool. Due to the nature of passive accounting,
+whenever changes to parameters which affect the rate of reward distribution
+occurs, withdrawal of rewards must also occur.</p>
+<ul>
+<li>Whenever withdrawing, one must withdraw the maximum amount they are entitled
+   to, leaving nothing in the pool.</li>
+<li>Whenever bonding, unbonding, or re-delegating tokens to an existing account, a
+   full withdrawal of the rewards must occur (as the rules for lazy accounting
+   change).</li>
+<li>Whenever a validator chooses to change the commission on rewards, all accumulated
+   commission rewards must be simultaneously withdrawn.</li>
+</ul>
+<p>The above scenarios are covered in <code>hooks.md</code>.</p>
+<p>The distribution mechanism outlined herein is used to lazily distribute the
+following rewards between validators and associated delegators:</p>
+<ul>
+<li>multi-token fees to be socially distributed</li>
+<li>proposer reward pool</li>
+<li>inflated atom provisions</li>
+<li>validator commission on all rewards earned by their delegators stake</li>
+</ul>
+<p>Fees are pooled within a global pool, as well as validator specific
+proposer-reward pools. The mechanisms used allow for validators and delegators
+to independently and lazily withdraw their rewards.</p>
+<h2 id="shortcomings">Shortcomings</h2>
+<p>As a part of the lazy computations, each delegator holds an accumulation term
+specific to each validator which is used to estimate what their approximate
+fair portion of tokens held in the global fee pool is owed to them.</p>
+<pre><code>entitlement = delegator-accumulation / all-delegators-accumulation
+</code></pre>
+<p>Under the circumstance that there was constant and equal flow of incoming
+reward tokens every block, this distribution mechanism would be equal to the
+active distribution (distribute individually to all delegators each block).
+However, this is unrealistic so deviations from the active distribution will
+occur based on fluctuations of incoming reward tokens as well as timing of
+reward withdrawal by other delegators.</p>
+<p>If you happen to know that incoming rewards are about to significantly increase,
+you are incentivized to not withdraw until after this event, increasing the
+worth of your existing <em>accum</em>. See <a href="https://github.com/cosmos/cosmos-sdk/issues/2764">#2764</a>
+for further details.</p>
+<h2 id="effect-on-staking">Effect on Staking</h2>
+<p>Charging commission on Atom provisions while also allowing for Atom-provisions
+to be auto-bonded (distributed directly to the validators bonded stake) is
+problematic within BPoS. Fundamentally, these two mechanisms are mutually
+exclusive. If both commission and auto-bonding mechanisms are simultaneously
+applied to the staking-token then the distribution of staking-tokens between
+any validator and its delegators will change with each block. This then
+necessitates a calculation for each delegation records for each block -
+which is considered computationally expensive.</p>
+<p>In conclusion, we can only have Atom commission and unbonded atoms
+provisions or bonded atom provisions with no Atom commission, and we elect to
+implement the former. Stakeholders wishing to rebond their provisions may elect
+to set up a script to periodically withdraw and rebond rewards.</p>
+<h2 id="contents">Contents</h2>
+<h2 id="concepts">Concepts</h2>
+<p>In Proof of Stake (PoS) blockchains, rewards gained from transaction fees are paid to validators. The fee distribution module fairly distributes the rewards to the validators' constituent delegators.</p>
+<p>Rewards are calculated per period. The period is updated each time a validator's delegation changes, for example, when the validator receives a new delegation.
+The rewards for a single validator can then be calculated by taking the total rewards for the period before the delegation started, minus the current total rewards.</p>
+<p>The commission to the validator is paid when the validator is removed or when the validator requests a withdrawal.
+The commission is calculated and incremented at every <code>BeginBlock</code> operation to update accumulated fee amounts.</p>
+<p>The rewards to a delegator are distributed when the delegation is changed or removed, or a withdrawal is requested.
+Before rewards are distributed, all slashes to the validator that occurred during the current delegation are applied.</p>
+<h3 id="reference-counting-in-f1-fee-distribution">Reference Counting in F1 Fee Distribution</h3>
+<p>In F1 fee distribution, the rewards a delegator receives are calculated when their delegation is withdrawn. This calculation must read the terms of the summation of rewards divided by the share of tokens from the period which they ended when they delegated, and the final period that was created for the withdrawal.</p>
+<p>Additionally, as slashes change the amount of tokens a delegation will have (but we calculate this lazily,
+only when a delegator un-delegates), we must calculate rewards in separate periods before / after any slashes
+which occurred in between when a delegator delegated and when they withdrew their rewards. Thus slashes, like
+delegations, reference the period which was ended by the slash event.</p>
+<p>All stored historical rewards records for periods which are no longer referenced by any delegations
+or any slashes can thus be safely removed, as they will never be read (future delegations and future
+slashes will always reference future periods). This is implemented by tracking a <code>ReferenceCount</code>
+along with each historical reward storage entry. Each time a new object (delegation or slash)
+is created which might need to reference the historical record, the reference count is incremented.
+Each time one object which previously needed to reference the historical record is deleted, the reference
+count is decremented. If the reference count hits zero, the historical record is deleted.</p>
+<h2 id="state">State</h2>
+<h3 id="feepool">FeePool</h3>
+<p>All globally tracked parameters for distribution are stored within
+<code>FeePool</code>. Rewards are collected and added to the reward pool and
+distributed to validators/delegators from here.</p>
+<p>Note that the reward pool holds decimal coins (<code>DecCoins</code>) to allow
+for fractions of coins to be received from operations like inflation.
+When coins are distributed from the pool they are truncated back to
+<code>sdk.Coins</code> which are non-decimal.</p>
+<ul>
+<li>FeePool: <code>0x00 -&gt; ProtocolBuffer(FeePool)</code></li>
+</ul>
+<pre><code class="language-go">// coins with decimal
+type DecCoins []DecCoin
+
+type DecCoin struct {
+    Amount sdk.Dec
+    Denom  string
+}
+</code></pre>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/distribution/v1beta1/distribution.proto#L94-L101</p>
+<h3 id="validator-distribution">Validator Distribution</h3>
+<p>Validator distribution information for the relevant validator is updated each time:</p>
+<ol>
+<li>delegation amount to a validator is updated,</li>
+<li>a validator successfully proposes a block and receives a reward,</li>
+<li>any delegator withdraws from a validator, or</li>
+<li>
+<p>the validator withdraws its commission.</p>
+</li>
+<li>
+<p>ValidatorDistInfo: <code>0x02 | ValOperatorAddrLen (1 byte) | ValOperatorAddr -&gt; ProtocolBuffer(validatorDistribution)</code></p>
+</li>
+</ol>
+<pre><code class="language-go">type ValidatorDistInfo struct {
+    OperatorAddress     sdk.AccAddress
+    SelfBondRewards     sdk.DecCoins
+    ValidatorCommission types.ValidatorAccumulatedCommission
+}
+</code></pre>
+<h3 id="delegation-distribution">Delegation Distribution</h3>
+<p>Each delegation distribution only needs to record the height at which it last
+withdrew fees. Because a delegation must withdraw fees each time it's
+properties change (aka bonded tokens etc.) its properties will remain constant
+and the delegator's <em>accumulation</em> factor can be calculated passively knowing
+only the height of the last withdrawal and its current properties.</p>
+<ul>
+<li>DelegationDistInfo: <code>0x02 | DelegatorAddrLen (1 byte) | DelegatorAddr | ValOperatorAddrLen (1 byte) | ValOperatorAddr -&gt; ProtocolBuffer(delegatorDist)</code></li>
+</ul>
+<pre><code class="language-go">type DelegationDistInfo struct {
+    WithdrawalHeight int64    // last time this delegation withdrew rewards
+}
+</code></pre>
+<h2 id="begin-block">Begin Block</h2>
+<p>At each <code>BeginBlock</code>, all fees received in the previous block are transferred to
+the distribution <code>ModuleAccount</code> account. When a delegator or validator
+withdraws their rewards, they are taken out of the <code>ModuleAccount</code>. During begin
+block, the different claims on the fees collected are updated as follows:</p>
+<ul>
+<li>The block proposer of the previous height and its delegators receive between 1% and 5% of fee rewards.</li>
+<li>The reserve community tax is charged.</li>
+<li>The remainder is distributed proportionally by voting power to all bonded validators</li>
+</ul>
+<p>To incentivize validators to wait and include additional pre-commits in the block, the block proposer reward is calculated from Tendermint pre-commit messages.</p>
+<h3 id="the-distribution-scheme">The Distribution Scheme</h3>
+<p>See <a href="07_params.md">params</a> for description of parameters.</p>
+<p>Let <code>fees</code> be the total fees collected in the previous block, including
+inflationary rewards to the stake. All fees are collected in a specific module
+account during the block. During <code>BeginBlock</code>, they are sent to the
+<code>"distribution"</code> <code>ModuleAccount</code>. No other sending of tokens occurs. Instead, the
+rewards each account is entitled to are stored, and withdrawals can be triggered
+through the messages <code>FundCommunityPool</code>, <code>WithdrawValidatorCommission</code> and
+<code>WithdrawDelegatorReward</code>.</p>
+<h4 id="reward-to-the-community-pool">Reward to the Community Pool</h4>
+<p>The community pool gets <code>community_tax * fees</code>, plus any remaining dust after
+validators get their rewards that are always rounded down to the nearest
+integer value.</p>
+<h4 id="reward-to-the-validators">Reward To the Validators</h4>
+<p>The proposer receives a base reward of <code>fees * baseproposerreward</code> and a bonus
+of <code>fees * bonusproposerreward * P</code>, where <code>P = (total power of validators with
+included precommits / total bonded validator power)</code>. The more precommits the
+proposer includes, the larger <code>P</code> is. <code>P</code> can never be larger than <code>1.00</code> (since
+only bonded validators can supply valid precommits) and is always larger than
+<code>2/3</code>.</p>
+<p>Any remaining fees are distributed among all the bonded validators, including
+the proposer, in proportion to their consensus power.</p>
+<pre><code>powFrac = validator power / total bonded validator power
+proposerMul = baseproposerreward + bonusproposerreward * P
+voteMul = 1 - communitytax - proposerMul
+</code></pre>
+<p>In total, the proposer receives <code>fees  * (voteMul * powFrac + proposerMul)</code>.
+All other validators receive <code>fees * voteMul * powFrac</code>.</p>
+<h4 id="rewards-to-delegators">Rewards to Delegators</h4>
+<p>Each validator's rewards are distributed to its delegators. The validator also
+has a self-delegation that is treated like a regular delegation in
+distribution calculations.</p>
+<p>The validator sets a commission rate. The commission rate is flexible, but each
+validator sets a maximum rate and a maximum daily increase. These maximums cannot be exceeded and protect delegators from sudden increases of validator commission rates to prevent validators from taking all of the rewards.</p>
+<p>The outstanding rewards that the operator is entitled to are stored in
+<code>ValidatorAccumulatedCommission</code>, while the rewards the delegators are entitled
+to are stored in <code>ValidatorCurrentRewards</code>. The <a href="01_concepts.md">F1 fee distribution
+scheme</a> is used to calculate the rewards per delegator as they
+withdraw or update their delegation, and is thus not handled in <code>BeginBlock</code>.</p>
+<h4 id="example-distribution">Example Distribution</h4>
+<p>For this example distribution, the underlying consensus engine selects block proposers in
+proportion to their power relative to the entire bonded power.</p>
+<p>All validators are equally performant at including pre-commits in their proposed
+blocks. Then hold <code>(precommits included) / (total bonded validator power)</code>
+constant so that the amortized block reward for the validator is <code>( validator power / total bonded power) * (1 - community tax rate)</code> of
+the total rewards. Consequently, the reward for a single delegator is:</p>
+<pre><code>(delegator proportion of the validator power / validator power) * (validator power / total bonded power)
+  * (1 - community tax rate) * (1 - validator commision rate)
+= (delegator proportion of the validator power / total bonded power) * (1 -
+community tax rate) * (1 - validat
+
+
+# Messages
+
+## MsgSetWithdrawAddress
+
+By default, the withdraw address is the delegator address. To change its withdraw address, a delegator must send a `MsgSetWithdrawAddress` message.
+Changing the withdraw address is possible only if the parameter `WithdrawAddrEnabled` is set to `true`.
+
+The withdraw address cannot be any of the module accounts. These accounts are blocked from being withdraw addresses by being added to the distribution keeper's `blockedAddrs` array at initialization.
+
+Response:
+
++++ https://github.com/cosmos/cosmos-sdk/blob/v0.42.4/proto/cosmos/distribution/v1beta1/tx.proto#L29-L37
+
+```go
+func (k Keeper) SetWithdrawAddr(ctx sdk.Context, delegatorAddr sdk.AccAddress, withdrawAddr sdk.AccAddress) error
+    if k.blockedAddrs[withdrawAddr.String()] {
+        fail with &quot;`{withdrawAddr}` is not allowed to receive external funds&quot;
+    }
+
+    if !k.GetWithdrawAddrEnabled(ctx) {
+        fail with `ErrSetWithdrawAddrDisabled`
+    }
+
+    k.SetDelegatorWithdrawAddr(ctx, delegatorAddr, withdrawAddr)
+</code></pre>
+<h3 id="msgwithdrawdelegatorreward">MsgWithdrawDelegatorReward</h3>
+<p>A delegator can withdraw its rewards.
+Internally in the distribution module, this transaction simultaneously removes the previous delegation with associated rewards, the same as if the delegator simply started a new delegation of the same value.
+The rewards are sent immediately from the distribution <code>ModuleAccount</code> to the withdraw address.
+Any remainder (truncated decimals) are sent to the community pool.
+The starting height of the delegation is set to the current validator period, and the reference count for the previous period is decremented.
+The amount withdrawn is deducted from the <code>ValidatorOutstandingRewards</code> variable for the validator.</p>
+<p>In the F1 distribution, the total rewards are calculated per validator period, and a delegator receives a piece of those rewards in proportion to their stake in the validator.
+In basic F1, the total rewards that all the delegators are entitled to between to periods is calculated the following way.
+Let <code>R(X)</code> be the total accumulated rewards up to period <code>X</code> divided by the tokens staked at that time. The delegator allocation is <code>R(X) * delegator_stake</code>.
+Then the rewards for all the delegators for staking between periods <code>A</code> and <code>B</code> are <code>(R(B) - R(A)) * total stake</code>.
+However, these calculated rewards don't account for slashing.</p>
+<p>Taking the slashes into account requires iteration.
+Let <code>F(X)</code> be the fraction a validator is to be slashed for a slashing event that happened at period <code>X</code>.
+If the validator was slashed at periods <code>P1, ..., PN</code>, where <code>A &lt; P1</code>, <code>PN &lt; B</code>, the distribution module calculates the individual delegator's rewards, <code>T(A, B)</code>, as follows:</p>
+<pre><code>stake := initial stake
+rewards := 0
+previous := A
+for P in P1, ..., PN`:
+    rewards = (R(P) - previous) * stake
+    stake = stake * F(P)
+    previous = P
+rewards = rewards + (R(B) - R(PN)) * stake
+</code></pre>
+<p>The historical rewards are calculated retroactively by playing back all the slashes and then attenuating the delegator's stake at each step.
+The final calculated stake is equivalent to the actual staked coins in the delegation with a margin of error due to rounding errors.</p>
+<p>Response:</p>
+<p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.42.4/proto/cosmos/distribution/v1beta1/tx.proto#L42-L50</p>
+<h3 id="withdrawvalidatorcommission">WithdrawValidatorCommission</h3>
+<p>The validator can send the WithdrawValidatorCommission message to withdraw their accumulated commission.
+The commission is calculated in every block during <code>BeginBlock</code>, so no iteration is required to withdraw.
+The amount withdrawn is deducted from the <code>ValidatorOutstandingRewards</code> variable for the validator.
+Only integer amounts can be sent. If the accumulated awards have decimals, the amount is truncated before the withdrawal is sent, and the remainder is left to be withdrawn later.</p>
+<h3 id="fundcommunitypool">FundCommunityPool</h3>
+<p>This message sends coins directly from the sender to the community pool.</p>
+<p>The transaction fails if the amount cannot be transferred from the sender to the distribution module account.</p>
+<pre><code class="language-go">func (k Keeper) FundCommunityPool(ctx sdk.Context, amount sdk.Coins, sender sdk.AccAddress) error {
+    if err := k.bankKeeper.SendCoinsFromAccountToModule(ctx, sender, types.ModuleName, amount); err != nil {
+        return err
+    }
+
+    feePool := k.GetFeePool(ctx)
+    feePool.CommunityPool = feePool.CommunityPool.Add(sdk.NewDecCoinsFromCoins(amount...)...)
+    k.SetFeePool(ctx, feePool)
+
+    return nil
+}
+</code></pre>
+<h3 id="common-distribution-operations">Common distribution operations</h3>
+<p>These operations take place during many different messages.</p>
+<h4 id="initialize-delegation">Initialize delegation</h4>
+<p>Each time a delegation is changed, the rewards are withdrawn and the delegation is reinitialized.
+Initializing a delegation increments the validator period and keeps track of the starting period of the delegation.</p>
+<pre><code class="language-go">// initialize starting info for a new delegation
+func (k Keeper) initializeDelegation(ctx sdk.Context, val sdk.ValAddress, del sdk.AccAddress) {
+    // period has already been incremented - we want to store the period ended by this delegation action
+    previousPeriod := k.GetValidatorCurrentRewards(ctx, val).Period - 1
+
+    // increment reference count for the period we're going to track
+    k.incrementReferenceCount(ctx, val, previousPeriod)
+
+    validator := k.stakingKeeper.Validator(ctx, val)
+    delegation := k.stakingKeeper.Delegation(ctx, del, val)
+
+    // calculate delegation stake in tokens
+    // we don't store directly, so multiply delegation shares * (tokens per share)
+    // note: necessary to truncate so we don't allow withdrawing more rewards than owed
+    stake := validator.TokensFromSharesTruncated(delegation.GetShares())
+    k.SetDelegatorStartingInfo(ctx, val, del, types.NewDelegatorStartingInfo(previousPeriod, stake, uint64(ctx.BlockHeight())))
+}
+</code></pre>
+<h2 id="hooks">Hooks</h2>
+<p>Available hooks that can be called by and from this module.</p>
+<h3 id="create-or-modify-delegation-distribution">Create or modify delegation distribution</h3>
+<ul>
+<li>triggered-by: <code>staking.MsgDelegate</code>, <code>staking.MsgBeginRedelegate</code>, <code>staking.MsgUndelegate</code></li>
+</ul>
+<h4 id="before">Before</h4>
+<ul>
+<li>The delegation rewards are withdrawn to the withdraw address of the delegator.
+  The rewards include the current period and exclude the starting period.</li>
+<li>The validator period is incremented.
+  The validator period is incremented because the validator's power and share distribution might have changed.</li>
+<li>The reference count for the delegator's starting period is decremented.</li>
+</ul>
+<h4 id="after">After</h4>
+<p>The starting height of the delegation is set to the previous period.
+Because of the <code>Before</code>-hook, this period is the last period for which the delegator was rewarded.</p>
+<h3 id="validator-created">Validator created</h3>
+<ul>
+<li>triggered-by: <code>staking.MsgCreateValidator</code></li>
+</ul>
+<p>When a validator is created, the following validator variables are initialized:</p>
+<ul>
+<li>Historical rewards</li>
+<li>Current accumulated rewards</li>
+<li>Accumulated commission</li>
+<li>Total outstanding rewards</li>
+<li>Period</li>
+</ul>
+<p>By default, all values are set to a <code>0</code>, except period, which is set to <code>1</code>.</p>
+<h3 id="validator-removed">Validator removed</h3>
+<ul>
+<li>triggered-by: <code>staking.RemoveValidator</code></li>
+</ul>
+<p>Outstanding commission is sent to the validator's self-delegation withdrawal address.
+Remaining delegator rewards get sent to the community fee pool.</p>
+<p>Note: The validator gets removed only when it has no remaining delegations.
+At that time, all outstanding delegator rewards will have been withdrawn.
+Any remaining rewards are dust amounts.</p>
+<h3 id="validator-is-slashed">Validator is slashed</h3>
+<ul>
+<li>
+<p>triggered-by: <code>staking.Slash</code></p>
+</li>
+<li>
+<p>The current validator period reference count is incremented.
+  The reference count is incremented because the slash event has created a reference to it.</p>
+</li>
+<li>The validator period is incremented.</li>
+<li>The slash event is stored for later use.
+  The slash event will be referenced when calculating delegator rewards.</li>
+</ul>
+<h2 id="events">Events</h2>
+<p>The distribution module emits the following events:</p>
+<h3 id="beginblocker">BeginBlocker</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>proposer_reward</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>proposer_reward</td>
+<td>reward</td>
+<td>{proposerReward}</td>
+</tr>
+<tr>
+<td>commission</td>
+<td>amount</td>
+<td>{commissionAmount}</td>
+</tr>
+<tr>
+<td>commission</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>rewards</td>
+<td>amount</td>
+<td>{rewardAmount}</td>
+</tr>
+<tr>
+<td>rewards</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handlers">Handlers</h3>
+<h4 id="msgsetwithdrawaddress">MsgSetWithdrawAddress</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set_withdraw_address</td>
+<td>withdraw_address</td>
+<td>{withdrawAddress}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>distribution</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>set_withdraw_address</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msgwithdrawdelegatorreward_1">MsgWithdrawDelegatorReward</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>withdraw_rewards</td>
+<td>amount</td>
+<td>{rewardAmount}</td>
+</tr>
+<tr>
+<td>withdraw_rewards</td>
+<td>validator</td>
+<td>{validatorAddress}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>distribution</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>withdraw_delegator_reward</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="msgwithdrawvalidatorcommission">MsgWithdrawValidatorCommission</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Attribute Key</th>
+<th>Attribute Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>withdraw_commission</td>
+<td>amount</td>
+<td>{commissionAmount}</td>
+</tr>
+<tr>
+<td>message</td>
+<td>module</td>
+<td>distribution</td>
+</tr>
+<tr>
+<td>message</td>
+<td>action</td>
+<td>withdraw_validator_commission</td>
+</tr>
+<tr>
+<td>message</td>
+<td>sender</td>
+<td>{senderAddress}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters</h2>
+<p>The distribution module contains the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>communitytax</td>
+<td>string (dec)</td>
+<td>"0.020000000000000000" [0]</td>
+</tr>
+<tr>
+<td>baseproposerreward</td>
+<td>string (dec)</td>
+<td>"0.010000000000000000" [0]</td>
+</tr>
+<tr>
+<td>bonusproposerreward</td>
+<td>string (dec)</td>
+<td>"0.040000000000000000" [0]</td>
+</tr>
+<tr>
+<td>withdrawaddrenabled</td>
+<td>bool</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>[0] <code>communitytax</code>, <code>baseproposerreward</code> and <code>bonusproposerreward</code> must be
+  positive and their sum cannot exceed 1.00.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
