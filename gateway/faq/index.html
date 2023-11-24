@@ -251,7 +251,7 @@
         <a href="../run/" class="md-tabs__link">
           
   
-  ✈Gateways and Authenticators
+  🏰Gateways and Authenticators
 
         </a>
       </li>
@@ -296,7 +296,7 @@
         <a href="../../window/introduce/" class="md-tabs__link">
           
   
-  Cross-chain
+  ✈Cross-chain
 
         </a>
       </li>
@@ -1080,7 +1080,7 @@
             
   
   <span class="md-ellipsis">
-    ✈Gateways and Authenticators
+    🏰Gateways and Authenticators
   </span>
   
 
@@ -1090,7 +1090,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            ✈Gateways and Authenticators
+            🏰Gateways and Authenticators
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1992,7 +1992,7 @@
             
   
   <span class="md-ellipsis">
-    Cross-chain
+    ✈Cross-chain
   </span>
   
 
@@ -2002,7 +2002,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Cross-chain
+            ✈Cross-chain
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2216,12 +2216,12 @@
 
 <summary><b>What is "staking"?</b></summary>
 
-<p>DST is a public proof-of-stake (PoS) blockchain, which means validators are weighted based on the amount of Mortgage Tokens (FM) held as collateral.
-These staked tokens can be directly staked by validators or delegated to them by FM holders. </p>
+<p>DST is a public proof-of-stake (PoS) blockchain, which means validators are weighted based on the amount of Mortgage Tokens (NXN) held as collateral.
+These staked tokens can be directly staked by validators or delegated to them by NXN holders. </p>
 
 <p>Any user in the system can declare their intent to become a validator by sending a <code>create-validator</code> transaction.
 From there, they become validators. A validator's weight (i.e. total stake or voting power) determines whether it is an active validator, and also determines how often the node proposes blocks and how much it will earn. </p>
-<p>Initially, only the top 150 validators with the highest weight will be active validators. If validators double-sign or are often offline, they risk staked tokens (including user-delegated FMs) being “slashed” by the protocol to punish negligence and misconduct. </p>
+<p>Initially, only the top 150 validators with the highest weight will be active validators. If validators double-sign or are often offline, they risk staked tokens (including user-delegated NXN) being “slashed” by the protocol to punish negligence and misconduct. </p>
 
 </details>
 
@@ -2240,8 +2240,8 @@ Running a full node requires more resources than a light client, but it is requi
 
 <summary><b>What is pos commission?</b></summary>
 
-<p>Delegators are FM holders who cannot or do not want to run validator operations themselves. .
-Users can delegate FM to validators and receive a portion of their revenue in exchange (for more details on how revenue is distributed, see <b>What is the motivation for staking?</b> and <b>What is Validation below? server commissions?</b> section). </p>
+<p>Delegators are NXN holders who cannot or do not want to run validator operations themselves. .
+Users can delegate NXN to validators and receive a portion of their revenue in exchange (for more details on how revenue is distributed, see <b>What is the motivation for staking?</b> and <b>What is Validation below? server commissions?</b> section). </p>
 
 <p>Because they share revenue with their validators, delegators also share responsibility. If a validator misbehaves, each of its delegators will be partially slashed in proportion to their stake. This is why delegators should do due diligence on validators before delegating and diversify by spreading their stake across multiple validators. </p>
 
@@ -2268,8 +2268,8 @@ The private key associated with this address is used for binding, unbinding and 
 <li><b>Initial commission rate</b>: Block rewards and fees charged to delegators.</li>
 <li><b>Maximum commission</b>: The maximum commission rate this validator will be allowed to charge. </li>
 <li><b>Commission change rate</b>: Maximum daily increase in validator commission. </li>
-<li><b>Minimum self-bond amount</b>: The minimum amount of FMs that the validator needs to always bond with. If a validator's self-staking stake falls below this limit, its entire staking pool will be unstaked. </li>
-<li><b>Initial self-bond amount</b>: The initial FM amount that the validator wants to self-bond. </li>
+<li><b>Minimum self-bond amount</b>: The minimum amount of NXN that the validator needs to always bond with. If a validator's self-staking stake falls below this limit, its entire staking pool will be unstaked. </li>
+<li><b>Initial self-bond amount</b>: The initial NXN amount that the validator wants to self-bond. </li>
 </ul>
 
 <pre><code class="language-bash">stcd tx staking create-validator
@@ -2294,8 +2294,8 @@ Doing so can result in the loss of funds, as your funds can be accessed remotely
 </p>
 
 <p>
-Once a validator is created and registered, FM holders can delegate FM to it, effectively adding stake to their pool.
-The total pledge amount of the validator is the sum of the FM staked by the validator operator itself and the FM staked by the external delegator.
+Once a validator is created and registered, NXN holders can delegate NXN to it, effectively adding stake to their pool.
+The total pledge amount of the validator is the sum of the NXN staked by the validator operator itself and the NXN staked by the external delegator.
 </p>
 
 <p>
@@ -2337,18 +2337,18 @@ The validator's operator key is bound directly to the application key, but the r
 <li><b>unbonding</b>: The validator is not in the active set and does not participate in the consensus. <br />
 Validators are not rewarded, but can still be slashed for misbehavior. This is the transition state from bound to unbound. If a validator does not send a rebond transaction in unbond mode, it takes two weeks to complete the state transition. </li>
 <li><b>unbonded</b>: The validator is not in the active set and therefore does not sign blocks. <br />
-Unbonded validators cannot be slashed, but do not receive any rewards for their actions. FM can still be delegated to this validator. <br />
+Unbonded validators cannot be slashed, but do not receive any rewards for their actions. NXN can still be delegated to this validator. <br />
 Unbonding from an <code>unbonded</code> validator is immediate. Delegators have the same state as their validators. </li>
 </ul>
 ⚠️<b>Note</b>:
-A delegate is not necessarily bound. FM can be delegated and bound, delegated and unbound, delegated and unbound, or liquid.
+A delegate is not necessarily bound. NXN can be delegated and bound, delegated and unbound, delegated and unbound, or liquid.
 </details>
 
 <details>
 
 <summary><b>What is a "self-mortgage"? How do I increase my "self-mortgage"?</b></summary>
 <p>
-A validator operator's <b>self-staking</b> refers to the amount of FM pledged to itself. You can increase your self-staking by delegating more FM to your validator account.
+A validator operator's <b>self-staking</b> refers to the amount of NXN pledged to itself. You can increase your self-staking by delegating more NXN to your validator account.
 </p>
 </details>
 
@@ -2363,7 +2363,7 @@ If you want to get testnet coins, you can use <a href="https://water-tap.daodst.
 
 <details>
 
-<summary><b>Is there a minimum amount of FMs that must be staked to be an active (bonded) validator? </b></summary>
+<summary><b>Is there a minimum amount of NXN that must be staked to be an active (bonded) validator? </b></summary>
 <p>
 There is no minimum. The top 150 validators with the highest total stake (where <code>total stake = self-bonded stake + delegators stake</code>) are active validators.
 </p>
@@ -2376,9 +2376,9 @@ There is no minimum. The top 150 validators with the highest total stake (where 
 Delegators are free to choose validators based on their own subjective criteria. That said, criteria expected to be important include:
 </p>
 <ul>
-<li><b>Number of self-bonded FMs:</b> The number of FMs the validator has self-bonded to its staking pool. Validators with more self-bonded FMs have more skin in the game, making them more responsible for their actions. </li>
+<li><b>Number of self-bonded NXN:</b> The number of NXN the validator has self-bonded to its staking pool. Validators with more self-bonded NXN have more skin in the game, making them more responsible for their actions. </li>
 
-<li><b>Number of FMs Delegated:</b> The total number of FMs delegated to the validator. A high stake indicates that the community trusts the validator, but also means that the validator is a bigger target for hackers. As the number of delegated FMs grows, validators are expected to become less and less attractive. Larger validators also increase the centralization of the network. </li>
+<li><b>Number of NXN Delegated:</b> The total number of NXN delegated to the validator. A high stake indicates that the community trusts the validator, but also means that the validator is a bigger target for hackers. As the number of delegated NXN grows, validators are expected to become less and less attractive. Larger validators also increase the centralization of the network. </li>
 <li><b>Commission Rate:</b> The commission that validators apply to earnings before distributing them to their delegators</li>
 <li><b>Track History:</b> Delegators may view the track records of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime, and how often nodes are compromised. </li>
 </ul>
@@ -2420,16 +2420,16 @@ Additionally, validators should be active members of the community. They should 
 <summary><b>What does staking mean?</b></summary>
 
 <p>
-Staking FM can be regarded as a security deposit for verification activities. When a validator or delegator wants to get back some or all of their stake, they send an unbond transaction. Deposits then go through a *two-week unbonding period* during which they may be slashed for potential misconduct by validators before the unbonding process begins.
+Staking NXN can be regarded as a security deposit for verification activities. When a validator or delegator wants to get back some or all of their stake, they send an unbond transaction. Deposits then go through a *two-week unbonding period* during which they may be slashed for potential misconduct by validators before the unbonding process begins.
 </p>
 
 </details>
 <details>
 
-<summary><b>Can a validator run away with a delegator's FM? </b></summary>
+<summary><b>Can a validator run away with a delegator's NXN? </b></summary>
 <p>
 By delegating to a validator, a user delegates a stake. The more collateral a validator has, the more weight it has in the consensus and process.
-This does not mean that validators can take custody of their delegators' FM.
+This does not mean that validators can take custody of their delegators' NXN.
 <b>Verifiers must never run away with delegator funds</b>.
 
 Even if delegated funds cannot be stolen by their validators, delegators are still liable if their validators misbehave. In this case, each settlor's stake will be partially cut in proportion to their relative stake.
@@ -2438,10 +2438,10 @@ Even if delegated funds cannot be stolen by their validators, delegators are sti
 
 <details>
 
-<summary><b>How often will a validator be elected to propose the next block? Will it increase with the number of staked FM</b></summary>
+<summary><b>How often will a validator be elected to propose the next block? Will it increase with the number of staked NXN</b></summary>
 <p>
 The verifier selected to mine the next block is called the <b>proposer</b>, which is the `leader`"` in this round of consensus. Each proposer is deterministically selected and is selected by The selected frequency is equal to the validator's relative total stake (where total stake = self-mortgaged stake + delegator's stake).
-For example, if the total stake of all validators is 100 FM, and the total stake of a validator is 10 FM, then that validator will have a 10% chance of being elected as a proposer.
+For example, if the total stake of all validators is 100 NXN, and the total stake of a validator is 10 NXN, then that validator will have a 10% chance of being elected as a proposer.
 
 To learn more about the proposer selection process in the Tendermint BFT consensus, read more
 (https://docs.tendermint.com/master/spec/consensus/proposer-selection.html)
@@ -2456,8 +2456,8 @@ To learn more about the proposer selection process in the Tendermint BFT consens
 Each member of a validator stake pool receives a different type of income:
 
 <p>
-<b>Block Reward:</b> The native token of the application run by the validator (e.g. FM on Daodst) is inflated to generate
-block terms. These terms exist to incentivize FM holders to bind their stake, as unbound FM will
+<b>Block Reward:</b> The native token of the application run by the validator (e.g. NXN on Daodst) is inflated to generate
+block terms. These terms exist to incentivize NXN holders to bind their stake, as unbound NXN will
 Diluted over time.
 </p>
 <p>
@@ -2500,21 +2500,21 @@ Candidature, and can be further restricted only if declared.
 <summary><b>How are collective provisions assigned? </b></summary>
 <p>
 Block terms (rewards) are distributed among all validators proportional to their total stake (voting power).
-This means that even though each validator earns FM per supply, all validators will remain equal
+This means that even though each validator earns NXN per supply, all validators will remain equal
 weight.
 </p>
 <p>
 Let's take an example where we have 10 validators with the same stake and 1% commission rate. let us also
-Suppose the supply of a block is 1000 FM, and each validator has 20% self-mortgaged FM. these tokens
+Suppose the supply of a block is 1000 NXN, and each validator has 20% self-mortgaged NXN. these tokens
 Do not go directly to the proposer. Instead, they are evenly distributed among validators. So now each validator's pool
-There are 100 FMs. The 100 FM will be distributed according to each participant's stake:
+There are 100 NXNs. The 100 NXN will be distributed according to each participant's stake:
 </p>
 <ul>
-<li>Commission: `100*80%*1% = 0.8 FM`</li>
-<li>Validator gets: `100\*20% + commission = 20.8 FM`</li>
-<li>All principals get: `100\*80% - commission = 79.2 FM`</li>
+<li>Commission: `100*80%*1% = 0.8 NXN`</li>
+<li>Validator gets: `100\*20% + commission = 20.8 NXN`</li>
+<li>All principals get: `100\*80% - commission = 79.2 NXN`</li>
 </ul>
-Each delegator can then claim a portion of the 79.2 FM in proportion to their stake in the validator's stake pool.
+Each delegator can then claim a portion of the 79.2 NXN in proportion to their stake in the validator's stake pool.
 Note that validator commissions do not apply to block terms. Note that block rewards are distributed according to the same mechanism.
 
 </details>
@@ -2539,7 +2539,7 @@ Incentivizes non-empty block proposals, better networking among validators, and 
 
 <p>
 Let us take a concrete example to illustrate the above concept. In this example, there are 10 validators
-equal interest. They charge 1% commission each and have a 20% self-insured FM. Now comes a successful block
+equal interest. They charge 1% commission each and have a 20% self-insured NXN. Now comes a successful block
 A total of 1005 dst will be charged. Suppose the proposer includes 100% of the signatures in its proposal
 clogged. Get a full 5% bonus.
 </p>
@@ -2600,19 +2600,19 @@ Connectivity, get DDoSed, or have their private key compromised.
 
 <details>
 
-<summary><b>Do validators need to self-bind FM? </b></summary>
+<summary><b>Do validators need to self-bind NXN? </b></summary>
 <p>
 No they don't. A validator's total stake is equal to the sum of its own collateral stake and its delegated stake.
 This means that validators can compensate their small self-staking stake by attracting more delegators. This is
 Why reputation is very important for validators.
 </p>
 <p>
-Even though validators are not obliged to bind FM themselves, delegators should expect their validators to have
-Self-bond FM in their staking pool. In other words, validators should participate.
+Even though validators are not obliged to bind NXN themselves, delegators should expect their validators to have
+Self-bond NXN in their staking pool. In other words, validators should participate.
 </p>
 <p>
 To give delegators some assurance about how much stake their validators have, the latter can signal
-Minimal amount of self-bonded FM. If the validator's self-constraint is lower than its predefined limit, then this
+Minimal amount of self-bonded NXN. If the validator's self-constraint is lower than its predefined limit, then this
 The validator and all its delegators will be unbound.
 </p>
 </details>

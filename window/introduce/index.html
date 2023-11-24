@@ -247,7 +247,7 @@
         <a href="../../gateway/run/" class="md-tabs__link">
           
   
-  ✈Gateways and Authenticators
+  🏰Gateways and Authenticators
 
         </a>
       </li>
@@ -296,7 +296,7 @@
         <a href="./" class="md-tabs__link">
           
   
-  Cross-chain
+  ✈Cross-chain
 
         </a>
       </li>
@@ -1078,7 +1078,7 @@
             
   
   <span class="md-ellipsis">
-    ✈Gateways and Authenticators
+    🏰Gateways and Authenticators
   </span>
   
 
@@ -1088,7 +1088,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            ✈Gateways and Authenticators
+            🏰Gateways and Authenticators
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1908,7 +1908,7 @@
             
   
   <span class="md-ellipsis">
-    Cross-chain
+    ✈Cross-chain
   </span>
   
 
@@ -1918,7 +1918,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Cross-chain
+            ✈Cross-chain
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2141,23 +2141,25 @@
 
 <h2 id="function-description">Function Description</h2>
 <p>Through this program, sellers can achieve functions such as creating pending order tasks, automatically placing orders based on pending order tasks, automatically withdrawing money, automatically canceling pending orders, etc. Cross-chain is a completely decentralized point-to-point cross-chain through HASH locking contracts.</p>
+<p>For the DST chain, if there is no full node in the local area, the full node will be started by default to provide the RPC used in the exchange. The link is http://127.0.0.1:8545
+You can also configure your own RPC link</p>
 <h2 id="hash-lock-contract-process-introduction">HASH lock contract process introduction</h2>
-<p>Suppose there are two chains A and B. As a seller, Zhang San owns the USDT assets of chain A and wants to exchange them for USDT assets of chain B. As a buyer, Li Si owns the USDT assets of chain B and wants to exchange them for USDT assets of chain A.</p>
+<p>Suppose there are two chains A and B. As a seller, Tom owns the USDT assets of chain A and wants to exchange them for USDT assets of chain B. As a buyer, Alice owns the USDT assets of chain B and wants to exchange them for USDT assets of chain A.</p>
 <ol>
 <li>
-<p>Zhang San needs to call the creation sell order method of the HASH-locked cross-chain contract of chain A, and pass in the chain ID, selling quantity, locking time, and signature generated off-chain of chain B (the seller, according to the chain ID of chain A, The chain ID of chain B, the seller’s customized password, and the quantity signature) generate an order. The order has a unique Key (obtained from sha256(signature)), and the corresponding amount of USDT assets is transferred to the contract.</p>
+<p>Tom needs to call the creation sell order method of the HASH-locked cross-chain contract of chain A, and pass in the chain ID, selling quantity, locking time, and signature generated off-chain of chain B (the seller, according to the chain ID of chain A, The chain ID of chain B, the seller’s customized password, and the quantity signature) generate an order. The order has a unique Key (obtained from sha256(signature)), and the corresponding amount of USDT assets is transferred to the contract.</p>
 </li>
 <li>
-<p>If Li Si wants to buy, he first calls the contract method of the purchase order of the cross-chain contract locked by the A chain HASH, and confirms that he wants to buy Zhang San's order. At this time, the order is in a locked state.</p>
+<p>If Alice wants to buy, he first calls the contract method of the purchase order of the cross-chain contract locked by the A chain HASH, and confirms that he wants to buy Tom's order. At this time, the order is in a locked state.</p>
 </li>
 <li>
-<p>Secondly, Li Si needs to bring the key of the order, the chain ID of chain A, the quantity sold, the order end time, signature, and the withdrawal lock time defined by the buyer (order end time &gt;= withdrawal lock time + current time) to call chain B How to create a sell order for a HASH-locked cross-chain contract and transfer the USDT assets of chain B into the contract</p>
+<p>Secondly, Alice needs to bring the key of the order, the chain ID of chain A, the quantity sold, the order end time, signature, and the withdrawal lock time defined by the buyer (order end time &gt;= withdrawal lock time + current time) to call chain B How to create a sell order for a HASH-locked cross-chain contract and transfer the USDT assets of chain B into the contract</p>
 </li>
 <li>
-<p>After Zhang San sees that Li Si has successfully paid on chain B, he calls the method of extracting order assets of chain B and passes in the password customized by the seller when creating the order. The password will be disclosed to Li Si after the transaction is successful.</p>
+<p>After Tom sees that Alice has successfully paid on chain B, he calls the method of extracting order assets of chain B and passes in the password customized by the seller when creating the order. The password will be disclosed to Alice after the transaction is successful.</p>
 </li>
 <li>
-<p>After Li Si gets the password, he needs to call the method of extracting order assets of chain A, pass in the password, and obtain the USDT assets of chain A.</p>
+<p>After Alice gets the password, he needs to call the method of extracting order assets of chain A, pass in the password, and obtain the USDT assets of chain A.</p>
 </li>
 </ol>
 
