@@ -1703,6 +1703,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#backend-management" class="md-nav__link">
+    Backend management
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    Start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    Stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-status" class="md-nav__link">
+    View status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#process" class="md-nav__link">
     process
   </a>
@@ -2339,6 +2373,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#backend-management" class="md-nav__link">
+    Backend management
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    Start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    Stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-status" class="md-nav__link">
+    View status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#process" class="md-nav__link">
     process
   </a>
@@ -2540,6 +2608,13 @@
 <h1 id="linux-operation-guide">linux operation guide</h1>
 <h2 id="install">install</h2>
 <h3 id="centos">centos</h3>
+<pre><code>From the official website（ https://www.daodst.com/ ）Download program compression package
+</code></pre>
+<p><img alt="/img/linux/centos/img_10.png" src="/img/linux/centos/img_10.png" /></p>
+<pre><code>Right click on DST.zip with the mouse, select "Open with Archive Manager" from the pop-up menu, then click "Extract" in the upper right corner, select an installation directory, and the program will automatically copy to that directory (it is recommended to choose a location with larger available disk space)
+</code></pre>
+<p><img alt="/img/linux/centos/img_11.png" src="/img/linux/centos/img_11.png" /></p>
+<p><img alt="/img/linux/centos/img_12.png" src="/img/linux/centos/img_12.png" /></p>
 <pre><code>After entering the installation directory for the first time, right-click "Terminal Open" to open the command line interface
 </code></pre>
 <p><img alt="/img/linux/centos/img.png" src="/img/linux/centos/img.png" /></p>
@@ -2551,7 +2626,7 @@
 <p><img alt="/img/linux/centos/img_2.png" src="/img/linux/centos/img_2.png" /></p>
 <pre><code>After the initialization is complete, the interface will prompt to restart the server to complete the initialization configuration
 </code></pre>
-<p><img alt="/img/linux/centos/img_3.png" src="/img/linux/centos/img_3.png" /></p>
+<p><img alt="/img/linux/centos/img_13.png" src="/img/linux/centos/img_13.png" /></p>
 <pre><code>After restarting, enter the installation root directory and double-click the newly generated icon start.desktop ,click trust and Launch to start. In the future, you only need to double-click the start icon to start the program every time you start it.
 </code></pre>
 <p><img alt="/img/linux/centos/img_4.png" src="/img/linux/centos/img_4.png" /></p>
@@ -2571,6 +2646,36 @@
 <pre><code>After restarting, enter the installation root directory, double-click secret_telegram to start the application
 </code></pre>
 <p><img alt="/img/linux/ubuntu/img_4.png" src="/img/linux/ubuntu/img_4.png" /></p>
+<h2 id="backend-management">Backend management</h2>
+<pre><code>After the GUI installation is completed, you can operate the gateway backend as follows:
+</code></pre>
+<h3 id="start">Start</h3>
+<pre><code>#Switch to root user
+su root
+
+#Switch directories
+cd {Installation directory}/resource/gateway
+
+./op.sh start
+</code></pre>
+<h3 id="stop">Stop</h3>
+<pre><code>#Switch to root user
+su root
+
+#Switch directories
+cd {Installation directory}/resource/gateway
+
+./op.sh stop
+</code></pre>
+<h3 id="view-status">View status</h3>
+<pre><code>#Switch to root user
+su root
+
+#Switch directories
+cd {Installation directory}/resource/gateway
+
+./op.sh status
+</code></pre>
 <h2 id="process">process</h2>
 <pre><code>Create or import wallet address --&gt; create dpos --&gt; create gateway --&gt; pledge NXN --&gt; receive rewards
 </code></pre>

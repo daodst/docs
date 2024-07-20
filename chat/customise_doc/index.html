@@ -2225,7 +2225,7 @@ The process is as follows:</p>
 
 Medal level, each level increases the bonus by 3%, and level 33 can get a maximum bonus of 100%
 
-User base = remaining disk used by the node / number of users who have uploaded today on the node / data cleaning cycle / 2
+User base = remaining disk used by the node / number of users who have uploaded today on the node /  2 (upper limit 200M)
 
 User bonus amount = user base amount x medal level increase
 
@@ -2234,13 +2234,13 @@ Roll over the oldest file when the quota is insufficient
 
 ++++++++++ Example: ++++++++++++++
 
-The remaining disk available for the node is 100G, the data cleaning cycle is 3 days, and the number of daily active users on the node today is 500
+The remaining disk available for the node is 100G,  and the number of daily active users on the node today is 500
 
-100G / 500 / 3 /2 = 35M (base storage capacity of node users)
+100G / 500 / 2 = 102M (base storage capacity of node users)
 
 User A's medal level is level 10, and the bonus ratio is 9%
 
-35M x (1 + 0.09) = 38.15M (the actual storage capacity after medal bonus)
+102M x (1 + 0.09) = 111.18M (the actual storage capacity after medal bonus)
 </code></pre>
 <h3 id="bandwidth-limit">Bandwidth limit</h3>
 <p><img alt="Schematic diagram of current limiting" src="/img/netflow.png" /></p>
