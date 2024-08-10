@@ -2376,10 +2376,10 @@
 
 
 <h1 id="single-node">single node</h1>
-<p>After this page, you can run a single-node local network manually or with an already prepared automated script. Running a single-node setup is useful for developers who want to test the functionality of their applications and protocols because of its simplicity and speed. For more complex setups, please refer to the <a href="./multi-nodes">Multi-node setup</a> page.</p>
+<p>After this page, you can run a single-node local network manually or with an already prepared automated script. Running a single-node setup is useful for developers who want to test the functionality of their applications and protocols because of its simplicity and speed. For more complex setups, please refer to the [Multi-node setup] page.</p>
 <h2 id="prerequisites">prerequisites</h2>
 <ul>
-<li><a href="/protocol/stcd/">Install</a></li>
+<li><a href="../">Install</a></li>
 </ul>
 <h2 id="automation-script">Automation script</h2>
 <p>The easiest way to start a local Daodst node is to use the provided helper script, which will create a sensible default configuration for testing purposes:</p>
@@ -2440,11 +2440,11 @@ $CHAINID=&quot;daodst_7000-1&quot;
 stcd init $MONIKER --chain-id=$CHAINID
 </code></pre>
 <p>📣 Tips:
-You can <a href="/protocol/stcd/config#client-configuration">modify</a> this moniker later by updating the <code>config.toml</code> file.</p>
-<p>The command above creates all the configuration files your node and validators need to run, as well as a default genesis file which defines the initial state of the network. By default all these <a href="/protocol/stcd/config">configuration files</a> are in <code>~/.stcd</code>, but you can override the location of this folder by passing the <code>--home</code> flag.</p>
+You can <a href="../config/#client-configuration">modify</a> this moniker later by updating the <code>config.toml</code> file.</p>
+<p>The command above creates all the configuration files your node and validators need to run, as well as a default genesis file which defines the initial state of the network. By default all these <a href="../config/">configuration files</a> are in <code>~/.stcd</code>, but you can override the location of this folder by passing the <code>--home</code> flag.</p>
 <h3 id="genesis-program">Genesis program</h3>
 <h3 id="add-genesis-account">Add genesis account</h3>
-<p>Before starting the chain, you need to populate the state with at least one account using <a href="/protocol/keyring#add-keys">keyring</a>:</p>
+<p>Before starting the chain, you need to populate the state with at least one account using <a href="../../keyring/#add-keys">keyring</a>:</p>
 <pre><code class="language-bash">stcd keys add my_validator
 </code></pre>
 <p>After creating the local account, go ahead and grant it some <code>dst</code> tokens in the chain's genesis file. Doing this will also ensure your chain is aware of the existence of this account:</p>
@@ -2514,7 +2514,7 @@ This can also be saved as a CLI configuration option:</p>
 <pre><code class="language-bash">stcd config keyring-backend file
 </code></pre>
 <p>📣 Tips:
-For more information on Keyring and its backend options, click <a href="/protocol/keyring/">here</a>.</p>
+For more information on Keyring and its backend options, click <a href="../../keyring/">here</a>.</p>
 <h3 id="enable-tracing">Enable tracing</h3>
 <p>To enable tracing while running node, modify the last line of the <code>local_node.sh</code> script to the following command,
 Where:</p>

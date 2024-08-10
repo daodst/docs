@@ -2079,10 +2079,10 @@
 
 <h1 id="hard-fork-upgrade">hard fork upgrade</h1>
 <p>One of the significant limitations of the normal upgrade procedure
-<a href="./../../validate/upgrades#governance-proposal">via governance</a> is that it needs to wait for the entire voting period.</p>
+<a href="../#governance-proposal">via governance</a> is that it needs to wait for the entire voting period.</p>
 <p>This duration makes it unsuitable for automated upgrades involving patches for security vulnerabilities or other critical components.</p>
 <p>A faster alternative to using governance is to create a hard fork procedure.
-This process <a href="./automated-upgrades">automatically</a> applies changes to upgrade plans, allowing them to execute at a given block height without creating a governance proposal.</p>
+This process <a href="../auto/">automatically</a> applies changes to upgrade plans, allowing them to execute at a given block height without creating a governance proposal.</p>
 <p>The high-level strategy for coordinated upgrades is as follows:</p>
 <ol>
 <li>Bugfixes are on private branches that contain breaking changes.</li>
@@ -2093,7 +2093,7 @@ This process <a href="./automated-upgrades">automatically</a> applies changes to
 </ol>
 <p><strong>IMPORTANT</strong>: Posts need to be created 1 hour in advance because
 It takes about 30 minutes to create release binaries, validators need buffer time to download them and update them
-<a href="./automated-upgrades#using-cosmovisor">cosmovisor</a> setting.</p>
+<a href="../auto/#using-cosmovisor">cosmovisor</a> setting.</p>
 
 
 

@@ -2384,14 +2384,14 @@
 </tbody>
 </table>
 <h2 id="install-stcd">Install <code>stcd</code></h2>
-<p>Follow the <a href="/protocol/stcd/single-node">installation</a> documentation to install <strong>program</strong>.</p>
+<p>Follow the <a href="../../protocol/stcd/single-node/">installation</a> documentation to install <strong>program</strong>.</p>
 <p>⚠️ <strong>Note</strong> :
 Make sure you have the correct version of <strong>Program</strong> installed.</p>
 <h3 id="save-chain-id">Save Chain ID</h3>
 <p>We recommend saving the testnet <code>chain-id</code> to your <code>client.toml</code>.
 This will save you from having to manually pass the <code>chain-id</code> flag for every CLI command.</p>
 <p>📣 Tips:
-See the official <a href="/protocol/chainid#official-chain-ids">chain IDs</a> for reference.</p>
+See the official <a href="../../protocol/chainid/#official-chain-ids">chain IDs</a> for reference.</p>
 <pre><code class="language-bash">stcd config chain-id daodst_7000-1
 </code></pre>
 <h2 id="initialize-node">Initialize node</h2>
@@ -2445,9 +2445,9 @@ You can retrieve them from the list of available peers in the <a href="https://g
 <pre><code class="language-bash">sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; $install_path/.stcd/config/config.toml
 </code></pre>
 <h2 id="run-the-testnet-validator">Run the testnet validator</h2>
-<p>Declare your testnet on <a href="/gateway/testnet">faucet</a> using your validator account address and submit your validator account address:</p>
+<p>Declare your testnet on <a href="./">faucet</a> using your validator account address and submit your validator account address:</p>
 <p>📣 Tips:
-For more details on how to run the validator, please follow <a href="/gateway/run">these</a> instructions.</p>
+For more details on how to run the validator, please follow <a href="../run/">these</a> instructions.</p>
 <pre><code class="language-bash">stcd tx staking create-validator \
    --amount=1000000000000dst \
    --pubkey=$(stcd tendermint show-validator) \
@@ -2462,7 +2462,7 @@ For more details on how to run the validator, please follow <a href="/gateway/ru
    --from=&lt;key_name&gt;
 </code></pre>
 <h2 id="start-the-testnet">Start the testnet</h2>
-<p>The last step is to <a href="/protocol/stcd/single-node#start-node">start the node</a>.
+<p>The last step is to <a href="../../protocol/stcd/single-node/#start-node">start the node</a>.
 Once enough voting power (+2/3) from genesis validators is up and running, the testnet will start producing blocks.</p>
 <pre><code class="language-bash">stcd daemon
 </code></pre>
@@ -2493,7 +2493,7 @@ To get your node ID, use</p>
 <pre><code class="language-bash">stcd tendermint show-node-id
 </code></pre>
 <h2 id="state-synchronization-node">State synchronization node</h2>
-<p>If you want to join the network using state-sync (fast, but not for archive nodes), check out our <a href="/gateway/state-sync">state-sync</a> page</p>
+<p>If you want to join the network using state-sync (fast, but not for archive nodes), check out our <a href="../state-sync/">state-sync</a> page</p>
 
 
 

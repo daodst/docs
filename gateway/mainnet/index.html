@@ -2323,7 +2323,7 @@
 <p>This document outlines the steps to join an existing mainnet.</p>
 <h2 id="prerequisites-to-read">Prerequisites to read</h2>
 <ul>
-<li><a href="/gateway/security">Authenticator Security</a></li>
+<li><a href="../security/">Authenticator Security</a></li>
 </ul>
 <h2 id="mainnet_1">Mainnet</h2>
 <p>You need to setup a <strong>genesis file</strong> and a <strong>seed node</strong>.
@@ -2350,15 +2350,15 @@ Note that the displayed version may differ when there is an active software upgr
 </tr>
 </tbody>
 </table>
-<p>⚠️ <strong>IMPORTANT:</strong> If you join mainnet as a validator, please make sure you follow all <a href="/gateway/security">security</a> recommendations!</p>
+<p>⚠️ <strong>IMPORTANT:</strong> If you join mainnet as a validator, please make sure you follow all <a href="../security/">security</a> recommendations!</p>
 <h2 id="install-daodst">Install <code>daodst</code></h2>
-<p>Follow the <a href="/gateway/run">installation</a> documentation to install the <strong>program</strong></p>
+<p>Follow the <a href="../run/">installation</a> documentation to install the <strong>program</strong></p>
 <p>⚠️ <strong>Note</strong> :
 Make sure you have the correct version of the <strong>program</strong> installed.</p>
 <h3 id="save-chain-id">Save Chain ID</h3>
 <p>We recommend saving the mainnet <code>chain-id</code> to your <strong>app</strong>'s <code>client.toml</code>.
 This will save you from having to manually pass the <code>chain-id</code> flag for every CLI command.</p>
-<p>📣 Tip : Please refer to the official <a href="/protocol/chainid">chain ID</a> for reference.</p>
+<p>📣 Tip : Please refer to the official <a href="../../protocol/chainid/">chain ID</a> for reference.</p>
 <pre><code class="language-bash">stcd config chain-id daodst_7777-1
 </code></pre>
 <h2 id="initialize-node">Initialize node</h2>
@@ -2412,7 +2412,7 @@ You can retrieve them from the list of available nodes in the <a href="https://g
 </code></pre>
 <h2 id="run-mainnet-validator">Run mainnet validator</h2>
 <p>📣 Tips:
-For more details on how to run a validator, follow the validator <a href="/gateway/run">these</a>
+For more details on how to run a validator, follow the validator <a href="../run/">these</a>
 instruct.</p>
 <pre><code class="language-bash">stcd tx staking create-validator \
 --amount=1000000000000dst \
@@ -2427,11 +2427,11 @@ instruct.</p>
 --gas-prices=&quot;5000000000dst&quot; \
 --from=&lt;key_name&gt;
 </code></pre>
-<p>🚨 <strong>DANGER</strong>: <u>NEVER</u> create validator keys using <a href="/protocol/keyring#testing"><code>test</code></a> as the keyring backend.
+<p>🚨 <strong>DANGER</strong>: <u>NEVER</u> create validator keys using <a href="../../protocol/keyring/#testing"><code>test</code></a> as the keyring backend.
 Doing so may cause your funds to be accessed remotely via the <code>eth_sendTransaction</code> JSON-RPC endpoint, resulting in loss of funds.</p>
 <p>Reference: <a href="https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds- remotely-accessible/">Security Advisory: Insecurely configured geth can make funds remotely accessible</a></p>
 <h2 id="start-the-mainnet">Start the mainnet</h2>
-<p>The last step is to <a href="/protocol/stcd/single-node#daemon">start the node</a>. Once enough voting power (+2/3)
+<p>The last step is to <a href="../../protocol/stcd/single-node/#daemon">start the node</a>. Once enough voting power (+2/3)
 Starting from the genesis validator, nodes will start producing blocks.</p>
 <pre><code class="language-bash">stcd daemon
 </code></pre>
@@ -2441,7 +2441,7 @@ Starting from the genesis validator, nodes will start producing blocks.</p>
 <pre><code class="language-bash">stcd tendermint show-node-id
 </code></pre>
 <h2 id="state-synchronization-node">State synchronization node</h2>
-<p>If you want to join the network using state-sync (fast, but not for archive nodes), check out our <a href="/gateway/state-sync/">state-sync</a> page.</p>
+<p>If you want to join the network using state-sync (fast, but not for archive nodes), check out our <a href="../state-sync/">state-sync</a> page.</p>
 
 
 

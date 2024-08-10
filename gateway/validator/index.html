@@ -2151,14 +2151,14 @@
 <h2 id="prerequisites">prerequisites</h2>
 <ul>
 <li>Wait for local node block synchronization to complete</li>
-<li><a href="/gateway/security">Validator security</a></li>
-<li><a href="/protocol/account/">Create an account</a></li>
+<li><a href="../security/">Validator security</a></li>
+<li><a href="../../protocol/account/">Create an account</a></li>
 </ul>
 <h2 id="create-your-validator">Create your validator</h2>
 <p>Your node consensus public key (<code>dstvalconspub...</code>) can be used to create new validators by staking NXN tokens. You can find your validator public key by running:</p>
 <pre><code class="language-bash">stcd tendermint show-validator
 </code></pre>
-<p>🚨 <strong>DANGER</strong>: <u>NEVER</u> use the <a href="/protocol/keyring#testing"><code>test</code></a> keying backend to create your mainnet validator keys. Doing so may cause your funds to be accessed remotely via the <code>eth_sendTransaction</code> JSON-RPC endpoint, resulting in loss of funds.</p>
+<p>🚨 <strong>DANGER</strong>: <u>NEVER</u> use the <a href="../../protocol/keyring/#testing"><code>test</code></a> keying backend to create your mainnet validator keys. Doing so may cause your funds to be accessed remotely via the <code>eth_sendTransaction</code> JSON-RPC endpoint, resulting in loss of funds.</p>
 <p>Ref: <a href="https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely -accessible/">Security Alert: Insecurely configured geth can make funds remotely</a></p>
 <p>To create a validator on the testnet, simply use the following command:</p>
 <pre><code class="language-bash">stcd tx staking create-validator \

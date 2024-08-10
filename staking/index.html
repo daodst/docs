@@ -2368,7 +2368,7 @@ and defines overall functioning of the staking module.</p>
 <li><code>Unbonded</code>: The validator is not in the active set. They cannot sign blocks and do not earn
   rewards. They can receive delegations.</li>
 <li><code>Bonded</code>: Once the validator receives sufficient bonded tokens they automtically join the
-  active set during <a href="./05_end_block.md#validator-set-changes"><code>EndBlock</code></a> and their status is updated to <code>Bonded</code>.
+  active set during [<code>EndBlock</code>] and their status is updated to <code>Bonded</code>.
   They are signing blocks and receiving rewards. They can receive further delegations.
   They can be slashed for misbehavior. Delegators to this validator who unbond their delegation
   must wait the duration of the UnbondingTime, a chain-specific param, during which time
@@ -2405,7 +2405,7 @@ ConsensusPower is validator.Tokens/10^6 by default. Note that all validators
 where <code>Jailed</code> is true are not stored within this index.</p>
 <p><code>LastValidatorsPower</code> is a special index that provides a historical list of the
 last-block's bonded validators. This index remains constant during a block but
-is updated during the validator set update process which takes place in <a href="./05_end_block.md"><code>EndBlock</code></a>.</p>
+is updated during the validator set update process which takes place in [<code>EndBlock</code>].</p>
 <p>Each validator's state is stored in a <code>Validator</code> struct:</p>
 <p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L65-L99</p>
 <p>+++ https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/proto/cosmos/staking/v1beta1/staking.proto#L24-L63</p>
@@ -2488,7 +2488,7 @@ historical entries.</p>
 <h1 id="state-transitions">State Transitions</h1>
 <p>This document describes the state transition operations pertaining to:</p>
 <h2 id="validators">Validators</h2>
-<p>State transitions in validators are performed on every <a href="./05_end_block.md#validator-set-changes"><code>EndBlock</code></a>
+<p>State transitions in validators are performed on every [<code>EndBlock</code>]
 in order to check for changes in the active <code>ValidatorSet</code>.</p>
 <p>A validator can be <code>Unbonded</code>, <code>Unbonding</code> or <code>Bonded</code>. <code>Unbonded</code>
 and <code>Unbonding</code> are collectively called <code>Not Bonded</code>. A validator can move
@@ -2602,7 +2602,7 @@ The total number of tokens is now <code>T + T_j</code>, and the total number of 
 For the initial delegation, delegator <code>j</code> who delegates <code>T_j</code> tokens receive <code>S_j = T_j</code> shares.
 So a validator that hasn't received any rewards and has not been slashed will have <code>T = S</code>.</p>
 <h1 id="messages">Messages</h1>
-<p>In this section we describe the processing of the staking messages and the corresponding updates to the state. All created/modified state objects specified by each message are defined within the <a href="./02_state_transitions.md">state</a> section.</p>
+<p>In this section we describe the processing of the staking messages and the corresponding updates to the state. All created/modified state objects specified by each message are defined within the [state]section.</p>
 <h2 id="msgcreatevalidator">MsgCreateValidator</h2>
 <p>A validator is created using the <code>MsgCreateValidator</code> message.
 The validator must be created with an initial delegation from the operator.</p>
@@ -2659,7 +2659,7 @@ the number of currently delegated tokens.</p>
 tracked in validator object in the <code>Validators</code> index.</p>
 <p>It is possible to delegate to a jailed validator, the only difference being it
 will not be added to the power index until it is unjailed.</p>
-<p><img alt="Delegation sequence" src="../../../docs/uml/svg/delegation_sequence.svg" /></p>
+<p>![Delegation sequence]</p>
 <h2 id="msgundelegate">MsgUndelegate</h2>
 <p>The <code>MsgUndelegate</code> message allows delegators to undelegate their tokens from
 validator.</p>
@@ -2686,7 +2686,7 @@ validator.</p>
 <li>if there are no more <code>Shares</code> in the delegation, then the delegation object is removed from the store</li>
 <li>under this situation if the delegation is the validator's self-delegation then also jail the validator.</li>
 </ul>
-<p><img alt="Unbond sequence" src="../../../docs/uml/svg/unbond_sequence.svg" /></p>
+<p>![Unbond sequence]</p>
 <h1 id="begin-block">Begin-Block</h1>
 <p>Each abci begin block call, the historical info will get stored and pruned
 according to the <code>HistoricalEntries</code> parameter.</p>

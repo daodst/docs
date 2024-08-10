@@ -2315,7 +2315,7 @@ This facilitates smooth upgrades of Daodst to new (broken) software versions, as
 All governance proposals, including software upgrades, will need to wait until the voting period ends before the upgrade can be implemented. Please consider this duration when submitting software upgrade proposals.</p>
 <p>If the proposal is passed, the upgrade <code>plan</code> for the specific upgrade logic to migrate the state will be persisted to the blockchain state and scheduled at a given upgrade height. Upgrades can be delayed or accelerated by updating <code>Plan.Height</code> in new proposals.</p>
 <h3 id="hard-fork">Hard Fork</h3>
-<p>A special type of planned upgrade is a <a href="/upgrade/hard-fork">hard-fork</a>. In contrast to governance proposals, hard forks do not need to wait for the entire voting period.
+<p>A special type of planned upgrade is a <a href="hard-fork/">hard-fork</a>. In contrast to governance proposals, hard forks do not need to wait for the entire voting period.
 This makes them ideal for coordinating security holes and patches.</p>
 <p>The upgraded (forked) block height is set in the application's <code>BeginBlock</code> (i.e. before processing transactions for the block).
 Once the blockchain reaches that height, it automatically schedules an upgrade "schedule" for the same height, which then triggers the upgrade process.
@@ -2367,8 +2367,8 @@ This primarily affects infrastructure providers, tools, and clients such as bloc
 <p>For each new software release, we strongly recommend that full node and validator operators perform a software upgrade.</p>
 <p>You can upgrade your node in any of the following ways:</p>
 <ul>
-<li><a href="/upgrade/auto">auto</a> upgrades the software version and restarts the node after the upgrade occurs, or</li>
-<li>Download the new binaries and perform a <a href="/upgrade/manual">manual upgrade</a></li>
+<li><a href="auto/">auto</a> upgrades the software version and restarts the node after the upgrade occurs, or</li>
+<li>Download the new binaries and perform a <a href="manual/">manual upgrade</a></li>
 </ul>
 <p>Follow the links in the options above to learn how to upgrade your node according to your preferred option.</p>
 

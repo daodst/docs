@@ -1690,13 +1690,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    ubuntu
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1897,13 +1890,6 @@
           <li class="md-nav__item">
   <a href="#centos_1" class="md-nav__link">
     centos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu_1" class="md-nav__link">
-    ubuntu
   </a>
   
 </li>
@@ -2360,13 +2346,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    ubuntu
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2572,13 +2551,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ubuntu_1" class="md-nav__link">
-    ubuntu
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#manual-upgrade" class="md-nav__link">
     Manual upgrade
   </a>
@@ -2608,44 +2580,46 @@
 <h1 id="linux-operation-guide">linux operation guide</h1>
 <h2 id="install">install</h2>
 <h3 id="centos">centos</h3>
-<pre><code>From the official website（ https://www.daodst.com/ ）Download program compression package
-</code></pre>
-<p><img alt="/img/linux/centos/img_10.png" src="/img/linux/centos/img_10.png" /></p>
-<pre><code>Right click on DST.zip with the mouse, select "Open with Archive Manager" from the pop-up menu, then click "Extract" in the upper right corner, select an installation directory, and the program will automatically copy to that directory (it is recommended to choose a location with larger available disk space)
-</code></pre>
-<p><img alt="/img/linux/centos/img_11.png" src="/img/linux/centos/img_11.png" /></p>
-<p><img alt="/img/linux/centos/img_12.png" src="/img/linux/centos/img_12.png" /></p>
-<pre><code>After entering the installation directory for the first time, right-click "Terminal Open" to open the command line interface
-</code></pre>
-<p><img alt="/img/linux/centos/img.png" src="/img/linux/centos/img.png" /></p>
-<pre><code>Enter the initialization command "pkexec xxx/init.sh $USER",xxx is the absolute path of the project
-</code></pre>
-<p><img alt="/img/linux/centos/img_1.png" src="/img/linux/centos/img_1.png" /></p>
-<pre><code>During the initialization process, it is necessary to enter the password of the currently logged-in user once to authorize the operation
-</code></pre>
-<p><img alt="/img/linux/centos/img_2.png" src="/img/linux/centos/img_2.png" /></p>
-<pre><code>After the initialization is complete, the interface will prompt to restart the server to complete the initialization configuration
-</code></pre>
-<p><img alt="/img/linux/centos/img_13.png" src="/img/linux/centos/img_13.png" /></p>
-<pre><code>After restarting, enter the installation root directory and double-click the newly generated icon start.desktop ,click trust and Launch to start. In the future, you only need to double-click the start icon to start the program every time you start it.
-</code></pre>
-<p><img alt="/img/linux/centos/img_4.png" src="/img/linux/centos/img_4.png" /></p>
-<h3 id="ubuntu">ubuntu</h3>
-<pre><code>After entering the installation directory for the first time, right-click "Terminal Open" to open the command line interface
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img.png" src="/img/linux/ubuntu/img.png" /></p>
-<pre><code>Enter the initialization command "pkexec xxx/init.sh $USER",xxx is the absolute path of the project
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_1.png" src="/img/linux/ubuntu/img_1.png" /></p>
-<pre><code>At the beginning of initialization, you need to enter the password of the currently logged-in user once to authorize the operation
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_2.png" src="/img/linux/ubuntu/img_2.png" /></p>
-<pre><code>After the initialization is complete, the interface will prompt to restart the server to complete the initialization configuration
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_3.png" src="/img/linux/ubuntu/img_3.png" /></p>
-<pre><code>After restarting, enter the installation root directory, double-click secret_telegram to start the application
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_4.png" src="/img/linux/ubuntu/img_4.png" /></p>
+<p><strong>1.From the official website（ https://www.daodst.com/ ）Download program compressed file</strong></p>
+<p><img alt="../img/linux/centos/img_10.png" src="../../img/linux/centos/img_10.png" /></p>
+<p><strong>2.Create/data directory permission (note:/data should be an independent hard drive with good read and write speeds, and the available space should be above 1000GB)</strong></p>
+<p><code>pkexec mkdir -p /data</code></p>
+<p><strong>Granting permissions</strong></p>
+<p><code>pkexec chown $USER:$USER /data</code></p>
+<p><strong>3.Right click on DST.zip and select "Open with Archive Manager" from the pop-up menu”</strong>
+<img alt="../img/linux/centos/img_11.png" src="../../img/linux/centos/img_11.png" /></p>
+<p><strong>4.Click on 'Extract' in the upper left corner of the pop-up window</strong><br />
+<img alt="../img/linux/centos/zip1.png" src="../../img/linux/centos/zip1.png" /></p>
+<p><strong>5.Choose /data, be careful not to select the wrong one</strong></p>
+<p><strong>After clicking the extract button on the right, the program will automatically copy to this directory (the red box on the left indicates the selected installation location)</strong></p>
+<p>📣 <strong><em>Note 1: The selected decompression path is/data, do not choose the wrong location</em></strong></p>
+<p>📣 <strong><em>Note 2: Do not select the installation directory under the user's home directory</em></strong></p>
+<p><img alt="../img/linux/centos/zip2.png" src="../../img/linux/centos/zip2.png" /></p>
+<p><strong>6.Enter the installation directory</strong></p>
+<p><strong>7.Right click the mouse in the blank space of the window, and click "Open on Terminal" in the pop-up window to open the command line interface</strong>
+<img alt="../img/linux/centos/ssh.png" src="../../img/linux/centos/ssh.png" /></p>
+<p><strong>8.Authorize and execute initialization commands in the command-line interface</strong></p>
+<p><code>pkexec chmod u+x /data/daodst/init.sh</code></p>
+<p><code>pkexec /data/daodst/init.sh $USER</code></p>
+<p><strong>9.During the initialization process, it is necessary to enter the root user's password once for authorization operations</strong></p>
+<p><img alt="../img/linux/centos/auth.png" src="../../img/linux/centos/auth.png" /></p>
+<p><strong>10.After the initialization script is executed</strong>
+<img alt="../img/linux/centos/pkexec_output.png" src="../../img/linux/centos/pkexec_output.png" /></p>
+<p><strong>11.Restart the operating system</strong></p>
+<p><strong>12.Open the terminal and switch to the root user (enter the root password after the su command). After successful switching, the root user will be displayed</strong>
+<img alt="../img/linux/centos/su.png" src="../../img/linux/centos/su.png" /></p>
+<p><strong>13.Enter the backend directory of the gateway</strong></p>
+<p><code>cd /data/daodst/resources/gateway</code>
+<img alt="../img/linux/centos/gateway_backgd.png" src="../../img/linux/centos/gateway_backgd.png" /></p>
+<p><strong>14.Start the gateway backend program</strong></p>
+<p><code>./op.sh start</code></p>
+<p><img alt="../img/linux/centos/gateway_backgd2.png" src="../../img/linux/centos/gateway_backgd2.png" /></p>
+<p><strong>15.Enter the installation root directory or system desktop, double-click the icon "DstGatewayGUI. desktop" to start the gateway frontend</strong>
+<img alt="../img/linux/centos/desktop_icon.png" src="../../img/linux/centos/desktop_icon.png" /></p>
+<p><strong>16.Click on 'trust and Launch' to start (this prompt will only be displayed once)</strong>
+<img alt="../img/linux/centos/desktop_trust.png" src="../../img/linux/centos/desktop_trust.png" /></p>
+<p><strong>17.matters needing attention</strong></p>
+<p><strong>You need to start the gateway backend as root before starting the gateway frontend</strong></p>
 <h2 id="backend-management">Backend management</h2>
 <pre><code>After the GUI installation is completed, you can operate the gateway backend as follows:
 </code></pre>
@@ -2680,17 +2654,17 @@ cd {Installation directory}/resource/gateway
 <pre><code>Create or import wallet address --&gt; create dpos --&gt; create gateway --&gt; pledge NXN --&gt; receive rewards
 </code></pre>
 <h3 id="new-wallet">new wallet</h3>
-<p><img alt="/img/pc/img_20.png" src="/img/pc/img_20.jpg" /></p>
+<p><img alt="../img/pc/img_20.png" src="../../img/pc/img_20.jpg" /></p>
 <h3 id="import-wallet">import wallet</h3>
-<p><img alt="/img/pc/img_21.png" src="/img/pc/img_21.jpg" /></p>
+<p><img alt="../img/pc/img_21.png" src="../../img/pc/img_21.jpg" /></p>
 <h3 id="create-validator">create validator</h3>
-<p><img alt="/img/pc/img_22.png" src="/img/pc/img_22.jpg" /></p>
+<p><img alt="../img/pc/img_22.png" src="../../img/pc/img_22.jpg" /></p>
 <h3 id="create-gateway">create gateway</h3>
-<p><img alt="/img/pc/img_26.png" src="/img/pc/img_26.jpg" /></p>
+<p><img alt="../img/pc/img_26.png" src="../../img/pc/img_26.jpg" /></p>
 <h3 id="pledge">Pledge</h3>
-<p><img alt="/img/pc/img_11.png" src="/img/pc/img_11.jpg" /></p>
+<p><img alt="../img/pc/img_11.png" src="../../img/pc/img_11.jpg" /></p>
 <h3 id="receive-award">Receive award</h3>
-<p><img alt="/img/pc/img_13.png" src="/img/pc/img_13.jpg" /></p>
+<p><img alt="../img/pc/img_13.png" src="../../img/pc/img_13.jpg" /></p>
 <h2 id="front-page">front page</h2>
 <pre><code>The home page contains some global views and functions
  These include:
@@ -2698,21 +2672,21 @@ cd {Installation directory}/resource/gateway
 
 View block synchronization (top right of the interface)
 </code></pre>
-<p><img alt="/img/pc/img_5.png" src="/img/pc/img_5.jpg" /></p>
+<p><img alt="../img/pc/img_5.png" src="../../img/pc/img_5.jpg" /></p>
 <pre><code>View task status (upper right corner of interface)
 </code></pre>
-<p><img alt="/img/pc/img_5.png" src="/img/pc/img_4.jpg" /></p>
+<p><img alt="../img/pc/img_5.png" src="../../img/pc/img_4.jpg" /></p>
 <pre><code>Management software settings (bottom left corner of the interface)
 </code></pre>
-<p><img alt="/img/pc/img_6.png" src="/img/pc/img_6.jpg" /></p>
+<p><img alt="../img/pc/img_6.png" src="../../img/pc/img_6.jpg" /></p>
 <h2 id="actions">Actions</h2>
 <pre><code>The Actions in the upper right corner can manage DID and modify gateway information
 </code></pre>
-<p><img alt="/img/pc/img_17.png" src="/img/pc/img_17.jpg" /></p>
+<p><img alt="../img/pc/img_17.png" src="../../img/pc/img_17.jpg" /></p>
 <h3 id="did-segment-management">DID segment management</h3>
 <pre><code>More DID numbers can be obtained by staking NXN
 </code></pre>
-<p><img alt="/img/pc/img_18.png" src="/img/pc/img_18.jpg" /></p>
+<p><img alt="../img/pc/img_18.png" src="../../img/pc/img_18.jpg" /></p>
 <pre><code>Select the line on the left side of the homepage, including two tabs for assets and gateways
 </code></pre>
 <h2 id="property">Property</h2>
@@ -2720,102 +2694,69 @@ View block synchronization (top right of the interface)
 
 The three buttons on the left correspond to the three main coins of DST, NXN and HASH respectively
 </code></pre>
-<p><img alt="/img/pc/img_7.png" src="/img/pc/img_7.jpg" /></p>
+<p><img alt="../img/pc/img_7.png" src="../../img/pc/img_7.jpg" /></p>
 <pre><code>On the right side, you can view the balance quantity, transaction records, and send and receive the main currency
 </code></pre>
-<p><img alt="/img/pc/img_8.png" src="/img/pc/img_8.jpg" /></p>
+<p><img alt="../img/pc/img_8.png" src="../../img/pc/img_8.jpg" /></p>
 <pre><code>Here export the mnemonic and change the password
 </code></pre>
-<p><img alt="/img/pc/img_9.png" src="/img/pc/img_9.jpg" /></p>
+<p><img alt="../img/pc/img_9.png" src="../../img/pc/img_9.jpg" /></p>
 <h2 id="gateway">gateway</h2>
 <pre><code>Gateway function management dpos pledge, gateway server, gateway app, gateway key, etc.
 </code></pre>
-<p><img alt="/img/pc/img_10.png" src="/img/pc/img_10.jpg" /></p>
+<p><img alt="../img/pc/img_10.png" src="../../img/pc/img_10.jpg" /></p>
 <h3 id="dpos-pledge-management">DPOS pledge management</h3>
 <pre><code>After becoming a validator, you can check the DPOS status of this node on the _DPOS pledge management_ page
 
 Available for pledge and redemption
 </code></pre>
-<p><img alt="/img/pc/img_11.png" src="/img/pc/img_11.jpg" /></p>
+<p><img alt="../img/pc/img_11.png" src="../../img/pc/img_11.jpg" /></p>
 <pre><code>The redemption of DPOS is not immediately received, check the redemption status here
 </code></pre>
-<p><img alt="/img/pc/img_12.png" src="/img/pc/img_12.jpg" /></p>
+<p><img alt="../img/pc/img_12.png" src="../../img/pc/img_12.jpg" /></p>
 <pre><code>Can view and claim staking rewards and commissions
 </code></pre>
-<p><img alt="/img/pc/img_13.png" src="/img/pc/img_13.jpg" /></p>
+<p><img alt="../img/pc/img_13.png" src="../../img/pc/img_13.jpg" /></p>
 <pre><code>Modify the settings of the gateway here
 </code></pre>
-<p><img alt="/img/pc/img_14.png" src="/img/pc/img_14.jpg" /></p>
+<p><img alt="../img/pc/img_14.png" src="../../img/pc/img_14.jpg" /></p>
 <h3 id="gateway-server-resources">Gateway server resources</h3>
-<p><img alt="/img/pc/img_15.png" src="/img/pc/img_15.jpg" /></p>
+<p><img alt="../img/pc/img_15.png" src="../../img/pc/img_15.jpg" /></p>
 <h3 id="gateway-app">gateway app</h3>
-<p><img alt="/img/pc/img_16.png" src="/img/pc/img_16.png" /></p>
+<p><img alt="../img/pc/img_16.png" src="../../img/pc/img_16.png" /></p>
 <h3 id="gateway-key">gateway key</h3>
 <pre><code>For details on how to use the gateway key, see
 </code></pre>
-<h4 id="how-to-use-the-gateway-key"><a href="./gateway/key-backup.md">How to use the gateway key</a></h4>
+<h4 id="how-to-use-the-gateway-key"><a href="../key-backup/">How to use the gateway key</a></h4>
 <h2 id="setting-method">Setting method</h2>
 <pre><code>Settings include: version detection, language detection, history clearing settings, node settings, data directory settings, routing layer detection
 </code></pre>
-<p><img alt="/img/pc/img_19.png" src="/img/pc/img_19.jpg" /></p>
+<p><img alt="../img/pc/img_19.png" src="../../img/pc/img_19.jpg" /></p>
 <h2 id="upgrade">upgrade</h2>
 <h3 id="centos_1">centos</h3>
-<pre><code>If the system has an upgrade task, the interface will automatically pop up an upgrade window
-</code></pre>
-<p><img alt="/img/linux/centos/img_5.png" src="/img/linux/centos/img_5.png" /></p>
-<pre><code>Click to update and the latest app will be downloaded automatically
-</code></pre>
-<p><img alt="/img/linux/centos/img_6.png" src="/img/linux/centos/img_6.png" /></p>
-<pre><code>After the new application download is complete, you will be prompted with the upgrade steps, then click Exit
-</code></pre>
-<p><img alt="/img/linux/centos/img_7.png" src="/img/linux/centos/img_7.png" /></p>
-<pre><code>Double-click the newly generated icon upgrade.desktop, click trust and Launch to start the upgrade.
-</code></pre>
-<p><img alt="/img/linux/centos/img_8.png" src="/img/linux/centos/img_8.png" /></p>
-<pre><code>During the upgrade process, it is necessary to enter the password of the currently logged-in user once to authorize the operation
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_9.png" /></p>
-<h3 id="ubuntu_1">ubuntu</h3>
-<pre><code>If the system has an upgrade task, the interface will automatically pop up an upgrade window
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_5.png" src="/img/linux/ubuntu/img_5.png" /></p>
-<pre><code>Click to update and the latest app will be downloaded automatically
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_6.png" src="/img/linux/ubuntu/img_6.png" /></p>
-<pre><code>After the new application download is complete, you will be prompted with the upgrade steps, then click Exit
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_7.png" src="/img/linux/ubuntu/img_7.png" /></p>
-<pre><code>Right-click the electric shock icon upgrade.desktop, click properties
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_8.png" src="/img/linux/ubuntu/img_8.png" /></p>
-<pre><code>Tick Allow Executing Files
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_9.png" /></p>
-<pre><code>Right-click the icon upgrade.desktop, and select Run as a program to upgrade.
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_10.png" /></p>
-<pre><code>During execution, you will be prompted to enter the current user password to authorize the operation
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_9.png" src="/img/linux/ubuntu/img_11.png" /></p>
+<p>If the system has an upgrade task, the interface will automatically pop up an upgrade window
+<img alt="../img/linux/centos/img_5.png" src="../../img/linux/centos/img_5.png" /></p>
+<p>Click to update and the latest app will be downloaded automatically
+<img alt="../img/linux/centos/img_6.png" src="../../img/linux/centos/img_6.png" /></p>
+<p>During the upgrade, you need to enter the password of the current user for authorization
+<img alt="../img/linux/centos/upgrade.png" src="../../img/linux/centos/upgrade.png" /></p>
+<p>After the upgrade is completed, the interface will exit automatically. At this time, double-click the dst gateway icon on the desktop and start it
+<img alt="../img/linux/centos/desktop_icon.png" src="../../img/linux/centos/desktop_icon.png" /></p>
+<p>After opening the program, if the display 「Wait for the GateWay program to start...」And so on, indicating the need <a href="#start">Start the back-end program manually</a>
+<img alt="../img/linux/centos/starting.png" src="../../img/linux/centos/starting.png" /></p>
 <h3 id="manual-upgrade">Manual upgrade</h3>
-<pre><code>Manual upgrade requires running commands as an administrator in the command window: ./gateway upgrade Perform a manual upgrade. If the gateway program is running, it will prompt to close the gateway and provide a command to exit the gateway: curl http://127.0.0.1:50321/soft/exit
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_12.png" src="/img/linux/ubuntu/img_12.png" /></p>
-<pre><code>The gateway will automatically exit after executing the exit command
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_13.png" src="/img/linux/ubuntu/img_13.png" /></p>
-<pre><code>Re execute upgrade command ./gateway upgrade  The program will prompt for the current version number and upgrade version number. After checking, enter y to perform the upgrade operation
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_14.png" src="/img/linux/ubuntu/img_14.png" /></p>
-<pre><code>During the upgrade process, the download directory and URL address will be prompted
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_15.png" src="/img/linux/ubuntu/img_15.png" /></p>
-<pre><code>If upgrading encounters permission errors, please rerun the upgrade command in administrator mode
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_16.png" src="/img/linux/ubuntu/img_16.png" /></p>
-<pre><code>After the upgrade is completed, you will be prompted to enter the specified directory and perform the initialization operation again as an administrator. After completion, the program can be started normally
-</code></pre>
-<p><img alt="/img/linux/ubuntu/img_17.png" src="/img/linux/ubuntu/img_17.png" /></p>
+<p>Manual upgrade requires running commands as an administrator in the command window: ./gateway upgrade Perform a manual upgrade. If the gateway program is running, it will prompt to close the gateway and provide a command to exit the gateway: curl http://127.0.0.1:50321/soft/exit
+<img alt="../img/linux/ubuntu/img_12.png" src="../../img/linux/ubuntu/img_12.png" /></p>
+<p>The gateway will automatically exit after executing the exit command
+<img alt="../img/linux/ubuntu/img_13.png" src="../../img/linux/ubuntu/img_13.png" /></p>
+<p>Re execute upgrade command ./gateway upgrade  The program will prompt for the current version number and upgrade version number. After checking, enter y to perform the upgrade operation
+<img alt="../img/linux/ubuntu/img_14.png" src="../../img/linux/ubuntu/img_14.png" /></p>
+<p>During the upgrade process, the download directory and URL address will be prompted
+<img alt="../img/linux/ubuntu/img_15.png" src="../../img/linux/ubuntu/img_15.png" /></p>
+<p>If upgrading encounters permission errors, please rerun the upgrade command in administrator mode
+<img alt="../img/linux/ubuntu/img_16.png" src="../../img/linux/ubuntu/img_16.png" /></p>
+<p>After the upgrade is completed, you will be prompted to enter the specified directory and perform the initialization operation again as an administrator. After completion, the program can be started normally
+<img alt="../img/linux/ubuntu/img_17.png" src="../../img/linux/ubuntu/img_17.png" /></p>
 
 
 

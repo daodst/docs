@@ -2189,7 +2189,7 @@
 <p>Learn how to manually upgrade your nodes.</p>
 <h2 id="prerequisites">prerequisites</h2>
 <ul>
-<li><a href="/protocol/stcd/">install stcd</a></li>
+<li><a href="../../protocol/stcd/">install stcd</a></li>
 </ul>
 <h2 id="1-upgrade-daodst-version">1. Upgrade Daodst version</h2>
 <p>Before upgrading Daodst version. Stop your daodst instance with <code>Ctrl/Cmd+C</code>.</p>
@@ -2232,7 +2232,7 @@ echo &quot;&lt;expected_hash&gt; genesis.json&quot; | sha256sum -c
 <p>:::</p>
 <h2 id="3-data-reset">3. Data reset</h2>
 <p>⚠️ <strong>Note</strong> :
-If the version you want to upgrade requires a data reset (hard fork), please check <a href="./list-of-upgrades">here</a>. If this is not the case, you can skip to <a href="https://docs.cosmos.network/main/modules/upgrade">Reboot</a>.</p>
+If the version you want to upgrade requires a data reset (hard fork), please check <a href="../list/">here</a>. If this is not the case, you can skip to <a href="https://docs.cosmos.network/main/modules/upgrade">Reboot</a>.</p>
 <p>Delete obsolete files and reset data:</p>
 <pre><code class="language-bash">rm $install_path/.stcd/config/addrbook.json
 stcd tendermint unsafe-reset-all --home $install_path/.stcd

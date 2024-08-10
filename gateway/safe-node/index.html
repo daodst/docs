@@ -2222,14 +2222,14 @@
 <h2 id="set-sentry-nodes">Set Sentry Nodes</h2>
 <p>When setting up a validator, there are countless ways to configure your settings. This guide aims to showcase one of them, namely the design of Sentry Nodes. This design is mainly designed to prevent DDOS</p>
 <h3 id="network-layout">Network layout</h3>
-<p><img alt="Network layout" src="/img/sentry_layout.png" /></p>
+<p><img alt="Network layout" src="../../img/sentry_layout.png" /></p>
 <p>This image is based on AWS, and other cloud providers will also have similar solutions to design. Running nodes is not limited to cloud providers, but you can also run nodes on bare metal systems. Regardless of which setting you decide to adopt, the architecture will be the same.</p>
 <p>The proposed network diagram is similar to the classic separation of backend/front-end services in enterprise environments. In this case, the 'backend' is the dedicated network of validators in the data center. The data center network may involve multiple subnets, firewalls, and redundant devices, which are not detailed in this figure. An important point is that the data center allows direct connection to the selected cloud environment. Amazon AWS has' Direct Connect ', while Google Cloud has' Partner Interconnect'. This is a dedicated connection with a cloud provider (usually directly connected to a virtual private cloud instance in a certain region).</p>
 <p>All sentinel nodes ("front-end") are connected to the validator using this private connection. The verifier does not have a public IP address to provide the service.</p>
 <p>Amazon has multiple available zones within a region. Sentry nodes can also be installed in other regions. In this case, the second, third, and more regions need to have private connections to the validator node. This can be achieved through VPC peer-to-peer interconnection (referred to as "VPC network peer-to-peer interconnection" in Google Cloud). In this case, the second, third, and more region sentinel nodes will be directed to the first region and connected directly to the data center to reach the validator.</p>
 <p>A more durable solution (not detailed in the figure) is multiple direct connections from the data center to different regions. In this way, VPC peer-to-peer connection is not mandatory, but it still benefits sentinel nodes. This overcomes the risk of relying on one region. It has a higher cost.</p>
 <h3 id="local-configuration">Local configuration</h3>
-<p><img alt="Local configuration" src="/img/local_config.png" /></p>
+<p><img alt="Local configuration" src="../../img/local_config.png" /></p>
 <p>The validator will only communicate with the provided sentinel, and the sentinel node will communicate with the validator through a secret connection and communicate with the rest of the network through a normal connection. Sentry nodes can also choose to communicate with each other.
 When 'config. toml' initializes a node, five parameters may need to be changed.</p>
 <ul>

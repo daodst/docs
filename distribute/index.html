@@ -2859,7 +2859,7 @@ block, the different claims on the fees collected are updated as follows:</p>
 </ul>
 <p>To incentivize validators to wait and include additional pre-commits in the block, the block proposer reward is calculated from Tendermint pre-commit messages.</p>
 <h3 id="the-distribution-scheme">The Distribution Scheme</h3>
-<p>See <a href="07_params.md">params</a> for description of parameters.</p>
+<p>See [params] for description of parameters.</p>
 <p>Let <code>fees</code> be the total fees collected in the previous block, including
 inflationary rewards to the stake. All fees are collected in a specific module
 account during the block. During <code>BeginBlock</code>, they are sent to the
@@ -2894,8 +2894,8 @@ distribution calculations.</p>
 validator sets a maximum rate and a maximum daily increase. These maximums cannot be exceeded and protect delegators from sudden increases of validator commission rates to prevent validators from taking all of the rewards.</p>
 <p>The outstanding rewards that the operator is entitled to are stored in
 <code>ValidatorAccumulatedCommission</code>, while the rewards the delegators are entitled
-to are stored in <code>ValidatorCurrentRewards</code>. The <a href="01_concepts.md">F1 fee distribution
-scheme</a> is used to calculate the rewards per delegator as they
+to are stored in <code>ValidatorCurrentRewards</code>. The [F1 fee distribution
+scheme] is used to calculate the rewards per delegator as they
 withdraw or update their delegation, and is thus not handled in <code>BeginBlock</code>.</p>
 <h4 id="example-distribution">Example Distribution</h4>
 <p>For this example distribution, the underlying consensus engine selects block proposers in

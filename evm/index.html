@@ -4065,7 +4065,7 @@ If no hooks are registered, this function returns a <code>nil</code> error. .</p
 <p>Errors returned by hooks are translated to VM errors <code>Unable to process native log</code>, with detailed error messages stored in the return value.
 Messages are sent asynchronously to native modules, and callers cannot catch and recover from errors.</p>
 <p>** Use case: calling native ERC20 modules on Daodst **</p>
-<p>The following is an example taken from the Daodst <a href="erc20.md">erc20 module</a> showing how <code>EVMHooks</code> support contracts that call native modules to convert ERC-20 tokens to Cosmos native tokens.
+<p>The following is an example taken from the Daodst [erc20 module] showing how <code>EVMHooks</code> support contracts that call native modules to convert ERC-20 tokens to Cosmos native tokens.
 Follow the steps above.</p>
 <p>You can define and emit a "Transfer" log signature in your smart contract like this:</p>
 <pre><code class="language-solidity">event Transfer(address indexed from, address indexed to, uint256 value);
